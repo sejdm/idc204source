@@ -12,9 +12,9 @@ Exercises are not to be submitted. They are for your own practice, especially to
 
 ## Grading scheme
 
-- Quizzes: 10%
-- Midsem 1: 25%
-- Midsem 2: 25%
+- Quizzes: 20%
+- Midsem 1: 20%
+- Midsem 2: 20%
 - Final: 40%
 
 ## Reference books/links
