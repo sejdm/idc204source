@@ -319,7 +319,7 @@ checkPdfCtx = field "haspdf" $ \item -> do
    r <- getRoute $ fromFilePath x
    return $ case  r of
               --Just s -> "<a href=\"/" ++ x ++ "\"><img src=\"/files/pdf.png\" alt=\"PDF\" height=\"15\"></a>"
-              Just s -> "<a href=\"/" ++ x ++ "\">Download PDF</a>"
+              Just s -> "<a href=\"/" ++ x ++ "\">PDF version</a>"
               Nothing -> ""
   
 

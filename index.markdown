@@ -6,7 +6,7 @@ title: Course information
 
 Please check this website regularly for any updates, especially for announcements and exercises.
 
-**Quizzes may be held during any lecture and at any time**. They will account for 10% of your total grade.
+**Quizzes may be held during any lecture and at any time**. They will account for **20%** of your total grade.
 
 Exercises are not to be submitted. They are for your own practice, especially to prepare for the quizzes and examinations.
 
