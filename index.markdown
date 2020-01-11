@@ -10,7 +10,7 @@ Please check this website regularly for any updates, especially for announcement
 
 Exercises are not to be submitted. They are for your own practice, especially to prepare for the quizzes and examinations.
 
-**IMPORTANT:** The lecture this Wednesday, the 8th of January, will begin at 5:00 P.M. in LH3.
+**IMPORTANT:** The first exercise sheet is complete.
 
 ## Grading scheme
 
