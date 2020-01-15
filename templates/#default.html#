@@ -34,7 +34,7 @@
           <a href="/assignments.html">Exercise sheets</a>
 	  $endif$
 	  $if(sortedposts)$
-          <a href="/posts.html">Explanations</a>
+          <a href="/posts.html">Comments</a>
 	  $endif$
         </menu>
 	</div>

@@ -33,10 +33,10 @@ title: Exercise sheet 1
    a) $P \lor P$
    a) $P \land (P \lor Q)$
    a) $P \lor (P \land Q)$
-   a) $T \land A$
-   a) $F \land A$
-   a) $T \lor A$
-   a) $F \lor A$
+   a) $T \land P$
+   a) $F \land P$
+   a) $T \lor P$
+   a) $F \lor P$
    a) $P \land \neg P$
    a) $P \lor \neg P$
    
@@ -52,7 +52,7 @@ title: Exercise sheet 1
    a) Identify any pairs of dual expressions in the previous exercise. Therefore, you need only have verified one per pair.
    b) Why do you think this principle of duality holds?
 
-2. Now that you have verified many simple boolean equations using truth tables, try to use them to simplify the following boolean expressions:
+2. Now that you have verified many simple boolean equations using truth tables, try to use various combinations of them to simplify the following boolean expressions:
    a) $(\neg P \lor \neg Q) \land (\neg P \lor Q)$
    b) $\neg P \land \neg (P \lor Q)$
 

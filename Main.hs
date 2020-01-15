@@ -210,7 +210,7 @@ assignmentCtx =
 
 allPostsCtx :: Context String
 allPostsCtx =
-    constField "title" "All posts" `mappend`
+    constField "title" "All comments" `mappend`
     postCtx
 
 
@@ -365,7 +365,7 @@ poemsFldrPoet = createAllPage "All Poems (by author)" "poems/*" "templates/poem.
 
 assignmentsFldr = orderedFolder "All the exercise sheets" "assignments/*" "templates/assignment.html" "templates/assignmentitem.html" "templates/assignments.html" "assignments.html" (return . sortAssignments) newdefaultCtx newdefaultCtx assignmentCtx (const mempty)
 
-postsFldr = orderedFolder "All posts" "posts/*" "templates/post.html" "templates/postitem.html" "templates/posts.html" "posts.html" recentFirst newdefaultCtx newdefaultCtx  postCtx (const mempty)
+postsFldr = orderedFolder "All comments" "posts/*" "templates/post.html" "templates/postitem.html" "templates/posts.html" "posts.html" recentFirst newdefaultCtx newdefaultCtx  postCtx (const mempty)
 
 orderedFolder ttl folder tmplt itemtmplt tmplts newfile sortFun eachctx allctx itemctx pgCtx tags = do
     match folder $ version "justlist" $ do

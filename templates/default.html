@@ -34,7 +34,7 @@
           <a href="/assignments.html">Exercise sheets</a>
 	  $endif$
 	  $if(sortedposts)$
-          <a href="/posts.html">Explanations</a>
+          <a href="/posts.html">Comments</a>
 	  $endif$
         </menu>
 	</div>
@@ -59,7 +59,7 @@ $if(sortedassignments)$
 $endif$
 
 $if(sortedposts)$
-    <h2>Recent explanations</h2>
+    <h2>Recent comments</h2>
     <ul>
 	  $for(sortedposts)$
           <li><a href="$url$">$title$</a>
@@ -67,10 +67,8 @@ $if(sortedposts)$
           </li>
 	  $endfor$
     </ul>
-    <p><a href="/posts.html">All posts&hellip;</a></p>
+    <p><a href="/posts.html">All comments&hellip;</a></p>
 
-    <h2>Explanation posts' tags</h2>
-    <p class="tags">$taglist$</p>
 $endif$
 </section>
 </body>
