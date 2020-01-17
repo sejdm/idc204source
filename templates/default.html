@@ -33,6 +33,9 @@
 	  $if(sortedassignments)$
           <a href="/assignments.html">Exercise sheets</a>
 	  $endif$
+	  $if(sortedlecturenotes)$
+          <a href="/lecturenotes.html">Lecture notes</a>
+	  $endif$
 	  $if(sortedposts)$
           <a href="/posts.html">Comments</a>
 	  $endif$
@@ -58,6 +61,19 @@ $if(sortedassignments)$
     <p><a href="/assignments.html">All exercise sheets&hellip;</a></p>
 $endif$
 
+$if(sortedlecturenotes)$
+    <h2>Recent lecture notes</h2>
+    <ul>
+	  $for(sortedlecturenotes)$
+          <li><a href="$url$">$title$</a>
+	    &nbsp; $haspdf$
+          </li>
+	  $endfor$
+    </ul>
+    <p><a href="/posts.html">All lecture notes&hellip;</a></p>
+
+$endif$
+    
 $if(sortedposts)$
     <h2>Recent comments</h2>
     <ul>

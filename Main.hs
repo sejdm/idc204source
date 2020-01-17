@@ -124,6 +124,7 @@ fullSite = hakyllWith myConfig $ do
     -- poemsFldrPoet tags
     assignmentsFldr tags
     postsFldr tags
+    lecturenotesFldr tags
 
 
 
@@ -208,6 +209,14 @@ assignmentCtx =
     strippedfileCtx `mappend`
     defaultContext
 
+lecturenoteCtx :: Context String
+lecturenoteCtx =
+    pdfCtx `mappend`
+    strippedfileCtx `mappend`
+    defaultContext
+
+
+
 allPostsCtx :: Context String
 allPostsCtx =
     constField "title" "All comments" `mappend`
@@ -218,6 +227,14 @@ allAssignmentsCtx :: Context String
 allAssignmentsCtx =
     constField "title" "All assignments" `mappend`
     assignmentCtx
+
+allLecturenotesCtx :: Context String
+allLecturenotesCtx =
+    constField "title" "All assignments" `mappend`
+    lecturenoteCtx
+
+
+
 
 homeCtx :: AllTags -> String -> Context String
 homeCtx tags list =
@@ -251,6 +268,7 @@ tagsCtx tags =
 pagesCtx p = listField "pages" defaultContext (return p) `mappend` pdfCtx
 postsCtx p = case p of [] -> mempty; _ -> listField "sortedposts" (postCtx `mappend` defaultContext) (return p)
 assignmentsCtx p = case p of [] -> mempty; _ -> listField "sortedassignments" (assignmentCtx `mappend` strippedfileCtx `mappend` defaultContext) (return p)
+lecturenotesCtx p = case p of [] -> mempty; _ -> listField "sortedlecturenotes" (assignmentCtx `mappend` strippedfileCtx `mappend` defaultContext) (return p)
 
 allCtx (p, q, r) = pagesCtx p `mappend` postsCtx q `mappend` assignmentsCtx r
 
@@ -363,6 +381,9 @@ poemsFldr = orderedFolder' "All Poems" "poems/*" "templates/poem.html" "template
 
 poemsFldrPoet = createAllPage "All Poems (by author)" "poems/*" "templates/poem.html" "templates/poemitem.html" "templates/poemsauthor.html" "poemsauthor.html" (sortusing "author") pnewdefaultCtx pnewdefaultCtx folderCtx poetsCtx
 
+
+lecturenotesFldr = orderedFolder "All the lecture notes" "lecturenotes/*" "templates/lecturenote.html" "templates/lecturenoteitem.html" "templates/lecturenotes.html" "lecturenotes.html" (return . sortAssignments) newdefaultCtx newdefaultCtx lecturenoteCtx (const mempty)
+
 assignmentsFldr = orderedFolder "All the exercise sheets" "assignments/*" "templates/assignment.html" "templates/assignmentitem.html" "templates/assignments.html" "assignments.html" (return . sortAssignments) newdefaultCtx newdefaultCtx assignmentCtx (const mempty)
 
 postsFldr = orderedFolder "All comments" "posts/*" "templates/post.html" "templates/postitem.html" "templates/posts.html" "posts.html" recentFirst newdefaultCtx newdefaultCtx  postCtx (const mempty)
@@ -440,18 +461,19 @@ foldersCtx s p = case p of [] -> mempty; _ -> listField s (folderCtx `mappend` d
 
 
 
-newdefaultCtx tags l = assignmentsCtx (assgns l) `mappend` postsCtx (sorted l) `mappend` mathCtx `mappend` onlyTagsCtx tags `mappend` pagesCtx (pages l) `mappend` foldersCtx "sortedpoems" (poems l) `mappend` poetsCtx tags
+newdefaultCtx tags l = lecturenotesCtx (lecturenotes l) `mappend` assignmentsCtx (assgns l) `mappend` postsCtx (sorted l) `mappend` mathCtx `mappend` onlyTagsCtx tags `mappend` pagesCtx (pages l) `mappend` foldersCtx "sortedpoems" (poems l) `mappend` poetsCtx tags
 
-data AllLists = AllLists {pages :: [Item String],  sorted :: [Item String], assgns :: [Item String], poems :: [Item String]}
+data AllLists = AllLists {pages :: [Item String],  sorted :: [Item String], assgns :: [Item String], poems :: [Item String], lecturenotes :: [Item String]}
 
 topPostsPages :: Compiler AllLists
 topPostsPages = do
           ps <- loadAll ("*.md" .&&. hasVersion "titleLine")
           posts <- loadAll ("posts/*"  .&&. hasVersion "justlist")
           as <- loadAll ("assignments/*"  .&&. hasVersion "justlist")
+          ls <- loadAll ("lecturenotes/*"  .&&. hasVersion "justlist")
           pms <- loadAll ("poems/*"  .&&. hasVersion "justlist")
           sd <- take 5 <$> recentFirst posts
-          return (AllLists ps sd (take 1 (reverse $ sortAssignments as)) pms)
+          return (AllLists ps sd (take 1 (reverse $ sortAssignments as)) pms   (take 1 (reverse $ sortAssignments ls)))
 
 getList :: MonadMetadata m => String -> String -> Identifier -> m [String]
 getList delim s identifier = do
