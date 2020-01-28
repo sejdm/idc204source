@@ -27,4 +27,3 @@ title: Exercise sheet 2
 
 3. One can define a new quantifier $\exists! x P(x)$ to mean that "there exists a *unique* x such that $P(x)$ is true". Show that this can always be expressed by an expression involving only the usual two quantifiers, $\exists$, and $\forall$.  *(Hint: you want to say that it exists **and** is unique. What does it mean to say that there is a unique x satisfying a predicate? Try considering its negation if that helps. You may assume that there is some notion of equality between the objects under consideration so that it makes sense to ask if "$a = b$" for any given $a$ and $b$)*
 
-**To be completed**

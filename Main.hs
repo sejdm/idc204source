@@ -230,7 +230,7 @@ allAssignmentsCtx =
 
 allLecturenotesCtx :: Context String
 allLecturenotesCtx =
-    constField "title" "All assignments" `mappend`
+    constField "title" "Dhruva Sambrani's notes" `mappend`
     lecturenoteCtx
 
 
@@ -473,7 +473,7 @@ topPostsPages = do
           ls <- loadAll ("lecturenotes/*"  .&&. hasVersion "justlist")
           pms <- loadAll ("poems/*"  .&&. hasVersion "justlist")
           sd <- take 5 <$> recentFirst posts
-          return (AllLists ps sd (take 1 (reverse $ sortAssignments as)) pms   (take 1 (reverse $ sortAssignments ls)))
+          return (AllLists ps sd (take 1 (reverse $ sortAssignments as)) pms   (take 2 (reverse $ sortAssignments ls)))
 
 getList :: MonadMetadata m => String -> String -> Identifier -> m [String]
 getList delim s identifier = do

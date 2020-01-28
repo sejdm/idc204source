@@ -30,6 +30,13 @@ h6{color:#777;font-size:14px}
     padding-bottom: 1em;
 }
 
+h1 .author {
+    color: black;
+    font-style: italic;
+    text-align: center;
+    font-size: 14px;
+}
+
 
 /* The sidebar menu */
 .sidenav {
