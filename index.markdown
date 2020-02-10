@@ -10,7 +10,8 @@ Please check this website regularly for any updates, especially for announcement
 
 Exercises are not to be submitted. They are for your own practice, especially to prepare for the quizzes and examinations.
 
-<span style="color:red">UPDATE:</span> Your colleague, Dhruva Sambrani, has been very kind in sharing his notes. Please access them via the new links on the top and side bars.
+
+<span style="color:red">**VERY IMPORTANT:**</span>  If your answer to question **4(c)** of the mid-semester examination was marked wrong, then please bring your paper to class on Wednesday, the 12th of February, to get that rechecked.
 
 ## Grading scheme
 
@@ -19,6 +20,10 @@ Exercises are not to be submitted. They are for your own practice, especially to
 - Midsem 2: 20%
 - Final: 40%
 
+
+
 ## Reference books/links
 
-- Michael Sipser. *Introduction Theory of Computation*.
+- Michael Sipser. *Introduction to the Theory of Computation* **(Textbook for this course)**
+- John E. Hopcroft, Rajeev Motwani, and Jeffrey D. Ullman. *Introduction to Automata Theory, Languages, and Computation*
+- Harry R. Lewis, Christos H. Papadimitriou. *Elements of the Theory of Computation*
