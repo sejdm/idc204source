@@ -1,0 +1,185 @@
+---
+title: Turing machines
+---
+
+## Why are they important?
+
+Turing machines will turn out to be more powerful than all the previous computation models that we have seen: any language that can be recognized by a finite state automaton or a push down automaton, can also be recognized by a Turing machine.  Some languages cannot be recognized by automata but can be recognized by a Turing machine.  In fact, despite their simply definition, Turing machines are really powerful: if you can write a program for any computation, no matter how complex, you can build a Turing machine to perform the same computation! Attempts at alternatives that can perform computations that a Turing machine cannot, have so far failed (although they may be more efficient). In this course, we will see how some attempts to "enhance" a Turing machine fail to make it more powerful, i.e. anything that the "enhanced" machine can compute, the original one can too. This is similar to the situation with non-deterministic vs deterministic automata. 
+
+Despite their power, Turing machines are merely abstract models of computation and though you can actually build a physical model of it, it would be too inefficient to use in practice.  But we will soon see that we can use the concept of a Turing machine to prove certain very fundamental questions about computability. For instance, we will show that some natural problems cannot be solved by any Turing machine, however complex it may be. Therefore, it cannot be done by any program either. This is why we will study Turing machines. Furthermore, if you can write a program in your favourite programming langauge that can simulate any Turing machine, given its designs, then you know that it is equivalent to a Turing machine and, therefore, what you can do in another programming language can also be done in your favourite one [^1]. 
+
+[^1]: This is why they say, "it is not what a programming language can do that matters, but what it makes easy"
+
+
+## Motivation
+
+This section is not meant to be very formal and may be skipped if you are annoyed by this sort of thing. The purpose is to reflect upon what characterizes a computation and how that leads to the definition of a Turing machine.
+
+
+### Computations
+
+Consider any algorithm that you perform by hand, like sorting a massive list in alphabetical order, dividing two numbers by long division, differentiating a big function etc. 
+
+If you were to do this on the board and show all your work, you will begin by writing the question or the input on the board. You will perform the task in steps where each step consists of focussing on a part of what you have written on the board,  alter it, and move to another part of the board to focus on, alter it, move to another part of the board and so on..
+
+No matter how big the input, usually, the part that you need to focus on at a time is of limited size. For instance, in long division, you only need to focus on two or three digits at a time. In differentiation, you need to focus on at most two functions separated by an operator etc. This is a very important observation because it means the number of different possibilities of strings that are in focus are finite and fixed. *Let $\Gamma$ denote this finite set of possible strings that can be in focus.*
+
+Let us also denote the possible directions we can move our focus to as $D$. If, on the basis of what is focus, we alter the focus and choose a new direction to shift focus to, we can capture that by a function $f : \Gamma \to \Gamma \times D$, so that $f(x) = (x', d)$ means, if $x$ is focus, replace it with $x'$ and shift focus in direction $d$. However, this is not enough: if you were to react to the string in focus in exactly the same way for every step, it would be too restrictive. For instance, assume that your computation needed you to refer to the answer to some intermediate computation that you had written on the board. To search for it you would be scanning through the board and in turn focussing on many parts that you will for now leave unaltered because you are currently "in the state of" searching for something. However, you may change those parts later if another step of the algorithm requires it. 
+
+We can correct the situation by introducing a finite set which we denote as $Q:=\{q_0, q_1, q_2, \ldots, q_n, q_{stop}\}$. Think of $q_i$'s as just labels for how we will react to whatever is in focus. We can then introduce a function $\delta : Q \times \Gamma \to Q \times \Gamma \times D$, so that $\delta(q_i, x) = (q_j, x', d)$ will replace the string, $x$, in focus with the string, $x'$, and shift focus in direction $d$, depending on what label $q_i$ is plugged into the first argument. It also outputs, $q_j$, which will help to decide what label it should use to react to what is in focus in the next step. If, for each possible $x$ in the next step, it should output the same $x'$ and $d$ as in this step, then $q_j$ can be equal to $q_i$, otherwise we can choose a different one. These $q_i$'s are called states and we start with state $q_0$ and stop only if we reach the state $q_{stop}$.
+
+What is a state? We had discussed this point when talking about automata and exactly the same idea applies here. From the point of view of the computation, that question is of no consequence. All that matters is that a state is characterized by how it makes you react to what you are focussing on. If two states make you react to all possibilities in the same way, they are for all practical purposes the same state. In other words, if $\delta(q_i, x) = \delta(q_i, x)$ for all $x$, then you may as well take $q_i = q_j$ and there will be no difference in the way your computation works.
+
+Now $\delta$ is essentially defining your algorithm. In order for the description of the algorithm to be finite, it is important that the domain of $\delta$ be finite, and therefore, $Q$ and $\Gamma$ must be finite.
+
+To summarize: We have a finite set $Q$ that serves as a set of labels or states, a finite set $\Gamma$ of possible strings in focus, a set $D$ of directions to shift focus on the board, and a function $\delta : Q \times \Gamma \to Q \times \Gamma \times D$. You start at the beginning of the board and with state $q_0$. Use $\delta$ to figure out what to erase and write on that part of the board, what direction to shift focus to, and what state to be in for the next step. Repeat this step until $\delta$ outputs the state $q_{stop}$.
+
+### An example
+
+In school you learned to sum two integers expressed in decimals without knowing the meaning of addition. Let us revisit the algorithm and see how it reduces to merely manipulation of symbols and why the description of the algorithm is finite and fixed despite the fact that it can work for arbitrarily large numbers.
+
+The algorithm involves writing the two numbers one below the other, lining up their digits to form colums. They are right aligned, and we begin focussing on the right most column.
+
+In this example, we need only one state, $q_0$, apart from $q_{stop}$ because we are always doing the same thing in each step, i.e., adding the numbers in the column in focus, always shifting left.  In the tables below, the characters in focus are shown in bold and the blank spaces in focus are marked with a dot.
+
+
+Step 0: $q_0$
+
+|   |   |   |       |       |
+|---|---|---|-------|-------|
+|   |   |   | **.** | **.** |
+|   | 2 | 3 | 5     | **6** |
+|   | 4 | 5 | 7     | **9** |
+|   |   |   |       | **.** |
+
+
+
+
+Step 1: $q_0$
+
+|   |   |       |       |     |
+|---|---|-------|-------|-----|
+|   |   | **.** | **1** |     |
+|   | 2 | 3     | **5** | 6   |
+|   | 4 | 5     | **7** | 9   |
+|   |   |       | **.** | *5* |
+
+
+Step 2: $q_0$
+
+|   |       |       |     |     |
+|---|-------|-------|-----|-----|
+|   | **.** | **1** | 1   |     |
+|   | 2     | **3** | 5   | 6   |
+|   | 4     | **5** | 7   | 9   |
+|   |       | **.** | *3* | *5* |
+
+
+Step 3: $q_0$
+
+|       |       |     |     |     |
+|-------|-------|-----|-----|-----|
+| **.** | **0** | 1   | 1   |     |
+|       | **2** | 3   | 5   | 6   |
+|       | **4** | 5   | 7   | 9   |
+|       | **.** | *9* | *3* | *5* |
+
+
+
+Step 4: $q_0$
+
+|       |     |     |     |     |
+|-------|-----|-----|-----|-----|
+| **0** | 0   | 1   | 1   |     |
+| **.** | 2   | 3   | 5   | 6   |
+| **.** | 4   | 5   | 7   | 9   |
+| **.** | *6* | *9* | *3* | *5* |
+
+
+Step 5: $q_{stop}$
+
+|   |     |     |     |     |
+|---|-----|-----|-----|-----|
+| 0 | 0   | 1   | 1   |     |
+|   | 2   | 3   | 5   | 6   |
+|   | 4   | 5   | 7   | 9   |
+|   | *6* | *9* | *3* | *5* |
+
+
+Each intermediate step is performed in exactly the same way, so in this example we are always in the same state. Each step involves altering what is in focus, and shifting focus for the next step (always to the left, in this example). This can easily be expressed as a mathematical function, denoted $\delta$, which takes the string in focus as input and outputs how the string in focus should change, how to shift focus (in this case, always to the left), and the state for the next item in focus (in this case, the same one).
+
+Here is how whatever is in focus is altered. Digits in the same column are added and the sum is written below, while the carried over digit is stacked onto the column to the left. Crucial observation 1: *There are only finitely many possibilities to consider for what is in focus*; ten possibilities each for the previously carried over digit, ten for the digit from the first number, and ten from the digit of the second number; a total of 1000 possibilities. One can simply list out the sum and carried over digit for each of these thousand possibilites and refer to it. Thousand may sound like a big number but it remains fixed no matter how large the numbers that we are adding are (if one uses binary, this can be cut down drastically). 
+
+Then one shifts focus to the column on the left. If there is nothing there, one stops and reveals the answer, otherwise one repeats the previous step on the column in focus. In this example, one never changes the way we react to what is in focus from step to step. We therefore use only one state. But even in more complex algorithms one uses only finitely many states, although one may repeatedly enter a state several times. Crucial observation 2: *There are only finitely many states*. Togther with the the first observation, it implies that the domain of $\delta$ is finite. 
+
+
+The description of the algorithm is finite, yet it can be used to compute the sum of any two numbers, however large. This is possible because each step of the algorithm requires one to focus on only five cells of the table at a time (shown in bold). These five cells will have two blank ones, and the other three consist of the digit to be carried, and the corresponding digits of the two numbers that are being added. The five cells are then altered by writing the sum and the new carried over digit in the two blank cells. Notice that one can define the function that does this altering by explicitly specifying each element and what is mapped to:
+
+
+|   |   |
+|---|---|
+|   | 0 |
+|   | 0 |
+|   | 0 |
+|   |   |
+
+is mapped to
+
+|   |     |
+|---|-----|
+| 0 | 0   |
+|   | 0   |
+|   | 0   |
+|   | *0* |
+
+and 
+
+
+|   |   |
+|---|---|
+|   | 0 |
+|   | 0 |
+|   | 1 |
+|   |   |
+
+is mapped to
+
+|   |     |
+|---|-----|
+| 0 | 0   |
+|   | 0   |
+|   | 0   |
+|   | *1* |
+
+etc. 
+
+There will be 10^3 possible entries, and though this number is large, it is finite and fixed throughout. The point is that this function is used for all except the last step in altering the contents of the five cells that are in focus. For the last one, we shift to a new "state" where we use a different function to change the contents: one that simply adds the word "Ans:" in the first cell of the bottom most row.
+
+For all except the last step, you were in the "add the digits and carry over state"; then you switched to the "write Ans:" state. What do the two states mean? That is not important to actually do the computation. What matters is that the states are characterized by how you would react to the cells in focus. When you are in the "add the digits and carry over state", then as long as you do not see blank cells in place of the corresponding digits of the two numbers, you remain in the same state but alter the contents according to the function defined above with 10^3 entries. Otherwise, you simply leave the contents unaltered and switch the "write Ans:" state. That state is characterized by simply adding the string "Ans:" in the right spot and halting the algorithm.
+
+So we summarize the situation as follows: we needed two states, each characterized by how it makes you "react" to the cells in focus. By "reaction" we mean a function that depending on the state and the cells in focus, decides new entries for those cells, decides where to shift focus, and finally decides the new state (which will decide how to react to the next cells in focus). Notice that the function has a finite domain and there are only finitely many states (in this case 2) so the algorithm is defined by finite information.
+
+Our algorithm consists of finite states, and a function that depending on the current state, alters what is in focus, decides what next to focus on, and the new state to be in.  We are nearly ready to define a Turing machine. But first, let us make some adjustments that will simplify the theory at the cost of making the machine more inefficient (which we do not care about anyway). 
+
+1. How big should the focus be? In this case, it was 5 cells. In some other case, it may be more or less. Rather than either choose an arbitrary number for every situation or have to make an additional choice, We will simply stick to focussing on only character at a time. In Turing machine language, it is called he "head".
+2. Here we imagined everything was written on a two dimensional paper, but describing how to shift on a two dimensional page is more complex than describing how to shift on a one-dimensional "tape". Therefore, we replace page with a long never-ending tape consisting of cells that can hold only one character of the alphabet at a time. The head can move across the tape in only two directions: left or right, and only the character under the head can be altered. The tape has a start cell but extends indefinitely to the right. By convention, if we are the start cell and move left, we remain at the start cell.
+
+We are now ready to define a Turing machine. 
+
+## The final definition
+
+A Turing machine consists of 
+
+1. an infinite tape of cells, a head that focusses on a particular cell of the tape and which can be shifted left or right
+2. a finite set of states with a start state, and two special states called "accept state" and "reject state", 
+3. and a transition function that takes as inputs the current state and the current character under the head, and outputs the new state, the new character to replace the one under the head, and the direction to move the head to (either left or right).
+
+The machine works by using the transition function to alter what is under the head, and shift to a new state, and shift the head. It repeats this until it reaches either the accept or reject state, in which case it stops.  If the problem is a language recognition one, then one can decide to accept or reject the state depending on whether halted with the accept state or the reject one. If one desires an output, then one reads the tape after the machine has halted.
+
+Now the formal definition of a Turing machine given in the book should make sense to you.
+
+
+
+
+
+

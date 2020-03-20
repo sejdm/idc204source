@@ -38,8 +38,9 @@ writerOptions = defaultHakyllWriterOptions
     { writerHTMLMathMethod = MathJax ""
     }
 
+writerOptions' toc = maybe writerOptions (const withTOC) toc
 
-
+pandocMathCompiler' toc = pandocCompilerWithTransformM defaultHakyllReaderOptions pandocOptions internalTransform
 
 
 

@@ -21,4 +21,14 @@ title: Exercise sheet 4
 
 4. Prove that if a language, $L$, is regular then the language, $L'$, obtained by reversing every string of $L$ is also regular.
 
-**to be completed**
+5. If $(Q_1,\Sigma,\delta_1,q_1, F_1)$ and $(Q_2,\Sigma,\delta_2,q_2, F_2)$ are non-deterministic finite state automata that recognize the languages $L_1$ and $L_2$ respectively, then we have already seen that we can design an automaton $(Q,\Sigma,\delta,q_0, F)$ to recognize $L_1 \cup L_2$ by taking $Q=Q_1\cup Q_2\cup \{q_0\}$, where $q_0$ is a new state, $F= F_1\cup F_2$, and 
+$$ \delta(q,c) = \begin{cases} 
+      \delta_1(q,c) & q\in Q_1\\
+      \delta_2(q,c) & q\in Q_2\\
+      \{q_1,q_2\} & q = q_0, c = \epsilon \\
+	  \emptyset & \mathrm{otherwise}
+   \end{cases}
+   $$
+Why did we need an entirely new initial state? What if we took either $q_1$ or $q_2$ to be the initial state? Does it then accept or reject more strings than it should?
+
+

@@ -10,16 +10,13 @@ Please check this website regularly for any updates, especially for announcement
 
 Exercises are not to be submitted. They are for your own practice, especially to prepare for the quizzes and examinations.
 
-
-<span style="color:red">**VERY IMPORTANT:**</span>  Please bring your mid-semester answer sheets on Wednesday, the 12th of February. I may have mistakenly marked something wrong when I should have given you credit for it, so I need to recheck that.
+<span style="color:red">**IMPORTANT**</span> Since some of our lectures had to unexpectedly cancelled, **solutions to mid-semester 2** have been posted and is available via the link on the right..
 
 ## Grading scheme
-
 - Quizzes: 20%
 - Midsem 1: 20%
 - Midsem 2: 20%
 - Final: 40%
-
 
 
 ## Reference books/links
