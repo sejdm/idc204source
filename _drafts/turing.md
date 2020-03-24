@@ -1,10 +1,12 @@
 ---
 title: Turing machines
-tableOfContents: true
+date: 23 March, 2020
 ---
 
 
-## Why are they important?
+## Why study them?
+
+Before we motivate and define Turing machines, let us see why we care about them.
 
 Turing machines will turn out to be more powerful than all the previous computation models that we have seen: any language that can be recognized by a finite state automaton or a push down automaton, can also be recognized by a Turing machine.  Some languages cannot be recognized by automata but can be recognized by a Turing machine.  In fact, despite their simple definition, Turing machines are really powerful: if you can write a program for any computation, no matter how complex, you can build a Turing machine to perform the same computation! Attempts at alternatives that can perform computations that a Turing machine cannot, have so far failed (although they may be more efficient). In this course, we will see how some attempts to "enhance" a Turing machine fail to make it more powerful, i.e. anything that the "enhanced" machine can compute, the original one can too. This is similar to the situation with non-deterministic vs deterministic automata. 
 
@@ -32,7 +34,7 @@ Step 0
 
 
 
-Step 1: $q_0$
+Step 1
 
 |   |   |       |       |     |
 |---|---|-------|-------|-----|
@@ -42,7 +44,7 @@ Step 1: $q_0$
 |   |   |       | **.** | *5* |
 
 
-Step 2: $q_0$
+Step 2
 
 |   |       |       |     |     |
 |---|-------|-------|-----|-----|
@@ -52,7 +54,7 @@ Step 2: $q_0$
 |   |       | **.** | *3* | *5* |
 
 
-Step 3: $q_0$
+Step 3
 
 |       |       |     |     |     |
 |-------|-------|-----|-----|-----|
@@ -63,7 +65,7 @@ Step 3: $q_0$
 
 
 
-Step 4: $q_0$
+Step 4
 
 |       |     |     |     |     |
 |-------|-----|-----|-----|-----|
@@ -73,7 +75,7 @@ Step 4: $q_0$
 | **.** | *6* | *9* | *3* | *5* |
 
 
-Step 5: $q_{stop}$
+Step 5
 
 |   |     |     |     |     |
 |---|-----|-----|-----|-----|
@@ -98,7 +100,7 @@ One would normally evaluate the output of $F$ by performing a tiny little calcul
 
 When we reach the step where no input digits are in focus, we stop and the last row is the final answer.
 
-In this example we need only one function $F$ because we are always doing the same thing in each step: "adding the single digits, updating the sum and carry over and shifing focus to the left". In more complicated computations, we may need to switch to a different function under certain circumstances. 
+In this example we need only one function $F$ because we are always doing the same thing in each step: "adding the single digits, updating the sum and carry over and shifing focus to the left". In more complicated computations, we may need to switch to a different function under certain circumstances. For instance, if we are checking for equality of two very large strings by comparing one character at a time and cancelling them if they match, then when we are searching for the last cancelled character, we will leave many characters unchanged. Yet, when it is time to cancel them, we would need to use a different function.
 
 We can do this by introducing a finite set which we denote $Q:=\{q_0, q_1, q_2, \ldots, q_n, q_{stop}\}$. For now, think of $q_i$'s as labels. They are usually called states. We can then introduce a function $\delta : Q \times \Gamma \to Q \times \Gamma \times D$, so that $\delta(q_i, x) = (q_j, x', d)$ may be interpreted as: "if the current state is $q_i$ and $x$ is in focus, then replace $x$ with the string $x'$, shift focus in direction $d$, and switch to state $q_j$."  We begin the computation in state $q_0$ and stop whenever the $q_{stop}$ is outputted.
 

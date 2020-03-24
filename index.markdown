@@ -10,7 +10,7 @@ Please check this website regularly for any updates, especially for announcement
 
 Exercises are not to be submitted. They are for your own practice, especially to prepare for the quizzes and examinations.
 
-<span style="color:red">**IMPORTANT**</span> Since some of our lectures had to unexpectedly cancelled, **solutions to mid-semester 2** have been posted and is available via the link on the right..
+<span style="color:red">**IMPORTANT**</span> Please check the comments tab for posts that are meant to make up for the lectures that we are missing.
 
 ## Grading scheme
 - Quizzes: 20%
