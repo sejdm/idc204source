@@ -21,6 +21,8 @@ Each step above corresponds with exactly one way to react to what is under the h
 4. $q_5$ turns left on every character that is not = and remains in the same state until it finds an =. When it finds =, it switches to $q_6$. $q_5$ never changes any characters.
 5. $q_6$ turns left for every non X character. When it reaches an X it turns right and switches to $q_0$.
 
+**Tip:** If you are viewing this on a smartphone, view the table and output below in landscape mode.
+
 
 This is the transition table.
 

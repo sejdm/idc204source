@@ -10,7 +10,10 @@ Please check this website regularly for any updates, especially for announcement
 
 Exercises are not to be submitted. They are for your own practice, especially to prepare for the quizzes and examinations.
 
-<span style="color:red">**IMPORTANT**</span> Please check the comments tab for posts that are meant to make up for the lectures that we are missing.
+<span style="color:red">**IMPORTANT**</span> There will be a zoom session from 4pm to 5pm today, 25th of March, 2020 to discuss any doubts related to whatever has been posted until now.
+
+
+A link will be posted here a few minutes before the session begins.
 
 ## Grading scheme
 - Quizzes: 20%
