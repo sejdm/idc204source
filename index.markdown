@@ -10,7 +10,7 @@ Please check this website regularly for any updates, especially for announcement
 
 Exercises are not to be submitted. They are for your own practice, especially to prepare for the quizzes and examinations.
 
-<span style="color:red">**IMPORTANT**</span> There will be a zoom session from 4pm to 5pm today, 25th of March, 2020 to discuss any doubts related to whatever has been posted until now.
+<span style="color:red">**IMPORTANT**</span> There will be another zoom session from 4pm to 5pm today, Monday, 30th of March, 2020. We will have such sessions during our usual lecture hours.
 
 
 A link will be posted here a few minutes before the session begins.

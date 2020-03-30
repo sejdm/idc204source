@@ -1,5 +1,5 @@
 ---
-title: Exercise sheet 6
+title: Exercise sheet 7
 ---
 
 1. Prove that the intersection of two context free languages need not be context free. *(Hint: Try to realize $\{a^nb^nc^n \ |\ a,b,c \in \{a,b,c\}\}$ as the intersection of two context free languages).*
