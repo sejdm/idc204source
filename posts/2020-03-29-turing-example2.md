@@ -61,7 +61,7 @@ Here is the final transition table:
 | $q_2$|($q_4$, _, L)|($q_3$, 0, R)|($q_2$, X, R) |
 | $q_3$|(Reject, _, R)|($q_2$, X, R)|($q_3$, X, R) |
 | $q_4$|($q_1$, _, R)|($q_4$, 0, L)|($q_4$, X, L) |
-Here is an  input which should be accepted because it is a string of 0s of length $2^^3$. Below, we also consider one that is rejected.
+Here is an  input which should be accepted because it is a string of 0s of length $2^3$. Below, we also consider one that is rejected.
 
 input: 00000000
 
