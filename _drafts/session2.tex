@@ -123,11 +123,20 @@ right and go to Step 0.\pause
 \begin{frame}
 \protect\hypertarget{the-states}{}
 
+\[S := \{\text{Step 0, Step 1, Step 2, Step 3, Step 4}\}\]
+\[M :=\{ 0, 1, \text{Nothing} \}\]
 
-States,
-$Q \subset S \times M$
+\uncover<2->{States,
+$Q \subset S \times M$}
 
-explicit blank symbol: \(\sqcup\) 
+\uncover<3->{Examples,}
+\[\only<3->{(\text{Step 2}, 0)}\]
+\[\only<4->{(\text{Step 1}, \text{Nothing})}\]
+
+\end{frame}
+
+\begin{frame}
+Explicit blank symbol: \(\sqcup\) 
 \end{frame}
 
 
@@ -149,8 +158,8 @@ $\uncover<10->{\alert<10>{q_1':=(\text{Step 1},1)}}$
 
 
 \uncover<8->{\[\delta(\alert<8>{\uncover<8->{q_0}}, x) = \begin{cases}
-(\alert<9>{\uncover<9->{q_1}},\sqcup , \mathrm{R}) & \text{if } x \text{= \alert<9>{\uncover<9->{0}}}\\
-(\alert<10>{\uncover<10->{q_1'}},\sqcup , \mathrm{R}) & \text{if } x \text{= \alert<10>{\uncover<10->{1}}}\\
+(\alert<9>{\uncover<9->{q_1}},\sqcup , \mathrm{R}) & \text{if } x \text{= \alert<9>{0}}\\
+(\alert<10>{\uncover<10->{q_1'}},\sqcup , \mathrm{R}) & \text{if } x \text{= \alert<10>{1}}\\
 (Accept,x, \mathrm{R}) & \text{otherwise}\\
 \end{cases}
 \]}

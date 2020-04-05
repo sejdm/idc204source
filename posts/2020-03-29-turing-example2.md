@@ -3,6 +3,7 @@ title: "Turing machine example: Power of 2"
 date: 25 March, 2020
 ---
 
+![](/files/power2.gif){#id .class width=100%}
 
 In this example, we design a Turing machine to check whether the number of 0s in a string of 0s is a power of 2.
 
