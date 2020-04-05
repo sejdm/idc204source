@@ -6,6 +6,7 @@
   ignorenonframetext,
 ]{beamer}
 \usepackage{pgfpages}
+\usepackage{longtable}
 \setbeamertemplate{caption}[numbered]
 \setbeamertemplate{caption label separator}{: }
 \setbeamercolor{caption name}{fg=normal text.fg}
@@ -156,27 +157,27 @@ $\uncover<10->{\alert<10>{q_1':=(\text{Step 1},1)}}$
 
 \end{frame}
 
-\begin{frame}[fragile]{Step 1}
+\begin{frame}[fragile]
 \protect\hypertarget{step-1}{}
+
+
+\textbf{Step 1:} \emph{``if the character under focus is a \texttt{\#}, then move right and go to Step 2; otherwise, repeat this step.''}\pause
 
 \[\delta((\text{Step 1}, n), x) = \begin{cases}
 ((\text{Step 2}, n) ,x, \mathrm{R}) & \text{if } x \text{=} \#\\
 ((\text{Step 1}, n),x, \mathrm{R}) & \text{otherwise}
 \end{cases}
-\]
+\]\pause
 
-\emph{``if the character under focus is a \texttt{\#}, then move right and go to Step 2; otherwise, repeat this step.''}
 
-Here, \(n=0\) or 1, so if we denote \[q_2=(\text{Step 2},0)\]
-\[q_2'=(\text{Step 2},1)\] then we can rewrite the above as
+$q_2=(\text{Step 2},0)$\\
+$q_2'=(\text{Step 2},1)$\pause
 
 \[\delta(q_1, x) = \begin{cases}
 (q_2 ,x, \mathrm{R}) & \text{if } x \text{=} \#\\
 (q_1,x, \mathrm{R}) & \text{otherwise}\\
 \end{cases}
 \]
-
-and
 
 \[\delta(q_1', x) = \begin{cases}
 (q_2' ,x, \mathrm{R}) & \text{if } x \text{=} \#\\
@@ -186,27 +187,26 @@ and
 
 \end{frame}
 
-\begin{frame}{Step 2}
+\begin{frame}
 \protect\hypertarget{step-2}{}
+
+
+\textbf{Step 2:} \emph{``If the character under focus is blank, erase the memory, move right, and go to Step 3; otherwise, move right.''}\pause
 
 \[\delta((\text{Step 2},n), x) = \begin{cases}
 ((\text{Step 3},\text{Nothing}),n, \mathrm{R}) & \text{if } x \text{=} \sqcup\\
 ((\text{Step 2},n),x, \mathrm{R}) & \text{otherwise}\\
 \end{cases}
-\]
+\]\pause
 
-\emph{``If the character under focus is blank, erase the memory, move
-right, and go to Step 3; otherwise, move right.''}
 
-Denoting \[q_3:=(\text{Step 3},\text{Nothing})\] we get
+$q_3:=(\text{Step 3},\text{Nothing})$\pause
 
 \[\delta(q_2, x) = \begin{cases}
 (q_3,0, \mathrm{R}) & \text{if } x \text{=} \sqcup\\
 (q_2,x, \mathrm{R}) & \text{otherwise}\\
 \end{cases}
 \]
-
-and
 
 \[\delta(q_2', x) = \begin{cases}
 (q_3,1, \mathrm{R}) & \text{if } x \text{=} \sqcup \\
@@ -216,20 +216,21 @@ and
 
 \end{frame}
 
-\begin{frame}[fragile]{Step 3}
+\begin{frame}[fragile]
 \protect\hypertarget{step-3}{}
+
+\textbf{Step 3:}
+\emph{``If the character under focus is \texttt{\#}, then move left and go to Step 4; otherwise, move left and repeat this step.''}\pause
 
 \[\delta((\text{Step 3},\text{Nothing}), x) = \begin{cases}
 ((\text{Step 4},\text{Nothing}),x, \mathrm{L}) & \text{if } x \text{=} \#\\
 ((\text{Step 3},\text{Nothing}),x, \mathrm{L}) & \text{otherwise}\\
 \end{cases}
-\]
+\]\pause
 
-\emph{``If the character under focus is \texttt{\#}, then move left and
-go to Step 4; otherwise, move left and repeat this step.''}
 
-Denote, \[q_3=(\text{Step 3},\text{Nothing})\]
-\[q_4=(\text{Step 4},\text{Nothing})\] to get
+$q_3=(\text{Step 3},\text{Nothing})$\\
+$q_4=(\text{Step 4},\text{Nothing})$\pause
 
 \[\delta(q_3, x) = \begin{cases}
 (q_4 ,x, \mathrm{L}) & \text{if } x \text{=} \#\\
@@ -241,14 +242,14 @@ Denote, \[q_3=(\text{Step 3},\text{Nothing})\]
 
 \begin{frame}{Step 4}
 \protect\hypertarget{step-4}{}
+\emph{``If the character under focus is a blank, then move right and go to Step 0; otherwise, move left and repeat this step.''}\pause
 
 \[\delta((\text{Step 4},\text{Nothing}), x) = \begin{cases}
 ((\text{Step 0}, \text{Nothing}),x, \mathrm{R}) & \text{if } x \text{=} \sqcup \\
 ((\text{Step 4},\text{Nothing}),x, \mathrm{L}) & \text{otherwise}\\
 \end{cases}
-\]
+\]\pause
 
-which, using the \(q_i\)'s already defined, is
 
 \[\delta(q_4, x) = \begin{cases}
 (q_0 ,x, \mathrm{R}) & \text{if } x \text{=} \sqcup \\
@@ -258,29 +259,73 @@ which, using the \(q_i\)'s already defined, is
 
 \end{frame}
 
-\begin{frame}{The transition table}
-\protect\hypertarget{the-transition-table}{}
+\begin{frame}
 
-Now it is very straightforward to translate all the partial definitions
-of \(\delta\) above that use \(q_i\)'s rather than the explicit tuples,
-into a transition table.
+  
+\only<1>{\[\delta(q_0, x) = \begin{cases}
+(q_1,\sqcup , \mathrm{R}) & \text{if } x \text{= 0}\\
+(q_1',\sqcup , \mathrm{R}) & \text{if } x \text{= 1}\\
+(Accept,x, \mathrm{R}) & \text{otherwise}\\
+\end{cases}
+\]}
 
-label: shift \textbar{} shift \textbar{} 0 \textbar{} 1 \textbar{}
-\textbar{} \# \textbar{}
-\textbar--------\textbar-------------\textbar-------------\textbar-------------\textbar-------------\textbar{}
-\textbar{} \(q_0\) \textbar{} \(q_1\), , R \textbar{} \(q_1'\), , R
-\textbar{} acc, ,R \textbar{} acc,\#,R \textbar{} \textbar{} \(q_1\)
-\textbar{} \(q_1\),0, R \textbar{} \(q_1\),1, R \textbar{} \(q_1\), , R
-\textbar{} \(q_2\),\#, R \textbar{} \textbar{} \(q_1'\) \textbar{}
-\(q_1'\),0, R \textbar{} \(q_1'\),1, R \textbar{} \(q_1'\), , R
-\textbar{} \(q_2'\),\#, R \textbar{} \textbar{} \(q_2\) \textbar{}
-\(q_2\),0,R \textbar{} \(q_2\),1,R \textbar{} \(q_3\),0,L \textbar{}
-\(q_2\),\#,R \textbar{} \textbar{} \(q_2'\) \textbar{} \(q_2'\),0,R
-\textbar{} \(q_2'\),1,R \textbar{} \(q_3\),1,L \textbar{} \(q_2'\),\#,R
-\textbar{} \textbar{} \(q_3\) \textbar{} \(q_3\),0,L \textbar{}
-\(q_3\),1,L \textbar{} \(q_3\), ,L \textbar{} \(q_4\),\#,L \textbar{}
-\textbar{} \(q_4\) \textbar{} \(q_4\),0,L \textbar{} \(q_4\),1,L
-\textbar{} \(q_0\), ,R \textbar{} \(q_4\),\#,L \textbar{}
+\only<2>{\[\delta(q_1, x) = \begin{cases}
+(q_2 ,x, \mathrm{R}) & \text{if } x \text{=} \#\\
+(q_1,x, \mathrm{R}) & \text{otherwise}\\
+\end{cases}
+\]}
+
+\only<3>{\[\delta(q_1', x) = \begin{cases}
+(q_2' ,x, \mathrm{R}) & \text{if } x \text{=} \#\\
+(q_1',x, \mathrm{R}) & \text{otherwise}\\
+\end{cases}
+\]}
+
+\only<4>{\[\delta(q_2, x) = \begin{cases}
+(q_3,0, \mathrm{R}) & \text{if } x \text{=} \sqcup\\
+(q_2,x, \mathrm{R}) & \text{otherwise}\\
+\end{cases}
+\]}
+
+\only<5>{\[\delta(q_2', x) = \begin{cases}
+(q_3,1, \mathrm{R}) & \text{if } x \text{=} \sqcup \\
+(q_2',x, \mathrm{R}) & \text{otherwise}\\
+\end{cases}
+\]}
+
+\only<6>{
+\[\delta(q_3, x) = \begin{cases}
+(q_4 ,x, \mathrm{L}) & \text{if } x \text{=} \#\\
+(q_3,x, \mathrm{L}) & \text{otherwise}\\
+\end{cases}
+\]}
+
+
+\only<7>{\[\delta(q_4, x) = \begin{cases}
+(q_0 ,x, \mathrm{R}) & \text{if } x \text{=} \sqcup \\
+(q_4,x, \mathrm{L}) & \text{otherwise}\\
+\end{cases}
+\]}
+
+%\end{frame}
+%\begin{frame}{The transition table}
+%\protect\hypertarget{the-transition-table}{}
+
+
+
+
+\begin{longtable}[]{@{}r|cccc@{}}
+& 0 & 1 & \(\sqcup\) & \#\tabularnewline
+\hline
+\uncover<1->{\(q_0\) & (\(q_1\), \(\sqcup\), R) & (\(q_1'\), \(\sqcup\), R) & (Accept, \(\sqcup\), R) & (Accept, \#, R)\tabularnewline}
+\uncover<2->{\(q_1\) & (\(q_1\), 0, R) & (\(q_1\), 1, R) & (\(q_1\), \(\sqcup\), R) & (\(q_2\), \#, R)\tabularnewline}
+\uncover<3->{\(q_1'\) & (\(q_1'\), 0, R) & (\(q_1'\), 1, R) & (\(q_1'\), \(\sqcup\), R) & (\(q_2'\), \#, R)\tabularnewline}
+\uncover<4->{\(q_2\) & (\(q_2\), 0, R) & (\(q_2\), 1, R) & (\(q_3\), 0, L) & (\(q_2\), \#, R)\tabularnewline}
+\uncover<5->{\(q_2'\) & (\(q_2'\), 0, R) & (\(q_2'\), 1, R) & (\(q_3\), 1, L) & (\(q_2'\), \#, R)\tabularnewline}
+\uncover<6->{\(q_3\) & (\(q_3\), 0, L) & (\(q_3\), 1, L) & (\(q_3\), \(\sqcup\), L) & (\(q_4\), \#, L)\tabularnewline}
+\uncover<7->{\(q_4\) & (\(q_4\), 0, L) & (\(q_4\), 1, L) & (\(q_0\), \(\sqcup\), R) & (\(q_4\), \#, L)}
+\end{longtable}
+
 
 \end{frame}
 

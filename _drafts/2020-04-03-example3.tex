@@ -1,0 +1,328 @@
+Although the tape serves as an unlimited memory for the computation, it
+is often used to focus on one part of the tape and then move to another
+part to use it (either to compare, as in equality, or to print it).
+While moving to the other part of the tape, one needs to remember what
+was seen and that information can only be " by the states themselves ".
+We will now see what that means. This time, let us separate whatever we
+need to remember from the steps and use more organized notation to help
+us keep track of all of this.
+
+We will now look at states in a more organized way by thinking of them
+as a combination of the steps and a finite memory. This is only to
+assist in designing the Turing machine, i.e.~coming up with the
+transition table. We can use it for all the previous examples too and
+the final transition table will be just as before, bearing no evidence
+of how we figured it out.
+
+\textbf{Example:} Shift a string to a position marked after the symbol
+\texttt{\#}.
+
+Let us summarize the algorithm. We can shift a string by repeating this
+sequence of steps: ``remember'' the character under the head, sweep
+right until we find the \texttt{\#} symbol, then find the first blank
+character, and print the remembered character there, and then sweep
+back, first searching for the \texttt{\#} and then for the blank
+character and then move right.
+
+\hypertarget{the-steps}{%
+\subsubsection{The steps}\label{the-steps}}
+
+The distinct steps are as follows:
+
+\emph{Step 0:} If the character under the head is 0 or 1, erase it and
+store it in the memory; otherwise, accept and halt.\\
+\emph{Step 1:} Search for the \texttt{\#} toward the right\\
+\emph{Step 2:} Now search for the first blank character and print the
+character stored in memory\\
+\emph{Step 3:} Search for the \texttt{\#} toward the left\\
+\emph{Step 4:} Now search for the first blank character, shift to the
+right and go to Step 0.
+
+Denote these set of steps by
+\[S := \{\text{Step 0, Step 1, Step 2, Step 3, Step 4}\}\].
+
+\hypertarget{the-memory}{%
+\subsubsection{The ``memory''}\label{the-memory}}
+
+It is necessary to remember the character while searching for the
+appropriate position of the tape to print it. So it is stored in a
+memory during the search. As we shall see, this memory can be viewed as
+a component of the state, and is therefore different from the tape: the
+tape is unlimited, whereas, the size of this memory is fixed in the
+machine and is usually very small. In our example, the steps above need
+to store at most one character at a time, and that too only 0, or 1. Of
+course, you may need to remember nothing. So the ``memory'' can have
+three possibilites, 0, 1, or Nothing. Denote the possible states of the
+memory by \[M :=\{ 0, 1, \text{Nothing} \}\].
+
+\hypertarget{the-states}{%
+\subsubsection{The states}\label{the-states}}
+
+We will see how we can view the current state as the current step
+\emph{and} the current memory. Therefore, we can think of it as a pair
+coming from \(S \times M\). So,
+
+\[Q \subset S \times M\]
+
+\hypertarget{decoding-the-steps}{%
+\subsubsection{Decoding the steps}\label{decoding-the-steps}}
+
+Each step describes possible changes to the memory, the character under
+the head, and the next step and the direction to shift the head to. We
+will literally describe these changes by defining the part of \(\delta\)
+that takes as input the current step, memory, and character under the
+head, and outputs their future versions as well as the direction. We
+will use notation that makes the translation from step to part of
+\(\delta\) very apparent.
+
+We will then hide the way we think of the states by assigning the
+distinct pairs (of step and memory) distinct labels, and express
+\(\delta\) in terms of these. For the implementation, this is all that
+is needed; viewing states as pairs was only to assist us in translating
+the algorithm to a transition table.
+
+Finally, we will collect all the parts of the definition of \(\delta\)
+that use \(q_i\)'s rather than pairs, and use it to define the
+transition table.
+
+\textbf{The symbol} \(\sqcup\) \textbf{is commonly used to denote a
+blank symbol explicitly.}
+
+\textbf{Step 0} is described by
+
+\[\delta((\text{Step 0},\text{Nothing}),x) = \begin{cases}
+((\text{Step 1}, x),\sqcup ,\mathrm{R}) & \text{if } x \text{= 0,1}\\
+(Accept,x, \mathrm{R}) & \text{otherwise}\\
+\end{cases}\]
+
+\emph{``If the character under focus is a 0 or 1, store it in the
+memory, shift right, and go to step 2; otherwise, accept''}
+
+We now hide the way we think of the states by denoting
+\[q_0:=(\text{Step 0}, \text{Nothing})\] \[q_1:=(\text{Step 1}, 0)\]
+\[q_1':=(\text{Step 1},1)\] and expressing the above as,
+
+\[\delta(q_0, x) = \begin{cases}
+(q_1,\sqcup , \mathrm{R}) & \text{if } x \text{= 0}\\
+(q_1',\sqcup , \mathrm{R}) & \text{if } x \text{= 1}\\
+(Accept,x, \mathrm{R}) & \text{otherwise}\\
+\end{cases}
+\]
+
+\textbf{Step 1} is described by,
+
+\[\delta((\text{Step 1}, n), x) = \begin{cases}
+((\text{Step 2}, n) ,x, \mathrm{R}) & \text{if } x \text{=} \#\\
+((\text{Step 1}, n),x, \mathrm{R}) & \text{otherwise}
+\end{cases}
+\]
+
+\emph{``if the character under focus is a \texttt{\#}, then move right
+and go to Step 2; otherwise, repeat this step.''}
+
+Here, \(n=0\) or 1, so if we denote \[q_2=(\text{Step 2},0)\]
+\[q_2'=(\text{Step 2},1)\] then we can rewrite the above as
+
+\[\delta(q_1, x) = \begin{cases}
+(q_2 ,x, \mathrm{R}) & \text{if } x \text{=} \#\\
+(q_1,x, \mathrm{R}) & \text{otherwise}\\
+\end{cases}
+\]
+
+and
+
+\[\delta(q_1', x) = \begin{cases}
+(q_2' ,x, \mathrm{R}) & \text{if } x \text{=} \#\\
+(q_1',x, \mathrm{R}) & \text{otherwise}\\
+\end{cases}
+\]
+
+\textbf{Step 2} is described by,
+
+\[\delta((\text{Step 2},n), x) = \begin{cases}
+((\text{Step 3},\text{Nothing}),n, \mathrm{R}) & \text{if } x \text{=} \sqcup\\
+((\text{Step 2},n),x, \mathrm{R}) & \text{otherwise}\\
+\end{cases}
+\]
+
+\emph{``If the character under focus is blank, erase the memory, move
+right, and go to Step 3; otherwise, move right.''}
+
+Denoting \[q_3:=(\text{Step 3},\text{Nothing})\] we get
+
+\[\delta(q_2, x) = \begin{cases}
+(q_3,0, \mathrm{R}) & \text{if } x \text{=} \sqcup\\
+(q_2,x, \mathrm{R}) & \text{otherwise}\\
+\end{cases}
+\]
+
+and
+
+\[\delta(q_2', x) = \begin{cases}
+(q_3,1, \mathrm{R}) & \text{if } x \text{=} \sqcup \\
+(q_2',x, \mathrm{R}) & \text{otherwise}\\
+\end{cases}
+\]
+
+\textbf{Step 3} is described by
+
+\[\delta((\text{Step 3},\text{Nothing}), x) = \begin{cases}
+((\text{Step 4},\text{Nothing}),x, \mathrm{L}) & \text{if } x \text{=} \#\\
+((\text{Step 3},\text{Nothing}),x, \mathrm{L}) & \text{otherwise}\\
+\end{cases}
+\]
+
+\emph{``If the character under focus is \texttt{\#}, then move left and
+go to Step 4; otherwise, move left and repeat this step.''}
+
+Denote, \[q_3=(\text{Step 3},\text{Nothing})\]
+\[q_4=(\text{Step 4},\text{Nothing})\] to get
+
+\[\delta(q_3, x) = \begin{cases}
+(q_4 ,x, \mathrm{L}) & \text{if } x \text{=} \#\\
+(q_3,x, \mathrm{L}) & \text{otherwise}\\
+\end{cases}
+\]
+
+\textbf{Step 4} is described by
+
+\[\delta((\text{Step 4},\text{Nothing}), x) = \begin{cases}
+((\text{Step 0}, \text{Nothing}),x, \mathrm{R}) & \text{if } x \text{=} \sqcup \\
+((\text{Step 4},\text{Nothing}),x, \mathrm{L}) & \text{otherwise}\\
+\end{cases}
+\]
+
+which, using the \(q_i\)'s already defined, is
+
+\[\delta(q_4, x) = \begin{cases}
+(q_0 ,x, \mathrm{R}) & \text{if } x \text{=} \sqcup \\
+(q_4,x, \mathrm{L}) & \text{otherwise}\\
+\end{cases}
+\]
+
+\hypertarget{the-transition-table}{%
+\subsubsection{The transition table}\label{the-transition-table}}
+
+Now it is very straightforward to translate all the partial definitions
+of \(\delta\) above that use \(q_i\)'s rather than the explicit tuples,
+into a transition table.
+
+\begin{longtable}[]{@{}lllll@{}}
+\toprule
+& 0 & 1 & \(\sqcup\) & \#\tabularnewline
+\midrule
+\endhead
+\(q_0\) & (\(q_1\), \(\sqcup\), R) & (\(q_1'\), \(\sqcup\), R) &
+(Accept, \(\sqcup\), R) & (Accept, \#, R)\tabularnewline
+\(q_1\) & (\(q_1\), 0, R) & (\(q_1\), 1, R) & (\(q_1\), \(\sqcup\), R) &
+(\(q_2\), \#, R)\tabularnewline
+\(q_1'\) & (\(q_1'\), 0, R) & (\(q_1'\), 1, R) & (\(q_1'\), \(\sqcup\),
+R) & (\(q_2'\), \#, R)\tabularnewline
+\(q_2\) & (\(q_2\), 0, R) & (\(q_2\), 1, R) & (\(q_3\), 0, L) &
+(\(q_2\), \#, R)\tabularnewline
+\(q_2'\) & (\(q_2'\), 0, R) & (\(q_2'\), 1, R) & (\(q_3\), 1, L) &
+(\(q_2'\), \#, R)\tabularnewline
+\(q_3\) & (\(q_3\), 0, L) & (\(q_3\), 1, L) & (\(q_3\), \(\sqcup\), L) &
+(\(q_4\), \#, L)\tabularnewline
+\(q_4\) & (\(q_4\), 0, L) & (\(q_4\), 1, L) & (\(q_0\), \(\sqcup\), R) &
+(\(q_4\), \#, L)\tabularnewline
+\bottomrule
+\end{longtable}
+
+\hypertarget{an-example-input}{%
+\subsubsection{An example input}\label{an-example-input}}
+
+input: 1011\#
+
+\texttt{:\ \textbar{}1\textbar{}\ 0\ \ 1\ \ 1\ \ \#\ ...}
+\(\delta:\)(\(q_0\), 1) \(\to\) (\(q_1'\), \(\sqcup\), R)\\
+\texttt{:\ \ ␣\ \textbar{}0\textbar{}\ 1\ \ 1\ \ \#\ ...}
+\(\delta:\)(\(q_1'\), 0) \(\to\) (\(q_1'\), 0, R)\\
+\texttt{:\ \ ␣\ \ 0\ \textbar{}1\textbar{}\ 1\ \ \#\ ...}
+\(\delta:\)(\(q_1'\), 1) \(\to\) (\(q_1'\), 1, R)\\
+\texttt{:\ \ ␣\ \ 0\ \ 1\ \textbar{}1\textbar{}\ \#\ ...}
+\(\delta:\)(\(q_1'\), 1) \(\to\) (\(q_1'\), 1, R)\\
+\texttt{:\ \ ␣\ \ 0\ \ 1\ \ 1\ \textbar{}\#\textbar{}...}
+\(\delta:\)(\(q_1'\), \#) \(\to\) (\(q_2'\), \#, R)\\
+\texttt{:\ \ ␣\ \ 0\ \ 1\ \ 1\ \ \#\ \textbar{}␣\textbar{}...}
+\(\delta:\)(\(q_2'\), \(\sqcup\)) \(\to\) (\(q_3\), 1, L)\\
+\texttt{:\ \ ␣\ \ 0\ \ 1\ \ 1\ \textbar{}\#\textbar{}\ 1\ ...}
+\(\delta:\)(\(q_3\), \#) \(\to\) (\(q_4\), \#, L)\\
+\texttt{:\ \ ␣\ \ 0\ \ 1\ \textbar{}1\textbar{}\ \#\ \ 1\ ...}
+\(\delta:\)(\(q_4\), 1) \(\to\) (\(q_4\), 1, L)\\
+\texttt{:\ \ ␣\ \ 0\ \textbar{}1\textbar{}\ 1\ \ \#\ \ 1\ ...}
+\(\delta:\)(\(q_4\), 1) \(\to\) (\(q_4\), 1, L)\\
+\texttt{:\ \ ␣\ \textbar{}0\textbar{}\ 1\ \ 1\ \ \#\ \ 1\ ...}
+\(\delta:\)(\(q_4\), 0) \(\to\) (\(q_4\), 0, L)\\
+\texttt{:\ \textbar{}␣\textbar{}\ 0\ \ 1\ \ 1\ \ \#\ \ 1\ ...}
+\(\delta:\)(\(q_4\), \(\sqcup\)) \(\to\) (\(q_0\), \(\sqcup\), R)\\
+\texttt{:\ \ ␣\ \textbar{}0\textbar{}\ 1\ \ 1\ \ \#\ \ 1\ ...}
+\(\delta:\)(\(q_0\), 0) \(\to\) (\(q_1\), \(\sqcup\), R)\\
+\texttt{:\ \ ␣\ \ ␣\ \textbar{}1\textbar{}\ 1\ \ \#\ \ 1\ ...}
+\(\delta:\)(\(q_1\), 1) \(\to\) (\(q_1\), 1, R)\\
+\texttt{:\ \ ␣\ \ ␣\ \ 1\ \textbar{}1\textbar{}\ \#\ \ 1\ ...}
+\(\delta:\)(\(q_1\), 1) \(\to\) (\(q_1\), 1, R)\\
+\texttt{:\ \ ␣\ \ ␣\ \ 1\ \ 1\ \textbar{}\#\textbar{}\ 1\ ...}
+\(\delta:\)(\(q_1\), \#) \(\to\) (\(q_2\), \#, R)\\
+\texttt{:\ \ ␣\ \ ␣\ \ 1\ \ 1\ \ \#\ \textbar{}1\textbar{}...}
+\(\delta:\)(\(q_2\), 1) \(\to\) (\(q_2\), 1, R)\\
+\texttt{:\ \ ␣\ \ ␣\ \ 1\ \ 1\ \ \#\ \ 1\ \textbar{}␣\textbar{}...}
+\(\delta:\)(\(q_2\), \(\sqcup\)) \(\to\) (\(q_3\), 0, L)\\
+\texttt{:\ \ ␣\ \ ␣\ \ 1\ \ 1\ \ \#\ \textbar{}1\textbar{}\ 0\ ...}
+\(\delta:\)(\(q_3\), 1) \(\to\) (\(q_3\), 1, L)\\
+\texttt{:\ \ ␣\ \ ␣\ \ 1\ \ 1\ \textbar{}\#\textbar{}\ 1\ \ 0\ ...}
+\(\delta:\)(\(q_3\), \#) \(\to\) (\(q_4\), \#, L)\\
+\texttt{:\ \ ␣\ \ ␣\ \ 1\ \textbar{}1\textbar{}\ \#\ \ 1\ \ 0\ ...}
+\(\delta:\)(\(q_4\), 1) \(\to\) (\(q_4\), 1, L)\\
+\texttt{:\ \ ␣\ \ ␣\ \textbar{}1\textbar{}\ 1\ \ \#\ \ 1\ \ 0\ ...}
+\(\delta:\)(\(q_4\), 1) \(\to\) (\(q_4\), 1, L)\\
+\texttt{:\ \ ␣\ \textbar{}␣\textbar{}\ 1\ \ 1\ \ \#\ \ 1\ \ 0\ ...}
+\(\delta:\)(\(q_4\), \(\sqcup\)) \(\to\) (\(q_0\), \(\sqcup\), R)\\
+\texttt{:\ \ ␣\ \ ␣\ \textbar{}1\textbar{}\ 1\ \ \#\ \ 1\ \ 0\ ...}
+\(\delta:\)(\(q_0\), 1) \(\to\) (\(q_1'\), \(\sqcup\), R)\\
+\texttt{:\ \ ␣\ \ ␣\ \ ␣\ \textbar{}1\textbar{}\ \#\ \ 1\ \ 0\ ...}
+\(\delta:\)(\(q_1'\), 1) \(\to\) (\(q_1'\), 1, R)\\
+\texttt{:\ \ ␣\ \ ␣\ \ ␣\ \ 1\ \textbar{}\#\textbar{}\ 1\ \ 0\ ...}
+\(\delta:\)(\(q_1'\), \#) \(\to\) (\(q_2'\), \#, R)\\
+\texttt{:\ \ ␣\ \ ␣\ \ ␣\ \ 1\ \ \#\ \textbar{}1\textbar{}\ 0\ ...}
+\(\delta:\)(\(q_2'\), 1) \(\to\) (\(q_2'\), 1, R)\\
+\texttt{:\ \ ␣\ \ ␣\ \ ␣\ \ 1\ \ \#\ \ 1\ \textbar{}0\textbar{}...}
+\(\delta:\)(\(q_2'\), 0) \(\to\) (\(q_2'\), 0, R)\\
+\texttt{:\ \ ␣\ \ ␣\ \ ␣\ \ 1\ \ \#\ \ 1\ \ 0\ \textbar{}␣\textbar{}...}
+\(\delta:\)(\(q_2'\), \(\sqcup\)) \(\to\) (\(q_3\), 1, L)\\
+\texttt{:\ \ ␣\ \ ␣\ \ ␣\ \ 1\ \ \#\ \ 1\ \textbar{}0\textbar{}\ 1\ ...}
+\(\delta:\)(\(q_3\), 0) \(\to\) (\(q_3\), 0, L)\\
+\texttt{:\ \ ␣\ \ ␣\ \ ␣\ \ 1\ \ \#\ \textbar{}1\textbar{}\ 0\ \ 1\ ...}
+\(\delta:\)(\(q_3\), 1) \(\to\) (\(q_3\), 1, L)\\
+\texttt{:\ \ ␣\ \ ␣\ \ ␣\ \ 1\ \textbar{}\#\textbar{}\ 1\ \ 0\ \ 1\ ...}
+\(\delta:\)(\(q_3\), \#) \(\to\) (\(q_4\), \#, L)\\
+\texttt{:\ \ ␣\ \ ␣\ \ ␣\ \textbar{}1\textbar{}\ \#\ \ 1\ \ 0\ \ 1\ ...}
+\(\delta:\)(\(q_4\), 1) \(\to\) (\(q_4\), 1, L)\\
+\texttt{:\ \ ␣\ \ ␣\ \textbar{}␣\textbar{}\ 1\ \ \#\ \ 1\ \ 0\ \ 1\ ...}
+\(\delta:\)(\(q_4\), \(\sqcup\)) \(\to\) (\(q_0\), \(\sqcup\), R)\\
+\texttt{:\ \ ␣\ \ ␣\ \ ␣\ \textbar{}1\textbar{}\ \#\ \ 1\ \ 0\ \ 1\ ...}
+\(\delta:\)(\(q_0\), 1) \(\to\) (\(q_1'\), \(\sqcup\), R)\\
+\texttt{:\ \ ␣\ \ ␣\ \ ␣\ \ ␣\ \textbar{}\#\textbar{}\ 1\ \ 0\ \ 1\ ...}
+\(\delta:\)(\(q_1'\), \#) \(\to\) (\(q_2'\), \#, R)\\
+\texttt{:\ \ ␣\ \ ␣\ \ ␣\ \ ␣\ \ \#\ \textbar{}1\textbar{}\ 0\ \ 1\ ...}
+\(\delta:\)(\(q_2'\), 1) \(\to\) (\(q_2'\), 1, R)\\
+\texttt{:\ \ ␣\ \ ␣\ \ ␣\ \ ␣\ \ \#\ \ 1\ \textbar{}0\textbar{}\ 1\ ...}
+\(\delta:\)(\(q_2'\), 0) \(\to\) (\(q_2'\), 0, R)\\
+\texttt{:\ \ ␣\ \ ␣\ \ ␣\ \ ␣\ \ \#\ \ 1\ \ 0\ \textbar{}1\textbar{}...}
+\(\delta:\)(\(q_2'\), 1) \(\to\) (\(q_2'\), 1, R)\\
+\texttt{:\ \ ␣\ \ ␣\ \ ␣\ \ ␣\ \ \#\ \ 1\ \ 0\ \ 1\ \textbar{}␣\textbar{}...}
+\(\delta:\)(\(q_2'\), \(\sqcup\)) \(\to\) (\(q_3\), 1, L)\\
+\texttt{:\ \ ␣\ \ ␣\ \ ␣\ \ ␣\ \ \#\ \ 1\ \ 0\ \textbar{}1\textbar{}\ 1\ ...}
+\(\delta:\)(\(q_3\), 1) \(\to\) (\(q_3\), 1, L)\\
+\texttt{:\ \ ␣\ \ ␣\ \ ␣\ \ ␣\ \ \#\ \ 1\ \textbar{}0\textbar{}\ 1\ \ 1\ ...}
+\(\delta:\)(\(q_3\), 0) \(\to\) (\(q_3\), 0, L)\\
+\texttt{:\ \ ␣\ \ ␣\ \ ␣\ \ ␣\ \ \#\ \textbar{}1\textbar{}\ 0\ \ 1\ \ 1\ ...}
+\(\delta:\)(\(q_3\), 1) \(\to\) (\(q_3\), 1, L)\\
+\texttt{:\ \ ␣\ \ ␣\ \ ␣\ \ ␣\ \textbar{}\#\textbar{}\ 1\ \ 0\ \ 1\ \ 1\ ...}
+\(\delta:\)(\(q_3\), \#) \(\to\) (\(q_4\), \#, L)\\
+\texttt{:\ \ ␣\ \ ␣\ \ ␣\ \textbar{}␣\textbar{}\ \#\ \ 1\ \ 0\ \ 1\ \ 1\ ...}
+\(\delta:\)(\(q_4\), \(\sqcup\)) \(\to\) (\(q_0\), \(\sqcup\), R)\\
+\texttt{:\ \ ␣\ \ ␣\ \ ␣\ \ ␣\ \textbar{}\#\textbar{}\ 1\ \ 0\ \ 1\ \ 1\ ...}
+\(\delta:\)(\(q_0\), \#) \(\to\) (Accept, \#, R)\\
+\texttt{:\ \ ␣\ \ ␣\ \ ␣\ \ ␣\ \ \#\ \textbar{}1\textbar{}\ 0\ \ 1\ \ 1\ ...}
+Accept
