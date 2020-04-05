@@ -1,18 +1,3 @@
----
-title: "Turing machine example: Shifting"
-date: 3 April, 2020
----
-
-Although the tape serves as an unlimited memory for the computation, it is often used to focus on one part of the tape and then move to another part to use it (either to compare, as in equality, or to print it). While moving to the other part of the tape, one needs to remember what was seen  and that information can only be " by the states themselves
-". We will now see what that means. This time, let us separate whatever we need to remember from the steps and use more organized notation to help us keep track of all of this.
-
-
-We will now look at states in a more organized way by thinking of them as a combination of the steps and a finite memory.  This is only to assist in designing the Turing machine, i.e. coming up with the transition table.  We can use it for all the previous examples too and the final transition table will be just as before, bearing no evidence of how we figured it out.
-
-**Example:** Shift a string to a position marked after the symbol `#`.
-
-Let us summarize the algorithm. We can shift a string by repeating this sequence of steps: "remember" the character under the head, sweep right until we find the `#` symbol, then find the first blank character, and print the remembered character there, and then sweep back, first searching for the `#` and then for the blank character and then move right.
-
 ### The steps
 
 The distinct steps are as follows:
@@ -68,7 +53,7 @@ $$\delta(q_0, x) = \begin{cases}
 \end{cases}
 $$ 
 
-**Step 1** is described by,
+### Step 1
 
 $$\delta((\text{Step 1}, n), x) = \begin{cases}
 ((\text{Step 2}, n) ,x, \mathrm{R}) & \text{if } x \text{=} \#\\
@@ -94,7 +79,7 @@ $$\delta(q_1', x) = \begin{cases}
 \end{cases}
 $$ 
 
-**Step 2** is described by,
+### Step 2
 
 $$\delta((\text{Step 2},n), x) = \begin{cases}
 ((\text{Step 3},\text{Nothing}),n, \mathrm{R}) & \text{if } x \text{=} \sqcup\\
@@ -123,7 +108,7 @@ $$\delta(q_2', x) = \begin{cases}
 $$ 
 
 
-**Step 3** is described by
+### Step 3
 
 $$\delta((\text{Step 3},\text{Nothing}), x) = \begin{cases}
 ((\text{Step 4},\text{Nothing}),x, \mathrm{L}) & \text{if } x \text{=} \#\\
@@ -142,7 +127,7 @@ $$\delta(q_3, x) = \begin{cases}
 $$
 
 
-**Step 4** is described by 
+### Step 4
 
 
 $$\delta((\text{Step 4},\text{Nothing}), x) = \begin{cases}
@@ -175,7 +160,3 @@ label: shift
 | $q_2'$ | $q_2'$,0,R  | $q_2'$,1,R  | $q_3$,1,L   | $q_2'$,#,R  |
 | $q_3$  | $q_3$,0,L   | $q_3$,1,L   | $q_3$, ,L   | $q_4$,#,L   |
 | $q_4$  | $q_4$,0,L   | $q_4$,1,L   | $q_0$, ,R   | $q_4$,#,L   |
-
-### An example input
-
-<<shift>>: 1011#

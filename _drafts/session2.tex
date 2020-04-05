@@ -1,0 +1,287 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  ignorenonframetext,
+]{beamer}
+\usepackage{pgfpages}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{caption label separator}{: }
+\setbeamercolor{caption name}{fg=normal text.fg}
+\beamertemplatenavigationsymbolsempty
+% Prevent slide breaks in the middle of a paragraph
+\widowpenalties 1 10000
+\raggedbottom
+\setbeamertemplate{part page}{
+  \centering
+  \begin{beamercolorbox}[sep=16pt,center]{part title}
+    \usebeamerfont{part title}\insertpart\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{section page}{
+  \centering
+  \begin{beamercolorbox}[sep=12pt,center]{part title}
+    \usebeamerfont{section title}\insertsection\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{subsection page}{
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center]{part title}
+    \usebeamerfont{subsection title}\insertsubsection\par
+  \end{beamercolorbox}
+}
+\AtBeginPart{
+  \frame{\partpage}
+}
+\AtBeginSection{
+  \ifbibliography
+  \else
+    \frame{\sectionpage}
+  \fi
+}
+\AtBeginSubsection{
+  \frame{\subsectionpage}
+}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\newif\ifbibliography
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+
+\date{}
+
+\begin{document}
+
+\begin{frame}[fragile]
+\protect\hypertarget{the-steps}{}
+
+\begin{enumerate}
+\item[Step 0:] If the character under the head is 0 or 1, erase it and
+store it in the memory; otherwise, accept and halt.\\\pause
+\item[Step 1:] Search for the \texttt{\#} toward the right\\\pause
+\item[Step 2:] Now search for the first blank character and print the
+character stored in memory\\\pause
+\item[Step 3:] Search for the \texttt{\#} toward the left\\\pause
+\item[Step 4:] Now search for the first blank character, shift to the
+right and go to Step 0.\pause
+\end{enumerate}
+
+\[S := \{\text{Step 0, Step 1, Step 2, Step 3, Step 4}\}\].
+
+\end{frame}
+
+\begin{frame}{The ``memory''}
+\protect\hypertarget{the-memory}{}
+
+\begin{itemize}
+\item Not the tape!\pause
+\item Fixed size\pause
+\item component of the state\pause
+\end{itemize}
+
+\[M :=\{ 0, 1, \text{Nothing} \}\].
+
+\end{frame}
+
+\begin{frame}
+\protect\hypertarget{the-states}{}
+
+
+States,
+$Q \subset S \times M$
+
+explicit blank symbol: \(\sqcup\) 
+\end{frame}
+
+
+\begin{frame}
+
+
+\textbf{Step 0:} \emph{``\alert<1>{If} \alert<2>{the character under focus is a 0 or 1}, \alert<3>{store it in the memory}, \alert<4>{shift right}, \alert<5>{erase the character}, and \alert<6>{go to step 1}; \alert<1>{otherwise}, \alert<7>{accept}''}
+  
+\[\delta(\alert<8>{(\alert<6>{\uncover<6->{\text{Step 0}}},\alert<3>{\uncover<3->{\text{Nothing}}})},\alert<2,5>{\uncover<2->{x}}) = \begin{cases}
+(\alert<9,10>{(\alert<6>{\uncover<6->{\text{Step 1}}}, \alert<3>{\uncover<3->{x}})},\alert<5>{\uncover<5->{\sqcup}} ,\alert<4>{\uncover<4->{\mathrm{R}}}) & \alert<1>{\uncover<1->{\text{if }}} \alert<2>{\uncover<2->{x \text{= \alert<9>{0},\alert<10>{1}}}}\\
+(\alert<7>{\uncover<7->{Accept}},\alert<7>{\uncover<7->{x}}, \alert<7>{\uncover<7->{\mathrm{R}}}) & \alert<1>{\uncover<1->{\text{otherwise}}}\\
+\end{cases}\]
+
+
+
+$\uncover<8->{\alert<8>{q_0:=(\text{Step 0}, \text{Nothing})}}$\\
+$\uncover<9->{\alert<9>{q_1:=(\text{Step 1}, 0)}}$\\
+$\uncover<10->{\alert<10>{q_1':=(\text{Step 1},1)}}$
+
+
+\uncover<8->{\[\delta(\alert<8>{\uncover<8->{q_0}}, x) = \begin{cases}
+(\alert<9>{\uncover<9->{q_1}},\sqcup , \mathrm{R}) & \text{if } x \text{= \alert<9>{\uncover<9->{0}}}\\
+(\alert<10>{\uncover<10->{q_1'}},\sqcup , \mathrm{R}) & \text{if } x \text{= \alert<10>{\uncover<10->{1}}}\\
+(Accept,x, \mathrm{R}) & \text{otherwise}\\
+\end{cases}
+\]}
+
+\end{frame}
+
+\begin{frame}[fragile]{Step 1}
+\protect\hypertarget{step-1}{}
+
+\[\delta((\text{Step 1}, n), x) = \begin{cases}
+((\text{Step 2}, n) ,x, \mathrm{R}) & \text{if } x \text{=} \#\\
+((\text{Step 1}, n),x, \mathrm{R}) & \text{otherwise}
+\end{cases}
+\]
+
+\emph{``if the character under focus is a \texttt{\#}, then move right and go to Step 2; otherwise, repeat this step.''}
+
+Here, \(n=0\) or 1, so if we denote \[q_2=(\text{Step 2},0)\]
+\[q_2'=(\text{Step 2},1)\] then we can rewrite the above as
+
+\[\delta(q_1, x) = \begin{cases}
+(q_2 ,x, \mathrm{R}) & \text{if } x \text{=} \#\\
+(q_1,x, \mathrm{R}) & \text{otherwise}\\
+\end{cases}
+\]
+
+and
+
+\[\delta(q_1', x) = \begin{cases}
+(q_2' ,x, \mathrm{R}) & \text{if } x \text{=} \#\\
+(q_1',x, \mathrm{R}) & \text{otherwise}\\
+\end{cases}
+\]
+
+\end{frame}
+
+\begin{frame}{Step 2}
+\protect\hypertarget{step-2}{}
+
+\[\delta((\text{Step 2},n), x) = \begin{cases}
+((\text{Step 3},\text{Nothing}),n, \mathrm{R}) & \text{if } x \text{=} \sqcup\\
+((\text{Step 2},n),x, \mathrm{R}) & \text{otherwise}\\
+\end{cases}
+\]
+
+\emph{``If the character under focus is blank, erase the memory, move
+right, and go to Step 3; otherwise, move right.''}
+
+Denoting \[q_3:=(\text{Step 3},\text{Nothing})\] we get
+
+\[\delta(q_2, x) = \begin{cases}
+(q_3,0, \mathrm{R}) & \text{if } x \text{=} \sqcup\\
+(q_2,x, \mathrm{R}) & \text{otherwise}\\
+\end{cases}
+\]
+
+and
+
+\[\delta(q_2', x) = \begin{cases}
+(q_3,1, \mathrm{R}) & \text{if } x \text{=} \sqcup \\
+(q_2',x, \mathrm{R}) & \text{otherwise}\\
+\end{cases}
+\]
+
+\end{frame}
+
+\begin{frame}[fragile]{Step 3}
+\protect\hypertarget{step-3}{}
+
+\[\delta((\text{Step 3},\text{Nothing}), x) = \begin{cases}
+((\text{Step 4},\text{Nothing}),x, \mathrm{L}) & \text{if } x \text{=} \#\\
+((\text{Step 3},\text{Nothing}),x, \mathrm{L}) & \text{otherwise}\\
+\end{cases}
+\]
+
+\emph{``If the character under focus is \texttt{\#}, then move left and
+go to Step 4; otherwise, move left and repeat this step.''}
+
+Denote, \[q_3=(\text{Step 3},\text{Nothing})\]
+\[q_4=(\text{Step 4},\text{Nothing})\] to get
+
+\[\delta(q_3, x) = \begin{cases}
+(q_4 ,x, \mathrm{L}) & \text{if } x \text{=} \#\\
+(q_3,x, \mathrm{L}) & \text{otherwise}\\
+\end{cases}
+\]
+
+\end{frame}
+
+\begin{frame}{Step 4}
+\protect\hypertarget{step-4}{}
+
+\[\delta((\text{Step 4},\text{Nothing}), x) = \begin{cases}
+((\text{Step 0}, \text{Nothing}),x, \mathrm{R}) & \text{if } x \text{=} \sqcup \\
+((\text{Step 4},\text{Nothing}),x, \mathrm{L}) & \text{otherwise}\\
+\end{cases}
+\]
+
+which, using the \(q_i\)'s already defined, is
+
+\[\delta(q_4, x) = \begin{cases}
+(q_0 ,x, \mathrm{R}) & \text{if } x \text{=} \sqcup \\
+(q_4,x, \mathrm{L}) & \text{otherwise}\\
+\end{cases}
+\]
+
+\end{frame}
+
+\begin{frame}{The transition table}
+\protect\hypertarget{the-transition-table}{}
+
+Now it is very straightforward to translate all the partial definitions
+of \(\delta\) above that use \(q_i\)'s rather than the explicit tuples,
+into a transition table.
+
+label: shift \textbar{} shift \textbar{} 0 \textbar{} 1 \textbar{}
+\textbar{} \# \textbar{}
+\textbar--------\textbar-------------\textbar-------------\textbar-------------\textbar-------------\textbar{}
+\textbar{} \(q_0\) \textbar{} \(q_1\), , R \textbar{} \(q_1'\), , R
+\textbar{} acc, ,R \textbar{} acc,\#,R \textbar{} \textbar{} \(q_1\)
+\textbar{} \(q_1\),0, R \textbar{} \(q_1\),1, R \textbar{} \(q_1\), , R
+\textbar{} \(q_2\),\#, R \textbar{} \textbar{} \(q_1'\) \textbar{}
+\(q_1'\),0, R \textbar{} \(q_1'\),1, R \textbar{} \(q_1'\), , R
+\textbar{} \(q_2'\),\#, R \textbar{} \textbar{} \(q_2\) \textbar{}
+\(q_2\),0,R \textbar{} \(q_2\),1,R \textbar{} \(q_3\),0,L \textbar{}
+\(q_2\),\#,R \textbar{} \textbar{} \(q_2'\) \textbar{} \(q_2'\),0,R
+\textbar{} \(q_2'\),1,R \textbar{} \(q_3\),1,L \textbar{} \(q_2'\),\#,R
+\textbar{} \textbar{} \(q_3\) \textbar{} \(q_3\),0,L \textbar{}
+\(q_3\),1,L \textbar{} \(q_3\), ,L \textbar{} \(q_4\),\#,L \textbar{}
+\textbar{} \(q_4\) \textbar{} \(q_4\),0,L \textbar{} \(q_4\),1,L
+\textbar{} \(q_0\), ,R \textbar{} \(q_4\),\#,L \textbar{}
+
+\end{frame}
+
+\end{document}
