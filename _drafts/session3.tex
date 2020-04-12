@@ -1,0 +1,153 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  ignorenonframetext,
+]{beamer}
+\usepackage{pgfpages}
+\usepackage{longtable,booktabs}
+\usepackage{array}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{caption label separator}{: }
+\setbeamercolor{caption name}{fg=normal text.fg}
+\beamertemplatenavigationsymbolsempty
+% Prevent slide breaks in the middle of a paragraph
+\widowpenalties 1 10000
+\raggedbottom
+\setbeamertemplate{part page}{
+  \centering
+  \begin{beamercolorbox}[sep=16pt,center]{part title}
+    \usebeamerfont{part title}\insertpart\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{section page}{
+  \centering
+  \begin{beamercolorbox}[sep=12pt,center]{part title}
+    \usebeamerfont{section title}\insertsection\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{subsection page}{
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center]{part title}
+    \usebeamerfont{subsection title}\insertsubsection\par
+  \end{beamercolorbox}
+}
+\AtBeginPart{
+  \frame{\partpage}
+}
+\AtBeginSection{
+  \ifbibliography
+  \else
+    \frame{\sectionpage}
+  \fi
+}
+\AtBeginSubsection{
+  \frame{\subsectionpage}
+}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\newif\ifbibliography
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+
+\date{}
+
+\newcommand{\say}[2]{\only<#1>{
+    \begin{center}
+    {\footnotesize \color{gray}\it #2}
+  \end{center}}
+}
+
+\newcommand{\yields}{\text{ yields }}
+
+\begin{document}
+
+\begin{frame}
+Configuration example:\\~\\
+\only<1>{\[C_0:=q_001101\]}
+\only<2>{\[C_1:=0q_01101\]}
+\only<3>{\[C_2:=01q_1101\]}
+\only<4>{\[C_3:=011q_001\]}
+\only<5>{\[C_4:=0110q_01\]}
+\only<6>{\[C_5:=01101q_1\text{\textvisiblespace}\]}
+\only<7>{\[C_6:=01101q_{reject}\]}
+\only<1>{Start configuration}
+\only<2-6>{Intermediate configuration}
+\only<7>{Halting configuration}
+\end{frame}
+
+\begin{frame}
+\[xq_icy \uncover<2->{\text{ yields } xc'q_iy}\] \uncover<2->{\[\text{if } \delta(q_i,c)= (q_j,c',R)\]}
+\end{frame}
+
+
+\begin{frame}
+\[xcq_iy \uncover<2->{\text{ yields } xq_ic'y}\] \uncover<2->{\[\text{if } \delta(q_i,c)= (q_j,c',L)\]}
+\end{frame}
+
+\begin{frame}
+\[C_0 \yields C_1 \yields C_2 \yields \ldots \yields C_k \text{ (halting configuration)}\]
+\end{frame}
+\begin{frame}
+
+  \begin{description}
+\item[Turing-Decidable] 
+  \end{description}
+
+\end{frame}
+
+\begin{frame}
+
+  \[\{\langle T, s \rangle \ |\ \text{T is a Turing machine which accepts } s \}\]
+  
+\end{frame}
+
+\begin{frame}
+  \only<1>{A certain barber shaves all those that do not shave themselves and does not shave anyone who does shave himself.\\~\\Should he shave himself?}
+  \only<2>{A certain Turing machine, $T$, accepts all those Turing machines that do \textbf{not} accept themselves and rejects those that do accept themselves.\\~\\ Should it accept itself?}
+\end{frame}
+
+\begin{frame}
+  If
+  \[\{\langle T, s \rangle \ |\ \text{T is a Turing machine which accepts } s \}\]
+   were decidable by $M$, then make $T$ by accepting when $M$ rejects and rejecting when $M$ accepts.
+  
+\end{frame}
+
+\end{document}

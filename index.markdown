@@ -12,7 +12,7 @@ Exercises are not to be submitted. They are for your own practice, especially to
 
 <span style="color:red">**IMPORTANT**</span> There will be zoom sessions during our usual lecture hours every week.
 
-[Updated: Zoom link for Wednesday, 1st April](https://us04web.zoom.us/j/951802369?pwd=cUxhdzZ5L1FqTDZVTC8yMi95SXJpQT09) This is the link after the interruption.
+[Second updated Zoom link for Wednesday, 8th April](https://us04web.zoom.us/j/336730920?pwd=YmlybUxnSUhPQU92aDRwOE11TVdkdz09)
 
 A link will be posted here a few minutes before the session begins.
 

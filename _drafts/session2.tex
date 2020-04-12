@@ -6,7 +6,8 @@
   ignorenonframetext,
 ]{beamer}
 \usepackage{pgfpages}
-\usepackage{longtable}
+\usepackage{longtable,booktabs}
+\usepackage{array}
 \setbeamertemplate{caption}[numbered]
 \setbeamertemplate{caption label separator}{: }
 \setbeamercolor{caption name}{fg=normal text.fg}
@@ -87,10 +88,30 @@
 
 \date{}
 
+\newcommand{\say}[2]{\only<#1>{
+    \begin{center}
+    {\footnotesize \color{gray}\it #2}
+  \end{center}}
+}
+
 \begin{document}
+
+
+
 
 \begin{frame}[fragile]
 \protect\hypertarget{the-steps}{}
+
+\say{1}{Do not worry too much about the algorithm.}
+\say{2}{We will soon see what we mean by ``memory''}
+\say{3}{This step is really redundant}
+\say{4}{Anything before has already been done}
+\say{5}{Find the beginning}
+\say{6}{Restart everything}
+\say{7}{Let us collect all the states in a set}
+
+  \textbf{Example:} Shift the the string to the right of {\tt \#}.\\~\\\pause 
+  
 
 \begin{enumerate}
 \item[Step 0:] If the character under the head is 0 or 1, erase it and
@@ -338,4 +359,291 @@ $q_4=(\text{Step 4},\text{Nothing})$\pause
 
 \end{frame}
 
+\begin{frame}
+
+\begin{tabular}{m{5cm}m{0.4cm}m{5cm}}
+  \uncover<1->{\textit{Step i: \dots until the character \dots}} & \uncover<2->{$\longrightarrow$ & \textit{if the character under the head is \dots, go to Step (i+1) ; otherwise, \ldots and go to Step i}}
+\end{tabular}
+\end{frame}
+
+\begin{frame}{Subroutine}
+
+Example,\\~\\
+Step i: If string \ldots is equal to \ldots then \ldots else \ldots\\~\\\pause
+
+Step i $\to$ start state of ``equality checking'' Turing machine\\~\\\pause
+
+Accept state of ``equality checking'' Turing machine $\to$ ``then'' state\\~\\\pause
+
+Reject state of ``equality checking'' Turing machine $\to$ ``else'' state
+
+
+\end{frame}
+
+
+\begin{frame}{Multitape Turing machine}
+\protect\hypertarget{multitape-turing-machine}{}
+
+\((Q, \Sigma, \Gamma, \delta, q_{accept}, q_{reject})\)
+
+\(\delta : Q \times \Gamma^k \to Q \times \Gamma^k \times \{L, R, S\}^k\)
+
+\end{frame}
+
+\begin{frame}[fragile]{Multitape Turing machine}
+\protect\hypertarget{multitape-turing-machine-1}{}
+
+\begin{block}{Simulating a tape's head}
+
+~
+
+Actual head:
+
+\begin{verbatim}
+  0  |0|  1   1   1
+\end{verbatim}
+
+Simulated head, replaces \texttt{0} with \texttt{o}:
+
+\begin{verbatim}
+  0   A   1   1   1
+\end{verbatim}
+
+\end{block}
+
+\end{frame}
+
+\begin{frame}[fragile]{Multitape Turing machine}
+\protect\hypertarget{multitape-turing-machine-2}{}
+
+\begin{block}{Simulating a tape's head}
+
+~
+
+Actual head:
+
+\begin{verbatim}
+  0   0  |1|  1   1
+\end{verbatim}
+
+Simulated head, replaces \texttt{1} with \texttt{I}:
+
+\begin{verbatim}
+  0   0   B   1   1
+\end{verbatim}
+
+\end{block}
+
+\end{frame}
+
+\begin{frame}[fragile]{Multitape Turing machine}
+\protect\hypertarget{multitape-turing-machine-3}{}
+
+Need more characters in the simulated Turing machine:
+
+\(\Sigma':=\{\) \texttt{0,1,A,B,.} \(\}\)
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+Without head & With head\tabularnewline
+\midrule
+\endhead
+\texttt{0} & \texttt{A}\tabularnewline
+\texttt{1} & \texttt{B}\tabularnewline
+\emph{blankspace} & \texttt{.}\tabularnewline
+\bottomrule
+\end{longtable}
+
+\end{frame}
+
+\begin{frame}[fragile]{Multitape Turing machine}
+\protect\hypertarget{multitape-turing-machine-4}{}
+
+Two tapes:
+
+\begin{verbatim}
+  0  |0|  1   1   1
+\end{verbatim}
+
+\begin{verbatim}
+  1   0   0  |0|  0
+\end{verbatim}
+
+Simulated on one tape:
+
+\begin{verbatim}
+  0   A   1   1   1   #   1   0   0   A   0
+\end{verbatim}
+
+\end{frame}
+
+\begin{frame}[fragile]{Multitape Turing machine}
+\protect\hypertarget{multitape-turing-machine-5}{}
+
+Two tapes:
+
+\begin{verbatim}
+  0   0  |1|  1   1
+\end{verbatim}
+
+\begin{verbatim}
+  1   0  |0|  0   0
+\end{verbatim}
+
+Simulated on one tape:
+
+\begin{verbatim}
+  0   0   B   1   1   #   1   0   A   0   0
+\end{verbatim}
+
+\end{frame}
+
+\begin{frame}[fragile]{Multitape Turing machine}
+\protect\hypertarget{multitape-turing-machine-6}{}
+
+Two tapes:
+
+\begin{verbatim}
+  0   0   1  |1|  1
+\end{verbatim}
+
+\begin{verbatim}
+  1   0  |0|  0   0
+\end{verbatim}
+
+Simulated on one tape:
+
+\begin{verbatim}
+  0   0   1   B   1   #   1   0   A   0   0
+\end{verbatim}
+
+\end{frame}
+
+\begin{frame}[fragile]{Multitape Turing machine}
+\protect\hypertarget{multitape-turing-machine-7}{}
+
+Two tapes:
+
+\begin{verbatim}
+  0   0   1   1  |1|
+\end{verbatim}
+
+\begin{verbatim}
+  1   0  |0|  0   0
+\end{verbatim}
+
+Simulated on one tape:
+
+\begin{verbatim}
+  0   0   1   1   B   #   1   0   A   0   0
+\end{verbatim}
+
+\end{frame}
+
+\begin{frame}[fragile]{Multitape Turing machine}
+\protect\hypertarget{multitape-turing-machine-8}{}
+
+Two tapes:
+
+\begin{verbatim}
+  0   0   1   1   1  | |
+\end{verbatim}
+
+\begin{verbatim}
+  1   0  |0|  0   0
+\end{verbatim}
+
+Simulated on one tape:
+
+\begin{verbatim}
+  0   0   1   1   1   .   #   1   0   A   0   0
+\end{verbatim}
+
+\end{frame}
+
+\begin{frame}[fragile]{Multitape Turing machine}
+\protect\hypertarget{multitape-turing-machine-9}{}
+
+To simulate two tapes, the alphabet needed in the single tape
+simulation:
+
+\(\Sigma':=\{\) \texttt{0,1,A,B,.,\ \#} \(\}\)
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+Without head & With head\tabularnewline
+\midrule
+\endhead
+\texttt{0} & \texttt{A}\tabularnewline
+\texttt{1} & \texttt{B}\tabularnewline
+\emph{blankspace} & \texttt{.}\tabularnewline
+\bottomrule
+\end{longtable}
+
+\texttt{\#}: Tape separator
+
+\end{frame}
+
+\begin{frame}
+\begin{enumerate}
+\item[Step 1:] Add the input on the ``first simulated'' tape, and keep the other ones blank\pause
+\item[Step 2:] Determine the symbols under the virtual heads\pause
+\item[Step 3:] Update the tapes, shifting tapes if more space is needed\pause
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\begin{enumerate}
+\item[S:] Steps\pause
+\item[N:=] $\{0,1,\ldots,k\}$ to note the tape number in focus\pause
+\item[$\tilde{Q}$:=] $Q\cup \{\text{Nothing}\}$, to note the current simulated state\pause
+\item[$\Gamma^k$:] to note the characters under the $k$ simulated heads\pause
+\item[$Y$:=] $Q \times \Gamma^k \times \{L, R, S\}^k$, to note the output of $\delta$\pause
+\end{enumerate}
+
+$$Q'\subset S \times N \times \tilde{Q}\times \Gamma^k \times Y$$
+\end{frame}
+
+\begin{frame}
+$((\text{Step 0}, \alert{2}, q_i, (0,1, \text{Nothing}, \ldots), \text{Nothing}),\  \alert{{\tt \#}})$\\ $\to ((\text{Step 0}, \alert{3}, q_i, (0, 1, \text{Nothing}, \ldots), \text{Nothing}), \alert{{\tt \#}}, \text{R}))$\\~\\\pause
+
+$((\text{Step 0}, {\color{blue}3}, q_i, (0,1, \text{Nothing}, \ldots), \text{Nothing}),\  \alert{\text{A}})$\\ $\to ((\text{Step 0}, 3, q_i, (0, 1, \alert{0}, \ldots), \text{Nothing}), \alert{\text{A}}, \text{R}))$\\~\\\pause
+
+$((\text{Step 0}, {\color{blue}3}, q_i, (0,1, \text{Nothing}, \ldots), \text{Nothing}),\  \alert{\text{B}})$\\ $\to ((\text{Step 0}, 3, q_i, (0, 1, \alert{1}, \ldots), \text{Nothing}), \alert{\text{B}}, \text{R}))$
+
+\end{frame}
+
+
+
+\begin{frame}
+$((\text{Step 1}, k, q_i, (0,1, 0, \ldots), \text{Nothing}),\  x)$\\ $\to ((\text{Step 2}, k, q_i, (0, 1, 0, \ldots), \alert{\delta(q_i, (0,1,0,\ldots))}, x, \text{R}))$\\~\\\pause
+
+
+Step 3 is a subroutine.
+\end{frame}
+
+\begin{frame}
+$$(q_0, 0) \to (q_3, 1, \text{R})$$
+$$(q_0, 1) \to (q_3, 0, \text{R})$$
+$$(q_2, 0) \to (q_0, 1, \text{R})$$
+$$\cdots$$
+
+Input: 0101\\~\\\pause
+Representation on the tapes:\\~\\
+Tape 1: {\tt q 0 , 0 , q 3 , 1 , R | q 0 , 1 , q 3 , 0 , R}\\~\\
+Tape 2: {\tt q 2 }\\~\\
+Tape 3: {\tt A 1 0 1 }
+
+\end{frame}
+
+\begin{frame}
+$$\{(T, s)\ |\ T\text{ is a Turing machine}, s \in \Sigma^*\}$$
+
+$$\{(T, s)\ |\ T\text{ halts on } s\}$$
+\end{frame}
+
+\begin{frame}
+$$q_0010101011$$
+$$0101q_i01011$$
+\end{frame}
 \end{document}
