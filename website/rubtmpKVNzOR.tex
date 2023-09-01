@@ -1,0 +1,2581 @@
+\documentclass[twocolumn,20pt,fleqn]{extarticle}
+\usepackage{color}
+\usepackage{geometry}
+\usepackage[normalem]{ulem}
+\usepackage{cancel}
+\usepackage{dingbat}
+\usepackage{marginnote}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\usepackage{tcolorbox}
+\usepackage{multicol}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{wrapfig}
+\usepackage{caption}
+%\usepackage{draftwatermark}
+
+\usetikzlibrary{calc}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}
+\makeatletter
+\renewcommand{\@seccntformat}[1]{}
+\makeatother
+
+\geometry{paperwidth=34cm, paperheight=19cm, margin=0.5cm}
+
+\newcommand{\clr}[2]{{\color{#1} #2}}
+\newcommand{\alert}[1]{{\color{red} #1}}
+\newcommand{\ovrbrc}[2]{\overbrace{#2}^{#1}}
+\newcommand{\undrbrc}[2]{\underbrace{#2}_{#1}}
+\newcommand{\lnspc}{\vspace{1cm}}
+\newcommand{\sep}{\vspace{0.5cm}}
+\newcommand{\e}{\textrm{e}}
+%\newcommand{\dydx}[2]{\frac{\mathrm{d}}}
+
+\theoremstyle{plain}
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{proposition}{Proposition}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{corollary}{Corollary}
+
+\theoremstyle{definition}
+\newtheorem*{exercise}{Exercise}
+\newtheorem*{definition}{Definition}
+\newtheorem*{example}{Example}
+\newtheorem*{exmpls}{Examples}
+
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\newtheorem*{note}{Note}
+
+\newenvironment*{examples}{\begin{exmpls} ~ \begin{enumerate}}{\end{enumerate}\end{exmpls}}
+
+\begin{document}
+
+
+
+\clearpage
+
+
+
+
+\begin{definition}
+  A  ``parametrized plane curve'' \end{definition}
+
+
+\clearpage
+
+
+
+
+\begin{definition}
+  A  ``parametrized plane curve''  is a  function,\\ $\gamma $\end{definition}
+
+
+\clearpage
+
+
+
+
+\begin{definition}
+  A  ``parametrized plane curve''  is a  function,\\ $\gamma  : (\alpha, \beta) $\end{definition}
+
+
+\clearpage
+
+
+
+
+\begin{definition}
+  A  ``parametrized plane curve''  is a  function,\\ $\gamma  : (\alpha, \beta) \to \mathbb{R}^2$.
+\end{definition}
+
+
+
+
+\clearpage
+
+
+
+
+\begin{definition}
+  A  ``parametrized plane curve''  is a  function,\\ $\gamma  : (\alpha, \beta) \to \mathbb{R}^2$.
+\end{definition}
+
+Explicitly,\\
+$\gamma(t) = (f_1(t), f_2(t))$, for planes
+
+
+\clearpage
+
+
+
+
+\begin{definition}
+  A  ``parametrized plane curve''  is a  function,\\ $\gamma  : (\alpha, \beta) \to \mathbb{R}^2$.
+\end{definition}
+
+Explicitly,\\
+$\gamma(t) = (f_1(t), f_2(t))$, for planes\\
+
+Set of points on the curve:\\ 
+
+
+\clearpage
+
+
+
+
+\begin{definition}
+  A  ``parametrized plane curve''  is a  function,\\ $\gamma  : (\alpha, \beta) \to \mathbb{R}^2$.
+\end{definition}
+
+Explicitly,\\
+$\gamma(t) = (f_1(t), f_2(t))$, for planes\\
+
+Set of points on the curve:\\  $\textrm{ Image } \gamma $
+
+
+\clearpage
+
+
+
+
+\begin{definition}
+  A  ``parametrized plane curve''  is a  function,\\ $\gamma  : (\alpha, \beta) \to \mathbb{R}^2$.
+\end{definition}
+
+Explicitly,\\
+$\gamma(t) = (f_1(t), f_2(t))$, for planes\\
+
+Set of points on the curve:\\  $\textrm{ Image } \gamma = \{(x,y) \in \mathbb{R}^2\}$
+
+
+\clearpage
+
+
+
+
+\begin{definition}
+  A  ``parametrized plane curve''  is a  function,\\ $\gamma  : (\alpha, \beta) \to \mathbb{R}^2$.
+\end{definition}
+
+Explicitly,\\
+$\gamma(t) = (f_1(t), f_2(t))$, for planes\\
+
+Set of points on the curve:\\  $\textrm{ Image } \gamma = \{(x,y) \in \mathbb{R}^2 \ |\ (x,y) = \gamma(t),\}$
+
+
+\clearpage
+
+
+
+
+\begin{definition}
+  A  ``parametrized plane curve''  is a  function,\\ $\gamma  : (\alpha, \beta) \to \mathbb{R}^2$.
+\end{definition}
+
+Explicitly,\\
+$\gamma(t) = (f_1(t), f_2(t))$, for planes\\
+
+Set of points on the curve:\\  $\textrm{ Image } \gamma = \{(x,y) \in \mathbb{R}^2 \ |\ (x,y) = \gamma(t), t \in \mathbb{R}\}$
+
+
+
+
+
+
+
+\clearpage
+
+
+
+
+\begin{definition}
+  A  ``parametrized plane curve''  is a  function,\\ $\gamma  : (\alpha, \beta) \to \mathbb{R}^2$.
+\end{definition}
+
+Explicitly,\\
+$\gamma(t) = (f_1(t), f_2(t))$, for planes\\
+
+Set of points on the curve:\\  $\textrm{ Image } \gamma = \{(x,y) \in \mathbb{R}^2 \ |\ (x,y) = \gamma(t), t \in \mathbb{R}\}$
+
+
+
+
+\begin{examples}
+  \item $L:=\{(x,y) \in \mathbb{R}^2\ |\ 4y = 7x + 3\}$\\
+  \end{examples}
+
+
+\clearpage
+
+
+
+
+\begin{definition}
+  A  ``parametrized plane curve''  is a  function,\\ $\gamma  : (\alpha, \beta) \to \mathbb{R}^2$.
+\end{definition}
+
+Explicitly,\\
+$\gamma(t) = (f_1(t), f_2(t))$, for planes\\
+
+Set of points on the curve:\\  $\textrm{ Image } \gamma = \{(x,y) \in \mathbb{R}^2 \ |\ (x,y) = \gamma(t), t \in \mathbb{R}\}$
+
+
+
+
+\begin{examples}
+  \item $L:=\{(x,y) \in \mathbb{R}^2\ |\ 4y = 7x + 3\}$\\
+  $\gamma $\end{examples}
+
+
+\clearpage
+
+
+
+
+\begin{definition}
+  A  ``parametrized plane curve''  is a  function,\\ $\gamma  : (\alpha, \beta) \to \mathbb{R}^2$.
+\end{definition}
+
+Explicitly,\\
+$\gamma(t) = (f_1(t), f_2(t))$, for planes\\
+
+Set of points on the curve:\\  $\textrm{ Image } \gamma = \{(x,y) \in \mathbb{R}^2 \ |\ (x,y) = \gamma(t), t \in \mathbb{R}\}$
+
+
+
+
+\begin{examples}
+  \item $L:=\{(x,y) \in \mathbb{R}^2\ |\ 4y = 7x + 3\}$\\
+  $\gamma  : (-\infty,\infty) $\end{examples}
+
+
+\clearpage
+
+
+
+
+\begin{definition}
+  A  ``parametrized plane curve''  is a  function,\\ $\gamma  : (\alpha, \beta) \to \mathbb{R}^2$.
+\end{definition}
+
+Explicitly,\\
+$\gamma(t) = (f_1(t), f_2(t))$, for planes\\
+
+Set of points on the curve:\\  $\textrm{ Image } \gamma = \{(x,y) \in \mathbb{R}^2 \ |\ (x,y) = \gamma(t), t \in \mathbb{R}\}$
+
+
+
+
+\begin{examples}
+  \item $L:=\{(x,y) \in \mathbb{R}^2\ |\ 4y = 7x + 3\}$\\
+  $\gamma  : (-\infty,\infty) \to \mathbb{R}^2$ \end{examples}
+
+
+\clearpage
+
+
+
+
+\begin{definition}
+  A  ``parametrized plane curve''  is a  function,\\ $\gamma  : (\alpha, \beta) \to \mathbb{R}^2$.
+\end{definition}
+
+Explicitly,\\
+$\gamma(t) = (f_1(t), f_2(t))$, for planes\\
+
+Set of points on the curve:\\  $\textrm{ Image } \gamma = \{(x,y) \in \mathbb{R}^2 \ |\ (x,y) = \gamma(t), t \in \mathbb{R}\}$
+
+
+
+
+\begin{examples}
+  \item $L:=\{(x,y) \in \mathbb{R}^2\ |\ 4y = 7x + 3\}$\\
+  $\gamma  : (-\infty,\infty) \to \mathbb{R}^2$ \\
+  $\gamma(t) = (t, \frac{7t+3}{4}) $\end{examples}
+
+
+\clearpage
+
+
+
+
+\begin{definition}
+  A  ``parametrized plane curve''  is a  function,\\ $\gamma  : (\alpha, \beta) \to \mathbb{R}^2$.
+\end{definition}
+
+Explicitly,\\
+$\gamma(t) = (f_1(t), f_2(t))$, for planes\\
+
+Set of points on the curve:\\  $\textrm{ Image } \gamma = \{(x,y) \in \mathbb{R}^2 \ |\ (x,y) = \gamma(t), t \in \mathbb{R}\}$
+
+
+
+
+\begin{examples}
+  \item $L:=\{(x,y) \in \mathbb{R}^2\ |\ 4y = 7x + 3\}$\\
+  $\gamma  : (-\infty,\infty) \to \mathbb{R}^2$ \\
+  $\gamma(t) = (t, \frac{7t+3}{4})  \in L$\\\end{examples}
+
+
+\clearpage
+
+
+
+
+\begin{definition}
+  A  ``parametrized plane curve''  is a  function,\\ $\gamma  : (\alpha, \beta) \to \mathbb{R}^2$.
+\end{definition}
+
+Explicitly,\\
+$\gamma(t) = (f_1(t), f_2(t))$, for planes\\
+
+Set of points on the curve:\\  $\textrm{ Image } \gamma = \{(x,y) \in \mathbb{R}^2 \ |\ (x,y) = \gamma(t), t \in \mathbb{R}\}$
+
+
+
+
+\begin{examples}
+  \item $L:=\{(x,y) \in \mathbb{R}^2\ |\ 4y = 7x + 3\}$\\
+  $\gamma  : (-\infty,\infty) \to \mathbb{R}^2$ \\
+  $\gamma(t) = (t, \frac{7t+3}{4})  \in L$\\
+  \item $P:=\{(x,y) \in \mathbb{R}^2\ |\ y^2 = x\}$\\
+  \end{examples}
+
+
+\clearpage
+
+
+
+
+\begin{definition}
+  A  ``parametrized plane curve''  is a  function,\\ $\gamma  : (\alpha, \beta) \to \mathbb{R}^2$.
+\end{definition}
+
+Explicitly,\\
+$\gamma(t) = (f_1(t), f_2(t))$, for planes\\
+
+Set of points on the curve:\\  $\textrm{ Image } \gamma = \{(x,y) \in \mathbb{R}^2 \ |\ (x,y) = \gamma(t), t \in \mathbb{R}\}$
+
+
+
+
+\begin{examples}
+  \item $L:=\{(x,y) \in \mathbb{R}^2\ |\ 4y = 7x + 3\}$\\
+  $\gamma  : (-\infty,\infty) \to \mathbb{R}^2$ \\
+  $\gamma(t) = (t, \frac{7t+3}{4})  \in L$\\
+  \item $P:=\{(x,y) \in \mathbb{R}^2\ |\ y^2 = x\}$\\
+  $\gamma $\end{examples}
+
+
+\clearpage
+
+
+
+
+\begin{definition}
+  A  ``parametrized plane curve''  is a  function,\\ $\gamma  : (\alpha, \beta) \to \mathbb{R}^2$.
+\end{definition}
+
+Explicitly,\\
+$\gamma(t) = (f_1(t), f_2(t))$, for planes\\
+
+Set of points on the curve:\\  $\textrm{ Image } \gamma = \{(x,y) \in \mathbb{R}^2 \ |\ (x,y) = \gamma(t), t \in \mathbb{R}\}$
+
+
+
+
+\begin{examples}
+  \item $L:=\{(x,y) \in \mathbb{R}^2\ |\ 4y = 7x + 3\}$\\
+  $\gamma  : (-\infty,\infty) \to \mathbb{R}^2$ \\
+  $\gamma(t) = (t, \frac{7t+3}{4})  \in L$\\
+  \item $P:=\{(x,y) \in \mathbb{R}^2\ |\ y^2 = x\}$\\
+  $\gamma  : (-\infty,\infty) $\end{examples}
+
+
+\clearpage
+
+
+
+
+\begin{definition}
+  A  ``parametrized plane curve''  is a  function,\\ $\gamma  : (\alpha, \beta) \to \mathbb{R}^2$.
+\end{definition}
+
+Explicitly,\\
+$\gamma(t) = (f_1(t), f_2(t))$, for planes\\
+
+Set of points on the curve:\\  $\textrm{ Image } \gamma = \{(x,y) \in \mathbb{R}^2 \ |\ (x,y) = \gamma(t), t \in \mathbb{R}\}$
+
+
+
+
+\begin{examples}
+  \item $L:=\{(x,y) \in \mathbb{R}^2\ |\ 4y = 7x + 3\}$\\
+  $\gamma  : (-\infty,\infty) \to \mathbb{R}^2$ \\
+  $\gamma(t) = (t, \frac{7t+3}{4})  \in L$\\
+  \item $P:=\{(x,y) \in \mathbb{R}^2\ |\ y^2 = x\}$\\
+  $\gamma  : (-\infty,\infty) \to \mathbb{R}^2$ \end{examples}
+
+
+\clearpage
+
+
+
+
+\begin{definition}
+  A  ``parametrized plane curve''  is a  function,\\ $\gamma  : (\alpha, \beta) \to \mathbb{R}^2$.
+\end{definition}
+
+Explicitly,\\
+$\gamma(t) = (f_1(t), f_2(t))$, for planes\\
+
+Set of points on the curve:\\  $\textrm{ Image } \gamma = \{(x,y) \in \mathbb{R}^2 \ |\ (x,y) = \gamma(t), t \in \mathbb{R}\}$
+
+
+
+
+\begin{examples}
+  \item $L:=\{(x,y) \in \mathbb{R}^2\ |\ 4y = 7x + 3\}$\\
+  $\gamma  : (-\infty,\infty) \to \mathbb{R}^2$ \\
+  $\gamma(t) = (t, \frac{7t+3}{4})  \in L$\\
+  \item $P:=\{(x,y) \in \mathbb{R}^2\ |\ y^2 = x\}$\\
+  $\gamma  : (-\infty,\infty) \to \mathbb{R}^2$ \\
+  $\gamma(t) = (t^2, t) $\end{examples}
+
+
+\clearpage
+
+
+
+
+\begin{definition}
+  A  ``parametrized plane curve''  is a  function,\\ $\gamma  : (\alpha, \beta) \to \mathbb{R}^2$.
+\end{definition}
+
+Explicitly,\\
+$\gamma(t) = (f_1(t), f_2(t))$, for planes\\
+
+Set of points on the curve:\\  $\textrm{ Image } \gamma = \{(x,y) \in \mathbb{R}^2 \ |\ (x,y) = \gamma(t), t \in \mathbb{R}\}$
+
+
+
+
+\begin{examples}
+  \item $L:=\{(x,y) \in \mathbb{R}^2\ |\ 4y = 7x + 3\}$\\
+  $\gamma  : (-\infty,\infty) \to \mathbb{R}^2$ \\
+  $\gamma(t) = (t, \frac{7t+3}{4})  \in L$\\
+  \item $P:=\{(x,y) \in \mathbb{R}^2\ |\ y^2 = x\}$\\
+  $\gamma  : (-\infty,\infty) \to \mathbb{R}^2$ \\
+  $\gamma(t) = (t^2, t)  \in P$\\\end{examples}
+
+
+\clearpage
+
+
+
+
+\begin{definition}
+  A  ``parametrized plane curve''  is a  function,\\ $\gamma  : (\alpha, \beta) \to \mathbb{R}^2$.
+\end{definition}
+
+Explicitly,\\
+$\gamma(t) = (f_1(t), f_2(t))$, for planes\\
+
+Set of points on the curve:\\  $\textrm{ Image } \gamma = \{(x,y) \in \mathbb{R}^2 \ |\ (x,y) = \gamma(t), t \in \mathbb{R}\}$
+
+
+
+
+\begin{examples}
+  \item $L:=\{(x,y) \in \mathbb{R}^2\ |\ 4y = 7x + 3\}$\\
+  $\gamma  : (-\infty,\infty) \to \mathbb{R}^2$ \\
+  $\gamma(t) = (t, \frac{7t+3}{4})  \in L$\\
+  \item $P:=\{(x,y) \in \mathbb{R}^2\ |\ y^2 = x\}$\\
+  $\gamma  : (-\infty,\infty) \to \mathbb{R}^2$ \\
+  $\gamma(t) = (t^2, t)  \in P$\\
+\end{examples}
+
+
+
+
+\clearpage
+
+
+
+\subsection{Parametrizing a circle}
+
+
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\end{tikzpicture}
+
+
+\clearpage
+
+
+
+\subsection{Parametrizing a circle}
+
+
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\end{tikzpicture}
+
+
+\clearpage
+
+
+
+\subsection{Parametrizing a circle}
+
+
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\end{tikzpicture}
+
+
+\clearpage
+
+
+
+\subsection{Parametrizing a circle}
+
+
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+;
+\end{tikzpicture}
+ 
+
+
+
+
+
+\clearpage
+
+
+
+\subsection{Parametrizing a circle}
+
+
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+
+\draw[color=blue,thick] (2,0) arc
+    [
+        start angle=0,
+        end angle=10,
+        x radius=2cm,
+        y radius =2cm
+    ] ;
+;
+\end{tikzpicture}
+ 
+
+
+
+\newpage
+ 
+$\gamma : (0, \pi/18) \to \mathbb{R}^2$\\
+
+
+
+
+\clearpage
+
+
+
+\subsection{Parametrizing a circle}
+
+
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+
+\draw[color=blue,thick] (2,0) arc
+    [
+        start angle=0,
+        end angle=10,
+        x radius=2cm,
+        y radius =2cm
+    ] ;
+;
+\end{tikzpicture}
+ 
+
+
+
+\newpage
+ 
+$\gamma : (0, \pi/18) \to \mathbb{R}^2$\\
+$\gamma(t) := (2\cos(t), 2\sin(t))$
+
+
+
+
+\clearpage
+
+
+
+\subsection{Parametrizing a circle}
+
+
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+
+\draw[color=blue,thick] (2,0) arc
+    [
+        start angle=0,
+        end angle= 20 ,
+        x radius=2cm,
+        y radius =2cm
+    ] ;
+;
+\end{tikzpicture}
+ 
+
+
+
+\newpage
+ 
+$\gamma : (0,  2\pi/18 ) \to \mathbb{R}^2$\\
+$\gamma(t) := (2\cos(t), 2\sin(t))$
+  
+
+
+
+
+\clearpage
+
+
+
+\subsection{Parametrizing a circle}
+
+
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+
+\draw[color=blue,thick] (2,0) arc
+    [
+        start angle=0,
+        end angle= 30 ,
+        x radius=2cm,
+        y radius =2cm
+    ] ;
+;
+\end{tikzpicture}
+ 
+
+
+
+\newpage
+ 
+$\gamma : (0,  3\pi/18 ) \to \mathbb{R}^2$\\
+$\gamma(t) := (2\cos(t), 2\sin(t))$
+  
+  
+
+
+
+
+\clearpage
+
+
+
+\subsection{Parametrizing a circle}
+
+
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+
+\draw[color=blue,thick] (2,0) arc
+    [
+        start angle=0,
+        end angle= 60 ,
+        x radius=2cm,
+        y radius =2cm
+    ] ;
+;
+\end{tikzpicture}
+ 
+
+
+
+\newpage
+ 
+$\gamma : (0,  6\pi/18 ) \to \mathbb{R}^2$\\
+$\gamma(t) := (2\cos(t), 2\sin(t))$
+  
+  
+  
+
+
+
+
+\clearpage
+
+
+
+\subsection{Parametrizing a circle}
+
+
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+
+\draw[color=blue,thick] (2,0) arc
+    [
+        start angle=0,
+        end angle= 90 ,
+        x radius=2cm,
+        y radius =2cm
+    ] ;
+;
+\end{tikzpicture}
+ 
+
+
+
+\newpage
+ 
+$\gamma : (0,  9\pi/18 ) \to \mathbb{R}^2$\\
+$\gamma(t) := (2\cos(t), 2\sin(t))$
+  
+  
+  
+  
+
+
+
+
+\clearpage
+
+
+
+\subsection{Parametrizing a circle}
+
+
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+
+\draw[color=blue,thick] (2,0) arc
+    [
+        start angle=0,
+        end angle= 120 ,
+        x radius=2cm,
+        y radius =2cm
+    ] ;
+;
+\end{tikzpicture}
+ 
+
+
+
+\newpage
+ 
+$\gamma : (0,  12\pi/18 ) \to \mathbb{R}^2$\\
+$\gamma(t) := (2\cos(t), 2\sin(t))$
+  
+  
+  
+  
+  
+
+
+
+
+\clearpage
+
+
+
+\subsection{Parametrizing a circle}
+
+
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+
+\draw[color=blue,thick] (2,0) arc
+    [
+        start angle=0,
+        end angle= 180 ,
+        x radius=2cm,
+        y radius =2cm
+    ] ;
+;
+\end{tikzpicture}
+ 
+
+
+
+\newpage
+ 
+$\gamma : (0,  18\pi/18 ) \to \mathbb{R}^2$\\
+$\gamma(t) := (2\cos(t), 2\sin(t))$
+  
+  
+  
+  
+  
+  
+
+
+
+
+\clearpage
+
+
+
+\subsection{Parametrizing a circle}
+
+
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+
+\draw[color=blue,thick] (2,0) arc
+    [
+        start angle=0,
+        end angle= 240 ,
+        x radius=2cm,
+        y radius =2cm
+    ] ;
+;
+\end{tikzpicture}
+ 
+
+
+
+\newpage
+ 
+$\gamma : (0,  24\pi/18 ) \to \mathbb{R}^2$\\
+$\gamma(t) := (2\cos(t), 2\sin(t))$
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+\clearpage
+
+
+
+\subsection{Parametrizing a circle}
+
+
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+
+\draw[color=blue,thick] (2,0) arc
+    [
+        start angle=0,
+        end angle= 270 ,
+        x radius=2cm,
+        y radius =2cm
+    ] ;
+;
+\end{tikzpicture}
+ 
+
+
+
+\newpage
+ 
+$\gamma : (0,  27\pi/18 ) \to \mathbb{R}^2$\\
+$\gamma(t) := (2\cos(t), 2\sin(t))$
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+\clearpage
+
+
+
+\subsection{Parametrizing a  line }
+
+
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+  ;
+\end{tikzpicture}
+ 
+
+
+
+\newpage
+ 
+$\gamma : (0,  27\pi/18 ) \to \mathbb{R}^2$\\
+$\gamma(t) := (2\cos(t), 2\sin(t))$
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+\clearpage
+
+
+
+\subsection{Parametrizing a  line }
+
+
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+
+\draw[color=blue,thick] (-5,-5) -- (-4,-4);
+;
+\end{tikzpicture}
+ 
+
+
+
+\newpage
+ 
+$\gamma : (-5, -4) \to \mathbb{R}^2$\\
+
+
+
+
+
+
+
+
+
+
+
+\clearpage
+
+
+
+\subsection{Parametrizing a  line }
+
+
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+
+\draw[color=blue,thick] (-5,-5) -- (-4,-4);
+;
+\end{tikzpicture}
+ 
+
+
+
+\newpage
+ 
+$\gamma : (-5, -4) \to \mathbb{R}^2$\\
+$\gamma(t) := (t,t)$
+
+
+
+
+
+
+
+
+
+
+
+\clearpage
+
+
+
+\subsection{Parametrizing a  line }
+
+
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+
+\draw[color=blue,thick] (-5,-5) -- ( -3 , -3 );
+;
+\end{tikzpicture}
+ 
+
+
+
+\newpage
+ 
+$\gamma : (-5,  -3 ) \to \mathbb{R}^2$\\
+$\gamma(t) := (t,t)$
+ 
+
+
+
+
+
+
+
+
+
+
+
+\clearpage
+
+
+
+\subsection{Parametrizing a  line }
+
+
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+
+\draw[color=blue,thick] (-5,-5) -- ( -2 , -2 );
+;
+\end{tikzpicture}
+ 
+
+
+
+\newpage
+ 
+$\gamma : (-5,  -2 ) \to \mathbb{R}^2$\\
+$\gamma(t) := (t,t)$
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+\clearpage
+
+
+
+\subsection{Parametrizing a  line }
+
+
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+
+\draw[color=blue,thick] (-5,-5) -- ( -1 , -1 );
+;
+\end{tikzpicture}
+ 
+
+
+
+\newpage
+ 
+$\gamma : (-5,  -1 ) \to \mathbb{R}^2$\\
+$\gamma(t) := (t,t)$
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+\clearpage
+
+
+
+\subsection{Parametrizing a  line }
+
+
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+
+\draw[color=blue,thick] (-5,-5) -- ( 0 , 0 );
+;
+\end{tikzpicture}
+ 
+
+
+
+\newpage
+ 
+$\gamma : (-5,  0 ) \to \mathbb{R}^2$\\
+$\gamma(t) := (t,t)$
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+\clearpage
+
+
+
+\subsection{Parametrizing a  line }
+
+
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+
+\draw[color=blue,thick] (-5,-5) -- ( 1 , 1 );
+;
+\end{tikzpicture}
+ 
+
+
+
+\newpage
+ 
+$\gamma : (-5,  1 ) \to \mathbb{R}^2$\\
+$\gamma(t) := (t,t)$
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+\clearpage
+
+
+
+\subsection{Parametrizing a  line }
+
+
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+
+\draw[color=blue,thick] (-5,-5) -- ( 2 , 2 );
+;
+\end{tikzpicture}
+ 
+
+
+
+\newpage
+ 
+$\gamma : (-5,  2 ) \to \mathbb{R}^2$\\
+$\gamma(t) := (t,t)$
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+\clearpage
+
+
+
+\subsection{Parametrizing a  line }
+
+
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+
+\draw[color=blue,thick] (-5,-5) -- ( 3 , 3 );
+;
+\end{tikzpicture}
+ 
+
+
+
+\newpage
+ 
+$\gamma : (-5,  3 ) \to \mathbb{R}^2$\\
+$\gamma(t) := (t,t)$
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+\clearpage
+
+
+
+\subsection{Parametrizing a  line }
+
+
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+
+\draw[color=blue,thick] (-5,-5) -- ( 4 , 4 );
+;
+\end{tikzpicture}
+ 
+
+
+
+\newpage
+ 
+$\gamma : (-5,  4 ) \to \mathbb{R}^2$\\
+$\gamma(t) := (t,t)$
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+\clearpage
+
+
+
+\subsection{Parametrizing a  line }
+
+
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+
+\draw[color=blue,thick] (-5,-5) -- ( 5 , 5 );
+;
+\end{tikzpicture}
+ 
+
+
+
+\newpage
+ 
+$\gamma : (-5,  5 ) \to \mathbb{R}^2$\\
+$\gamma(t) := (t,t)$
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\clearpage
+
+
+
+\subsection{Quick review: Derivative}
+
+
+
+\clearpage
+
+
+
+\subsection{Quick review: Derivative}
+\begin{example}
+  $f : \mathbb{R}\to \mathbb{R}$\end{example}
+
+
+\clearpage
+
+
+
+\subsection{Quick review: Derivative}
+\begin{example}
+  $f : \mathbb{R}\to \mathbb{R}$
+  \[f(x) =
+      \begin{cases}
+       \end{cases}\]\end{example}
+
+
+\clearpage
+
+
+
+\subsection{Quick review: Derivative}
+\begin{example}
+  $f : \mathbb{R}\to \mathbb{R}$
+  \[f(x) =
+      \begin{cases}
+        x^2 & x < 5\\
+       \end{cases}\]\end{example}
+
+
+\clearpage
+
+
+
+\subsection{Quick review: Derivative}
+\begin{example}
+  $f : \mathbb{R}\to \mathbb{R}$
+  \[f(x) =
+      \begin{cases}
+        x^2 & x < 5\\
+        0 & x = 5\\
+       \end{cases}\]\end{example}
+
+
+\clearpage
+
+
+
+\subsection{Quick review: Derivative}
+\begin{example}
+  $f : \mathbb{R}\to \mathbb{R}$
+  \[f(x) =
+      \begin{cases}
+        x^2 & x < 5\\
+        0 & x = 5\\
+        x^3 & x > 5
+      \end{cases}
+      \]
+      \end{example}
+
+
+\clearpage
+
+
+
+\subsection{Quick review: Derivative}
+\begin{example}
+  $f : \mathbb{R}\to \mathbb{R}$
+  \[f(x) =
+      \begin{cases}
+        x^2 & x < 5\\
+        0 & x = 5\\
+        x^3 & x > 5
+      \end{cases}
+      \]
+      $f(5)=0$\\
+\end{example}
+
+
+\clearpage
+
+
+
+\subsection{Quick review: Derivative}
+\begin{example}
+  $f : \mathbb{R}\to \mathbb{R}$
+  \[f(x) =
+      \begin{cases}
+        x^2 & x < 5\\
+        0 & x = 5\\
+        x^3 & x > 5
+      \end{cases}
+      \]
+      $f(5)=0$\\
+$\displaystyle\lim_{x \to 5^-} f(x) $\end{example}
+
+
+\clearpage
+
+
+
+\subsection{Quick review: Derivative}
+\begin{example}
+  $f : \mathbb{R}\to \mathbb{R}$
+  \[f(x) =
+      \begin{cases}
+        x^2 & x < 5\\
+        0 & x = 5\\
+        x^3 & x > 5
+      \end{cases}
+      \]
+      $f(5)=0$\\
+$\displaystyle\lim_{x \to 5^-} f(x)  = 5^2$\\
+\end{example}
+
+
+\clearpage
+
+
+
+\subsection{Quick review: Derivative}
+\begin{example}
+  $f : \mathbb{R}\to \mathbb{R}$
+  \[f(x) =
+      \begin{cases}
+        x^2 & x < 5\\
+        0 & x = 5\\
+        x^3 & x > 5
+      \end{cases}
+      \]
+      $f(5)=0$\\
+$\displaystyle\lim_{x \to 5^-} f(x)  = 5^2$\\
+$\displaystyle\lim_{x \to 5^+} f(x) $\end{example}
+
+
+\clearpage
+
+
+
+\subsection{Quick review: Derivative}
+\begin{example}
+  $f : \mathbb{R}\to \mathbb{R}$
+  \[f(x) =
+      \begin{cases}
+        x^2 & x < 5\\
+        0 & x = 5\\
+        x^3 & x > 5
+      \end{cases}
+      \]
+      $f(5)=0$\\
+$\displaystyle\lim_{x \to 5^-} f(x)  = 5^2$\\
+$\displaystyle\lim_{x \to 5^+} f(x)  = 5^3$
+\end{example}
+
+
+
+
+
+\clearpage
+
+
+
+\subsection{Quick review: Derivative}
+\begin{example}
+  $f : \mathbb{R}\to \mathbb{R}$
+  \[f(x) =
+      \begin{cases}
+        x^2 & x < 5\\
+        0 & x = 5\\
+        x^3 & x > 5
+      \end{cases}
+      \]
+      $f(5)=0$\\
+$\displaystyle\lim_{x \to 5^-} f(x)  = 5^2$\\
+$\displaystyle\lim_{x \to 5^+} f(x)  = 5^3$
+\end{example}
+
+
+\begin{example}
+  \[f(x) =
+      \begin{cases}
+        x^2 & x < 5\\
+        0 & x = 5\\
+       x^{\alert{2}} & x > 5
+      \end{cases}
+      \]
+\end{example}
+
+
+\clearpage
+
+
+
+\subsection{Quick review: Derivative}
+\begin{example}
+  $f : \mathbb{R}\to \mathbb{R}$
+  \[f(x) =
+      \begin{cases}
+        x^2 & x < 5\\
+        0 & x = 5\\
+        x^3 & x > 5
+      \end{cases}
+      \]
+      $f(5)=0$\\
+$\displaystyle\lim_{x \to 5^-} f(x)  = 5^2$\\
+$\displaystyle\lim_{x \to 5^+} f(x)  = 5^3$
+\end{example}
+
+
+\begin{example}
+  \[f(x) =
+      \begin{cases}
+        x^2 & x  \neq  5\\
+        0 & x = 5\\
+        
+      \end{cases}
+      \]
+      
+      
+
+
+\end{example}
+
+
+\clearpage
+
+
+
+\subsection{Quick review: Derivative}
+\begin{example}
+  $f : \mathbb{R}\to \mathbb{R}$
+  \[f(x) =
+      \begin{cases}
+        x^2 & x < 5\\
+        0 & x = 5\\
+        x^3 & x > 5
+      \end{cases}
+      \]
+      $f(5)=0$\\
+$\displaystyle\lim_{x \to 5^-} f(x)  = 5^2$\\
+$\displaystyle\lim_{x \to 5^+} f(x)  = 5^3$
+\end{example}
+
+
+\begin{example}
+  \[f(x) =
+      \begin{cases}
+        x^2 & x  \neq  5\\
+        0 & x = 5\\
+        
+      \end{cases}
+      \]
+      
+      
+
+
+$\displaystyle\lim_{x \to 5^-} f(x) = 5^2 $\end{example}
+
+
+\clearpage
+
+
+
+\subsection{Quick review: Derivative}
+\begin{example}
+  $f : \mathbb{R}\to \mathbb{R}$
+  \[f(x) =
+      \begin{cases}
+        x^2 & x < 5\\
+        0 & x = 5\\
+        x^3 & x > 5
+      \end{cases}
+      \]
+      $f(5)=0$\\
+$\displaystyle\lim_{x \to 5^-} f(x)  = 5^2$\\
+$\displaystyle\lim_{x \to 5^+} f(x)  = 5^3$
+\end{example}
+
+
+\begin{example}
+  \[f(x) =
+      \begin{cases}
+        x^2 & x  \neq  5\\
+        0 & x = 5\\
+        
+      \end{cases}
+      \]
+      
+      
+
+
+$\displaystyle\lim_{x \to 5^-} f(x) = 5^2  = \displaystyle\lim_{x \to 5^+} f(x)$\\
+\end{example}
+
+
+\clearpage
+
+
+
+\subsection{Quick review: Derivative}
+\begin{example}
+  $f : \mathbb{R}\to \mathbb{R}$
+  \[f(x) =
+      \begin{cases}
+        x^2 & x < 5\\
+        0 & x = 5\\
+        x^3 & x > 5
+      \end{cases}
+      \]
+      $f(5)=0$\\
+$\displaystyle\lim_{x \to 5^-} f(x)  = 5^2$\\
+$\displaystyle\lim_{x \to 5^+} f(x)  = 5^3$
+\end{example}
+
+
+\begin{example}
+  \[f(x) =
+      \begin{cases}
+        x^2 & x  \neq  5\\
+        0 & x = 5\\
+        
+      \end{cases}
+      \]
+      
+      
+
+
+$\displaystyle\lim_{x \to 5^-} f(x) = 5^2  = \displaystyle\lim_{x \to 5^+} f(x)$\\
+Can say, $\displaystyle\lim_{x \to 5} f(x) = 5^2$
+\end{example}
+
+\newpage
+
+
+
+\clearpage
+
+
+
+\subsection{Quick review: Derivative}
+\begin{example}
+  $f : \mathbb{R}\to \mathbb{R}$
+  \[f(x) =
+      \begin{cases}
+        x^2 & x < 5\\
+        0 & x = 5\\
+        x^3 & x > 5
+      \end{cases}
+      \]
+      $f(5)=0$\\
+$\displaystyle\lim_{x \to 5^-} f(x)  = 5^2$\\
+$\displaystyle\lim_{x \to 5^+} f(x)  = 5^3$
+\end{example}
+
+
+\begin{example}
+  \[f(x) =
+      \begin{cases}
+        x^2 & x  \neq  5\\
+        0 & x = 5\\
+        
+      \end{cases}
+      \]
+      
+      
+
+
+$\displaystyle\lim_{x \to 5^-} f(x) = 5^2  = \displaystyle\lim_{x \to 5^+} f(x)$\\
+Can say, $\displaystyle\lim_{x \to 5} f(x) = 5^2$
+\end{example}
+
+\newpage
+\begin{example}
+$f(x) = x^2$\\
+\end{example}
+
+
+\clearpage
+
+
+
+\subsection{Quick review: Derivative}
+\begin{example}
+  $f : \mathbb{R}\to \mathbb{R}$
+  \[f(x) =
+      \begin{cases}
+        x^2 & x < 5\\
+        0 & x = 5\\
+        x^3 & x > 5
+      \end{cases}
+      \]
+      $f(5)=0$\\
+$\displaystyle\lim_{x \to 5^-} f(x)  = 5^2$\\
+$\displaystyle\lim_{x \to 5^+} f(x)  = 5^3$
+\end{example}
+
+
+\begin{example}
+  \[f(x) =
+      \begin{cases}
+        x^2 & x  \neq  5\\
+        0 & x = 5\\
+        
+      \end{cases}
+      \]
+      
+      
+
+
+$\displaystyle\lim_{x \to 5^-} f(x) = 5^2  = \displaystyle\lim_{x \to 5^+} f(x)$\\
+Can say, $\displaystyle\lim_{x \to 5} f(x) = 5^2$
+\end{example}
+
+\newpage
+\begin{example}
+$f(x) = x^2$\\
+$\displaystyle\lim_{x \to 5} f(x) = 5^2 $\end{example}
+
+
+\clearpage
+
+
+
+\subsection{Quick review: Derivative}
+\begin{example}
+  $f : \mathbb{R}\to \mathbb{R}$
+  \[f(x) =
+      \begin{cases}
+        x^2 & x < 5\\
+        0 & x = 5\\
+        x^3 & x > 5
+      \end{cases}
+      \]
+      $f(5)=0$\\
+$\displaystyle\lim_{x \to 5^-} f(x)  = 5^2$\\
+$\displaystyle\lim_{x \to 5^+} f(x)  = 5^3$
+\end{example}
+
+
+\begin{example}
+  \[f(x) =
+      \begin{cases}
+        x^2 & x  \neq  5\\
+        0 & x = 5\\
+        
+      \end{cases}
+      \]
+      
+      
+
+
+$\displaystyle\lim_{x \to 5^-} f(x) = 5^2  = \displaystyle\lim_{x \to 5^+} f(x)$\\
+Can say, $\displaystyle\lim_{x \to 5} f(x) = 5^2$
+\end{example}
+
+\newpage
+\begin{example}
+$f(x) = x^2$\\
+$\displaystyle\lim_{x \to 5} f(x) = 5^2 = f(5)$\end{example}
+
+
+\clearpage
+
+
+
+\subsection{Quick review: Derivative}
+\begin{example}
+  $f : \mathbb{R}\to \mathbb{R}$
+  \[f(x) =
+      \begin{cases}
+        x^2 & x < 5\\
+        0 & x = 5\\
+        x^3 & x > 5
+      \end{cases}
+      \]
+      $f(5)=0$\\
+$\displaystyle\lim_{x \to 5^-} f(x)  = 5^2$\\
+$\displaystyle\lim_{x \to 5^+} f(x)  = 5^3$
+\end{example}
+
+
+\begin{example}
+  \[f(x) =
+      \begin{cases}
+        x^2 & x  \neq  5\\
+        0 & x = 5\\
+        
+      \end{cases}
+      \]
+      
+      
+
+
+$\displaystyle\lim_{x \to 5^-} f(x) = 5^2  = \displaystyle\lim_{x \to 5^+} f(x)$\\
+Can say, $\displaystyle\lim_{x \to 5} f(x) = 5^2$
+\end{example}
+
+\newpage
+\begin{example}
+$f(x) = x^2$\\
+$\displaystyle\lim_{x \to 5} f(x) = 5^2 = f(5)$\\
+$f$ is ``continous''.
+\end{example}
+
+
+
+
+\clearpage
+
+
+
+\subsection{Quick review: Derivative}
+\begin{example}
+  $f : \mathbb{R}\to \mathbb{R}$
+  \[f(x) =
+      \begin{cases}
+        x^2 & x < 5\\
+        0 & x = 5\\
+        x^3 & x > 5
+      \end{cases}
+      \]
+      $f(5)=0$\\
+$\displaystyle\lim_{x \to 5^-} f(x)  = 5^2$\\
+$\displaystyle\lim_{x \to 5^+} f(x)  = 5^3$
+\end{example}
+
+
+\begin{example}
+  \[f(x) =
+      \begin{cases}
+        x^2 & x  \neq  5\\
+        0 & x = 5\\
+        
+      \end{cases}
+      \]
+      
+      
+
+
+$\displaystyle\lim_{x \to 5^-} f(x) = 5^2  = \displaystyle\lim_{x \to 5^+} f(x)$\\
+Can say, $\displaystyle\lim_{x \to 5} f(x) = 5^2$
+\end{example}
+
+\newpage
+\begin{example}
+$f(x) = x^2$\\
+$\displaystyle\lim_{x \to 5} f(x) = 5^2 = f(5)$\\
+$f$ is ``continous''.
+\end{example}
+
+\begin{definition}[Continuous function]
+$f : \mathbb{R} \to \mathbb{R}$ is continuous if $\displaystyle\lim_{x \to a} f(x) = f(a)$
+\end{definition}
+
+
+
+
+\clearpage
+
+
+
+\subsection{Quick review: Derivative}
+\begin{example}
+  $f : \mathbb{R}\to \mathbb{R}$
+  \[f(x) =
+      \begin{cases}
+        x^2 & x < 5\\
+        0 & x = 5\\
+        x^3 & x > 5
+      \end{cases}
+      \]
+      $f(5)=0$\\
+$\displaystyle\lim_{x \to 5^-} f(x)  = 5^2$\\
+$\displaystyle\lim_{x \to 5^+} f(x)  = 5^3$
+\end{example}
+
+
+\begin{example}
+  \[f(x) =
+      \begin{cases}
+        x^2 & x  \neq  5\\
+        0 & x = 5\\
+        
+      \end{cases}
+      \]
+      
+      
+
+
+$\displaystyle\lim_{x \to 5^-} f(x) = 5^2  = \displaystyle\lim_{x \to 5^+} f(x)$\\
+Can say, $\displaystyle\lim_{x \to 5} f(x) = 5^2$
+\end{example}
+
+\newpage
+\begin{example}
+$f(x) = x^2$\\
+$\displaystyle\lim_{x \to 5} f(x) = 5^2 = f(5)$\\
+$f$ is ``continous''.
+\end{example}
+
+\begin{definition}[Continuous function]
+$f : \mathbb{R} \to \mathbb{R}$ is continuous if $\displaystyle\lim_{x \to a} f(x) = f(a)$
+\end{definition}
+
+\begin{definition}[Derivative]
+  If $f : \mathbb{R}\to \mathbb{R}$ is such that\end{definition}
+
+
+\clearpage
+
+
+
+\subsection{Quick review: Derivative}
+\begin{example}
+  $f : \mathbb{R}\to \mathbb{R}$
+  \[f(x) =
+      \begin{cases}
+        x^2 & x < 5\\
+        0 & x = 5\\
+        x^3 & x > 5
+      \end{cases}
+      \]
+      $f(5)=0$\\
+$\displaystyle\lim_{x \to 5^-} f(x)  = 5^2$\\
+$\displaystyle\lim_{x \to 5^+} f(x)  = 5^3$
+\end{example}
+
+
+\begin{example}
+  \[f(x) =
+      \begin{cases}
+        x^2 & x  \neq  5\\
+        0 & x = 5\\
+        
+      \end{cases}
+      \]
+      
+      
+
+
+$\displaystyle\lim_{x \to 5^-} f(x) = 5^2  = \displaystyle\lim_{x \to 5^+} f(x)$\\
+Can say, $\displaystyle\lim_{x \to 5} f(x) = 5^2$
+\end{example}
+
+\newpage
+\begin{example}
+$f(x) = x^2$\\
+$\displaystyle\lim_{x \to 5} f(x) = 5^2 = f(5)$\\
+$f$ is ``continous''.
+\end{example}
+
+\begin{definition}[Continuous function]
+$f : \mathbb{R} \to \mathbb{R}$ is continuous if $\displaystyle\lim_{x \to a} f(x) = f(a)$
+\end{definition}
+
+\begin{definition}[Derivative]
+  If $f : \mathbb{R}\to \mathbb{R}$ is such that
+  \[\displaystyle\lim_{h\to 0}\frac{f(x+h) - f(x)}{h}\] exists,\end{definition}
+
+
+\clearpage
+
+
+
+\subsection{Quick review: Derivative}
+\begin{example}
+  $f : \mathbb{R}\to \mathbb{R}$
+  \[f(x) =
+      \begin{cases}
+        x^2 & x < 5\\
+        0 & x = 5\\
+        x^3 & x > 5
+      \end{cases}
+      \]
+      $f(5)=0$\\
+$\displaystyle\lim_{x \to 5^-} f(x)  = 5^2$\\
+$\displaystyle\lim_{x \to 5^+} f(x)  = 5^3$
+\end{example}
+
+
+\begin{example}
+  \[f(x) =
+      \begin{cases}
+        x^2 & x  \neq  5\\
+        0 & x = 5\\
+        
+      \end{cases}
+      \]
+      
+      
+
+
+$\displaystyle\lim_{x \to 5^-} f(x) = 5^2  = \displaystyle\lim_{x \to 5^+} f(x)$\\
+Can say, $\displaystyle\lim_{x \to 5} f(x) = 5^2$
+\end{example}
+
+\newpage
+\begin{example}
+$f(x) = x^2$\\
+$\displaystyle\lim_{x \to 5} f(x) = 5^2 = f(5)$\\
+$f$ is ``continous''.
+\end{example}
+
+\begin{definition}[Continuous function]
+$f : \mathbb{R} \to \mathbb{R}$ is continuous if $\displaystyle\lim_{x \to a} f(x) = f(a)$
+\end{definition}
+
+\begin{definition}[Derivative]
+  If $f : \mathbb{R}\to \mathbb{R}$ is such that
+  \[\displaystyle\lim_{h\to 0}\frac{f(x+h) - f(x)}{h}\] exists, then $f$ is ``differentiable''\end{definition}
+
+
+\clearpage
+
+
+
+\subsection{Quick review: Derivative}
+\begin{example}
+  $f : \mathbb{R}\to \mathbb{R}$
+  \[f(x) =
+      \begin{cases}
+        x^2 & x < 5\\
+        0 & x = 5\\
+        x^3 & x > 5
+      \end{cases}
+      \]
+      $f(5)=0$\\
+$\displaystyle\lim_{x \to 5^-} f(x)  = 5^2$\\
+$\displaystyle\lim_{x \to 5^+} f(x)  = 5^3$
+\end{example}
+
+
+\begin{example}
+  \[f(x) =
+      \begin{cases}
+        x^2 & x  \neq  5\\
+        0 & x = 5\\
+        
+      \end{cases}
+      \]
+      
+      
+
+
+$\displaystyle\lim_{x \to 5^-} f(x) = 5^2  = \displaystyle\lim_{x \to 5^+} f(x)$\\
+Can say, $\displaystyle\lim_{x \to 5} f(x) = 5^2$
+\end{example}
+
+\newpage
+\begin{example}
+$f(x) = x^2$\\
+$\displaystyle\lim_{x \to 5} f(x) = 5^2 = f(5)$\\
+$f$ is ``continous''.
+\end{example}
+
+\begin{definition}[Continuous function]
+$f : \mathbb{R} \to \mathbb{R}$ is continuous if $\displaystyle\lim_{x \to a} f(x) = f(a)$
+\end{definition}
+
+\begin{definition}[Derivative]
+  If $f : \mathbb{R}\to \mathbb{R}$ is such that
+  \[\displaystyle\lim_{h\to 0}\frac{f(x+h) - f(x)}{h}\] exists, then $f$ is ``differentiable'' and the limit is the derivative\end{definition}
+
+
+\clearpage
+
+
+
+\subsection{Quick review: Derivative}
+\begin{example}
+  $f : \mathbb{R}\to \mathbb{R}$
+  \[f(x) =
+      \begin{cases}
+        x^2 & x < 5\\
+        0 & x = 5\\
+        x^3 & x > 5
+      \end{cases}
+      \]
+      $f(5)=0$\\
+$\displaystyle\lim_{x \to 5^-} f(x)  = 5^2$\\
+$\displaystyle\lim_{x \to 5^+} f(x)  = 5^3$
+\end{example}
+
+
+\begin{example}
+  \[f(x) =
+      \begin{cases}
+        x^2 & x  \neq  5\\
+        0 & x = 5\\
+        
+      \end{cases}
+      \]
+      
+      
+
+
+$\displaystyle\lim_{x \to 5^-} f(x) = 5^2  = \displaystyle\lim_{x \to 5^+} f(x)$\\
+Can say, $\displaystyle\lim_{x \to 5} f(x) = 5^2$
+\end{example}
+
+\newpage
+\begin{example}
+$f(x) = x^2$\\
+$\displaystyle\lim_{x \to 5} f(x) = 5^2 = f(5)$\\
+$f$ is ``continous''.
+\end{example}
+
+\begin{definition}[Continuous function]
+$f : \mathbb{R} \to \mathbb{R}$ is continuous if $\displaystyle\lim_{x \to a} f(x) = f(a)$
+\end{definition}
+
+\begin{definition}[Derivative]
+  If $f : \mathbb{R}\to \mathbb{R}$ is such that
+  \[\displaystyle\lim_{h\to 0}\frac{f(x+h) - f(x)}{h}\] exists, then $f$ is ``differentiable'' and the limit is the derivative of $f$\end{definition}
+
+
+\clearpage
+
+
+
+\subsection{Quick review: Derivative}
+\begin{example}
+  $f : \mathbb{R}\to \mathbb{R}$
+  \[f(x) =
+      \begin{cases}
+        x^2 & x < 5\\
+        0 & x = 5\\
+        x^3 & x > 5
+      \end{cases}
+      \]
+      $f(5)=0$\\
+$\displaystyle\lim_{x \to 5^-} f(x)  = 5^2$\\
+$\displaystyle\lim_{x \to 5^+} f(x)  = 5^3$
+\end{example}
+
+
+\begin{example}
+  \[f(x) =
+      \begin{cases}
+        x^2 & x  \neq  5\\
+        0 & x = 5\\
+        
+      \end{cases}
+      \]
+      
+      
+
+
+$\displaystyle\lim_{x \to 5^-} f(x) = 5^2  = \displaystyle\lim_{x \to 5^+} f(x)$\\
+Can say, $\displaystyle\lim_{x \to 5} f(x) = 5^2$
+\end{example}
+
+\newpage
+\begin{example}
+$f(x) = x^2$\\
+$\displaystyle\lim_{x \to 5} f(x) = 5^2 = f(5)$\\
+$f$ is ``continous''.
+\end{example}
+
+\begin{definition}[Continuous function]
+$f : \mathbb{R} \to \mathbb{R}$ is continuous if $\displaystyle\lim_{x \to a} f(x) = f(a)$
+\end{definition}
+
+\begin{definition}[Derivative]
+  If $f : \mathbb{R}\to \mathbb{R}$ is such that
+  \[\displaystyle\lim_{h\to 0}\frac{f(x+h) - f(x)}{h}\] exists, then $f$ is ``differentiable'' and the limit is the derivative of $f$ at $x$, \end{definition}
+
+
+\clearpage
+
+
+
+\subsection{Quick review: Derivative}
+\begin{example}
+  $f : \mathbb{R}\to \mathbb{R}$
+  \[f(x) =
+      \begin{cases}
+        x^2 & x < 5\\
+        0 & x = 5\\
+        x^3 & x > 5
+      \end{cases}
+      \]
+      $f(5)=0$\\
+$\displaystyle\lim_{x \to 5^-} f(x)  = 5^2$\\
+$\displaystyle\lim_{x \to 5^+} f(x)  = 5^3$
+\end{example}
+
+
+\begin{example}
+  \[f(x) =
+      \begin{cases}
+        x^2 & x  \neq  5\\
+        0 & x = 5\\
+        
+      \end{cases}
+      \]
+      
+      
+
+
+$\displaystyle\lim_{x \to 5^-} f(x) = 5^2  = \displaystyle\lim_{x \to 5^+} f(x)$\\
+Can say, $\displaystyle\lim_{x \to 5} f(x) = 5^2$
+\end{example}
+
+\newpage
+\begin{example}
+$f(x) = x^2$\\
+$\displaystyle\lim_{x \to 5} f(x) = 5^2 = f(5)$\\
+$f$ is ``continous''.
+\end{example}
+
+\begin{definition}[Continuous function]
+$f : \mathbb{R} \to \mathbb{R}$ is continuous if $\displaystyle\lim_{x \to a} f(x) = f(a)$
+\end{definition}
+
+\begin{definition}[Derivative]
+  If $f : \mathbb{R}\to \mathbb{R}$ is such that
+  \[\displaystyle\lim_{h\to 0}\frac{f(x+h) - f(x)}{h}\] exists, then $f$ is ``differentiable'' and the limit is the derivative of $f$ at $x$, denoted $f'(x)$ or $\frac{df}{dx}$. \end{definition}
+
+
+\clearpage
+
+
+
+\subsection{Quick review: Derivative}
+\begin{example}
+  $f : \mathbb{R}\to \mathbb{R}$
+  \[f(x) =
+      \begin{cases}
+        x^2 & x < 5\\
+        0 & x = 5\\
+        x^3 & x > 5
+      \end{cases}
+      \]
+      $f(5)=0$\\
+$\displaystyle\lim_{x \to 5^-} f(x)  = 5^2$\\
+$\displaystyle\lim_{x \to 5^+} f(x)  = 5^3$
+\end{example}
+
+
+\begin{example}
+  \[f(x) =
+      \begin{cases}
+        x^2 & x  \neq  5\\
+        0 & x = 5\\
+        
+      \end{cases}
+      \]
+      
+      
+
+
+$\displaystyle\lim_{x \to 5^-} f(x) = 5^2  = \displaystyle\lim_{x \to 5^+} f(x)$\\
+Can say, $\displaystyle\lim_{x \to 5} f(x) = 5^2$
+\end{example}
+
+\newpage
+\begin{example}
+$f(x) = x^2$\\
+$\displaystyle\lim_{x \to 5} f(x) = 5^2 = f(5)$\\
+$f$ is ``continous''.
+\end{example}
+
+\begin{definition}[Continuous function]
+$f : \mathbb{R} \to \mathbb{R}$ is continuous if $\displaystyle\lim_{x \to a} f(x) = f(a)$
+\end{definition}
+
+\begin{definition}[Derivative]
+  If $f : \mathbb{R}\to \mathbb{R}$ is such that
+  \[ f'(x) := \displaystyle\lim_{h\to 0}\frac{f(x+h) - f(x)}{h}\] exists, then $f$ is ``differentiable'' and the limit is the derivative of $f$ at $x$, denoted $f'(x)$ or $\frac{df}{dx}$.  
+\end{definition}
+
+
+\end{document}

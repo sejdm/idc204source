@@ -1,0 +1,24 @@
+\documentclass[a4paper]{article}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\setcounter{secnumdepth}{0}
+\newtheorem{theorem}{Theorem}
+\title{Exercise sheet 4\\ {\small Theory of Computation, IDC204} }
+\date{}
+\begin{document}
+\maketitle
+\begin{enumerate}
+\item For each language that you proved was regular in the previous exercise sets, find a regular expression to describe the language.
+\item For each language that you proved was regular in the previous exercise sets, find a context free grammar to define it. Can any regular language be defined by context free grammar?
+\item Find a context-free grammar to generate the following languages over $\Sigma:=\{0,1\}$
+  \begin{enumerate}
+    \item $\{0^n1^n \ |\ n=0,1,\ldots\}$
+        \item The complement of the previous language, i.e. $\{0^m1^n \ |\  m>n,m,n=0,1,\ldots\}$
+  \end{enumerate}
+
+\item What language does the context free grammar $G:=(\{X\},\{(,)\},R,X)$, where $R=\{X\to (X) | XX | ϵ\}$ generate?
+
+\item Find a context free grammar that generates the language consisting of precisely those strings that are polynomials in $x$ with integer coefficients.
+\end{enumerate}
+\end{document}

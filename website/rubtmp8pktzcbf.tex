@@ -1,0 +1,97 @@
+\documentclass[a4paper]{article}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\setcounter{secnumdepth}{0}
+\newtheorem{theorem}{Theorem}
+\title{Exercise sheet 1\\ {\small Theory of Computation, IDC204} }
+\date{}
+\begin{document}
+\maketitle
+\begin{enumerate}
+\item Verify the following using truth tables:
+   a) $P \lor P \land Q = P$
+   b) $P \land (P \lor Q) = P$
+   c) $P \lor (\neg P \land Q) = P \lor Q$
+
+\item Find a boolean expression for the following truth table in terms of $\land$, $\lor$, and $\neg$ and then simplify it:
+
+  \begin{tabular}{|c|c|c|c|}
+ P   & Q   & R   &   \\
+    \hline
+ T   & T   & T   & T \\
+ T   & T   & F   & T \\
+ T   & F   & T   & F \\
+ T   & F   & F   & F \\
+ F   & T   & T   & F \\
+ F   & T   & F   & F \\
+ F   & F   & T   & F \\
+ F   & F   & F   & F \\
+  \end{tabular}
+  
+
+
+\item Write truth tables for the following expressions and based on that try to guess an equivalent but simpler expression (involving fewer terms):
+  \begin{enumerate}
+   \item $P \land P$
+   \item $P \lor P$
+   \item $P \land (P \lor Q)$
+   \item $P \lor (P \land Q)$
+   \item $T \land P$
+   \item $F \land P$
+   \item $T \lor P$
+   \item $F \lor P$
+   \item $P \land \neg P$
+   \item $P \lor \neg P$
+  \end{enumerate}
+   
+\item Verify the following using truth tables:
+  \begin{enumerate}
+   \item $P \land Q = Q \land P$
+   \item $P \lor Q = Q \lor P$
+   \item $P \land (Q \lor R) = (P \land Q) \lor (P \land R)$
+   \item $P \lor (Q \land R) = (P \lor Q) \land (P \lor R)$
+   \item $\neg (P \land Q) = \neg P \lor \neg Q$
+   \item $\neg (P \lor Q) = \neg P \land \neg Q$
+  \end{enumerate}
+
+\item If you prove an equality of boolean expressions, for example, $\neg (P \land Q) = \neg P \lor \neg Q$, then if you replace every $\lor$ with $\land$, every $\land$ with $\lor$, every $T$ with $F$, and every $F$ with $T$ in that expression, you get a new equality of expressions called the "dual" which is also guaranteed to be true (in this example, $\neg (P \lor Q) = \neg P \land \neg Q$ is the dual of the example).
+  \begin{enumerate}
+   \item Identify any pairs of dual expressions in the previous exercise. Therefore, you need only have verified one per pair.
+   \item Why do you think this principle of duality holds?
+  \end{enumerate}
+
+\item Now that you have verified many simple boolean equations using truth tables, try to use various combinations of them to simplify the following boolean expressions:
+  \begin{enumerate}
+   \item $(\neg P \lor \neg Q) \land (\neg P \lor Q)$
+   \item $\neg P \land \neg (P \lor Q)$
+  \end{enumerate}
+
+\item This exercise and the following one revise something that was discussed in the lecture. See if you can answer it yourself by at most looking at the hints. Define the $\mathrm{NOR}$ operator by the rule, $P\ \mathrm{NOR}\ Q$ is true if and only if $P$ and $Q$ are both false.
+  \begin{enumerate}
+    \item Write a truth table for $\mathrm{NOR}$.
+    \item Find an expression for $P\ \mathrm{NOR}\ Q$ in terms of $\land$, $\lor$, and $\neg$.
+    \item Prove that $\neg P$ can be defined completely in terms of $\mathrm{NOR}$ *(Hint: since $\mathrm{NOR}$ takes two arguments but $\neg P$ involves just one variable, there is only one thing you can do!).*
+    \item Prove that $P \lor Q$ can be expressed using only the $\mathrm{NOR}$ operator. *(Hint: $\lor$ is the negation of $\mathrm{NOR}$ and part c. shows how to express negation in terms of $\mathrm{NOR}$).*
+    \item Prove that $P \land Q$ can be expressed using only the $\mathrm{NOR}$ operator, and therefore, by c. and d. you can express any boolean function using only the $\mathrm{NOR}$ operator. *(Hint: compare the truth tables of $\land$ and $\mathrm{NOR}$. How do you get one from the other?)*
+  \end{enumerate}
+
+\item During the lecture we discussed a method to derive a boolean expression from its truth table, by looking at the rows whose output is $T$.  Can you come up with an analogous method that involves looking at the rows whose output is $F$?
+
+\item Define $P \implies Q$ (i.e. ``P implies Q'') so that it is False only when $P$ is true but $Q$ is false.
+  \begin{enumerate}
+  \item Write a truth table for the $\implies$ operator and derive an expression in terms of only $\land$, $\lor$, and $\neg$.
+  \item Prove that the earlier expression is equal to $\neg P \lor Q$.
+  \item Prove that $P \land Q \implies P$ is always True
+  \item Prove that $(P \implies Q) \land (Q \implies R) \implies (P \implies R)$ is always True
+  \end{enumerate}
+
+\item Define $P \iff Q$ (i.e. ``P implies Q'') so that it is True only when $P$ and $Q$ are either both True or both False.
+  \begin{enumerate}
+  \item Write a truth table for the $\iff$ operator and derive an expression in terms of only $\land$, $\lor$, and $\neg$.
+  \item Prove that $(P\implies Q) \land (Q \implies P) \implies (P \iff Q)$ is always True
+  \end{enumerate}
+
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,31 @@
+\subsubsection{Applications of the inverse function theorem}
+\begin{enumerate}
+\item Consider a smooth map $f : M \to N$ where $M$ and $N$ are of the same dimension $n$. Assume that $d_p(f) : T_p(M) \to T_{f(p)}(N)$ is invertible. Prove that there exists a chart $\phi : U \to \mathbb{R}^n$ centered at $p$ and a chart $\psi : V \to \mathbb{R}^n$ centered at $f(p)$ so that $\psi \circ f \circ \phi^{-1} = Id$.
+
+\item Consider a map $F : \mathbb{R}^n \to \mathbb{R}^k$, which is smooth and its Jacobian is of rank $k$ at $0$. 
+  \begin{enumerate}
+\item Prove that there exists a map $\theta : \mathbb{R}^n \to \mathbb{R}^n$ so that the first $k$ columns of $Jac_0(F \circ \theta^{-1})$ are linearly independent (A permutation would do!).
+
+\item Let $f_i$ be the coordinates of $F\circ \theta^{-1}$, i.e.\\ $F(\theta^{-1}((x_1, x_2, \ldots, x_n)) = (f_1(x_1, x_2, \ldots, x_n), f_2(x_1, x_2, \ldots, x_n), \ldots, f_k(x_1, x_2, \ldots, x_n))$
+  Consider the map $F : \mathbb{R}^n \to \mathbb{R}^k \times \mathbb{R}^{n-k}$ defined by $G(x_1, x_2, \ldots, x_n) = (f_1(x_1, \ldots, x_n), f_2(x_1, \ldots, x_n), \ldots, f_k(x_1, \ldots, x_n), x_{k+1}, \ldots, x_n)$. Prove that $G$ is a local diffeomorphism.
+
+    \item Let $\pi(x_1, x_2, \ldots, x_n) = (x_1, x_2, \ldots, x_k)$. Observe that $F\circ \theta^{-1} = \pi \circ G$. Define $\phi := G \circ \theta$. Prove that $F \circ \phi^{-1} = \pi$.
+  \end{enumerate}
+
+\item Use the previous exercise to prove the local submersion theorem.
+
+  \item Use the submersion theorem to prove that the inverse image (under a smooth map between manifolds) of a regular value is always a manfold.
+
+\item Consider a map $F : \mathbb{R}^k \to \mathbb{R}^n$, which is smooth and its Jacobian is of rank $k$ at $0$. 
+  \begin{enumerate}
+\item Prove that there exists a map $\theta : \mathbb{R}^n \to \mathbb{R}^n$ so that the first $k$ rows of $Jac_0(\theta \circ F)$ are linearly independent (A permutation would do!).
+\item Let $f_i$ be the coordinates of $\theta \circ F$, i.e.\\ $\theta(F(x_1, \ldots, x_k) = (f_1(x_1, \ldots, x_k), f_2(x_1, \ldots, x_k), \ldots, f_n(x_1, \ldots, x_k))$
+  Consider the map $F : \mathbb{R}^k \times \mathbb{R}^{n-k} \to \mathbb{R}^n$ defined by $G(x_1, \ldots, x_n) = (f_1(x_1, \ldots, x_k), f_2(x_1, \ldots, x_k), \ldots, f_n(x_1, \ldots, x_k))+(0, \ldots, 0, x_{k+1}, \ldots, x_n)$. Prove that $G$ is a local diffeomorphism when restricted to some neighbourhood $U$ of 0.
+    \item Let $i(x_1, x_2, \ldots, x_k) = (x_1, x_2, \ldots, x_k, 0, \ldots, 0)$. Observe that $\theta \circ F = G \circ i$. Define $\psi := G^{-1} \circ \theta$. Prove that $\psi \circ F= i$.
+  \end{enumerate}
+
+\item Use the previous exercise to prove the local immersion theorem.
+
+  \item Use the immersion theorem to prove that that image of an injective immersion which is a homeomorphism onto its image is always a submanifold.
+ 
+\end{enumerate}

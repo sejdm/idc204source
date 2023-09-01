@@ -1,0 +1,10 @@
+#!/bin/sh
+for i in $*
+do
+  file="$(echo $i | sed 's#assignments/\(.*\)#\1#')"
+  filename="${file%.*}"
+  exercisenum="$(echo $filename | sed 's/.*\([1-9][0-9]*\)/\1/')"
+  echo $exercisenum
+  pandoc -o assignments/pdfs/"$filename".pdf -s -V "pagetitle:Exercise sheet $exercisenum" -V "title:Exercise sheet $exercisenum" assignments/$file
+done
+

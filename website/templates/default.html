@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>$title$ - MTH406</title>
+  <meta charset="utf-8" />
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="/css/my.css">
+<link rel="stylesheet" href="/css/syntax.css">
+  <link rel="alternate"
+        type="application/atom+xml"
+        title="MTH 406"
+        href="/atom.xml" />
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+  <div class="navbar">
+
+    <header>
+      <hgroup>
+        <h1><a href="/index.html" id="titlelink">Manifolds (MTH 406)</a></h1>
+      </hgroup>
+    </header>
+
+    <nav id="mainnav">
+      <div id="topmenu">
+        <menu>
+          <a href="/index.html">Course information</a>
+	  $if(assignments)$
+          <a href="/assignments.html">Exercise sheets</a>
+	  $endif$
+	  $if(posts)$
+          <a href="/posts.html">Comments</a>
+	  $endif$
+        </menu>
+	</div>
+    </nav>
+    </div>
+    <section id="pagecontent">
+        $body$
+    </section>
+
+<section id="posts" class="sidenav">
+$if(assignments)$
+    <h2>Latest exercise sheet</h2>
+$partial("templates/assignment-list.html")$
+    <p><a href="/assignments.html">All exercise sheets&hellip;</a></p>
+$endif$
+
+
+$if(posts)$
+    <h2>Recent comments</h2>
+$partial("templates/post-list.html")$
+    <p><a href="/posts.html">All comments&hellip;</a></p>
+$endif$
+
+$if(solutions)$
+    <h2>Latest exercise sheet</h2>
+$partial("templates/solution-list.html")$
+    <p><a href="/assignments.html">All exercise sheets&hellip;</a></p>
+$endif$
+
+</section>
+</body>
+</html>

@@ -1,0 +1,63 @@
+\documentclass[a4paper]{article}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\setcounter{secnumdepth}{0}
+\newtheorem{theorem}{Theorem}
+\title{Exercise sheet 2\\ {\small Theory of Computation, IDC204} }
+\date{}
+\begin{document}
+\maketitle
+\subsection{Quantifiers}
+\begin{enumerate}
+  \item Consider the predicate $P(x,y,z):=``2x+5y−6z=1"$. Which of the following propositions are true:
+\begin{enumerate}
+\item $\forall x\forall y\forall zP(x,y,z)$
+\item $\forall x\forall y\exists zP(x,y,z)$
+\item $\forall x\exists y\exists zP(x,y,z)$
+\item $\exists x\exists y\exists zP(x,y,z)$
+\end{enumerate}
+
+\item Which of these are true no matter what the predicate P(x,y) is. For each of the others, find an example for which it does not hold.
+\begin{enumerate}
+\item $\forall x\exists yP(x,y)≡\exists y\forall xP(x,y)$
+\item $\forall x\forall yP(x,y)≡\forall y\forall xP(x,y)$
+\item $\exists x\exists yP(x,y)≡\exists y\exists xP(x,y)$
+\end{enumerate}
+
+\item Let $Q(x,y)$ denote the predicate “$x$ is a question from Quiz $y$”. Let $D(x)$ denote the predicate “$x$ is difficult”. Write expressions for the following statements using quantifiers, $Q$, and $D$:
+\begin{enumerate}
+    \item “Quiz 3 has exactly one difficult question”
+    \item “Every quiz will have at least one difficult question”
+    \item “For some quizzes, every question will be difficult”
+    \item “For some quizzes, at most one question will be easy”
+\end{enumerate}
+
+\item One can define a new quantifier $\exists !xP(x)$ to mean that “there exists a unique $x$ such that $P(x)$ is true”. Show that this can always be expressed by an expression involving only the usual two quantifiers, $\exists $, and $\forall$. (Hint: you want to say that it exists and is unique. What does it mean to say that there is a unique $x$ satisfying a predicate? Try considering its negation if that helps. You may assume that there is some notion of equality between the objects under consideration so that it makes sense to ask if “a=b” for any given a and b)
+
+\subsection{Deterministic finite state automata}
+\item Design a deterministic finite state automaton over the alphabet $\Sigma={0,1}$ that will accept a string if and only if it
+  \begin{enumerate}
+    \item is the empty string
+    \item is not the empty string
+    \item is precisely the string 111
+\item begins with the substring 111
+\item is the empty string or begins with the substring 111
+\item ends with the substring 111
+\item begins with 0 and ends with 1
+\item contains the substring 111 
+  \end{enumerate}
+
+ \item Show that if we can design a finite state automaton that accepts strings with certain properties and rejects others, then we can also design an automaton that does the same job but has only one accept state.
+
+   \item Show that if a language $L$ over some alphabet $\Sigma$ is regular (a finite state automaton can be designed to accept strings in the language and reject the others), then even $\Sigma^* \setminus L$ is also regular. 
+
+     \item Consider the alphabet $\Sigma=\{0,1,…,n,(,),+,−,∗,/\}$. Prove that it is impossible to build a finite state automaton that will reject precisely those strings over $\Sigma$ that have mis-matched parentheses but accept those with all their parentheses matched. For example, it should reject “(5 + 6 - 9” but should accept “(5+6)-9”
+
+       \item Consider the alphabet $\Sigma={1}$ and let $L:=\{1^p \ |\ \textrm{p is a prime}\}$. Prove that $L$ cannot be recognized by a finite state automaton.
+
+         \item Consider a finite state automaton, $M$, that recognizes a language, $L$, over an alphabet, $\Sigma$. If we now enlarge the alphabet to $\Sigma′$, i.e. $\Sigma⊂\Sigma$′, but consider the same set strings as before as our language, how would you modify $M$ to recognize this language? Note that while it accepts exactly the same strings as before, it must reject a lot more strings.
+
+           \item By our definition, a finite state automaton must read the entire input even if it is already clear that the string must be rejected (for example, if the language includes all strings beginning with a 0). Let us define a “haltable automaton” that can also reject and stop reading the string when there is no point in doing so. Such an automaton may be represented by $(Q,\Sigma,\delta,q_0,F,H)$ where $H$ denotes the subset of “reject and halt states” and the other symbols carry their usual meanings. It works as usual except that if the automaton enters a state in $H$, it immediately halts and rejects the string reading no more characters. Show that for any such “haltable automaton”, the language that it recognizes can also be recognized by a standard deterministic finite state automaton. Therefore, despite the improvement, “haltable automata” recognize no more languages than the usual deterministic finite state automata can.
+\end{enumerate}
+\end{document}

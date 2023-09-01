@@ -1,0 +1,32 @@
+\documentclass[a4paper]{article}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\setcounter{secnumdepth}{0}
+\newtheorem{theorem}{Theorem}
+\title{Exercise sheet 3\\ {\small Theory of Computation, IDC204} }
+\date{}
+\begin{document}
+\maketitle
+\begin{enumerate}
+\item If $L_1$ and $L_2$ are both regular languages over an alphabet $\Sigma$. If $L_1$ can be recognized by a finite state automaton $A_1$ and $L_2$ can be recognized by a finite state automaton $A_2$, then show that one can use $A_1$ and $A_2$ to design a *non-deterministic* finite state automaton that recognizes,
+  \begin{enumerate}
+   \item $L_1 \cup L_2$
+   \item $L_1 \circ L_2 = \{s_1s_2 \ |\ s_1 \in L_1, s_2 \in L_2\}$, i.e., it is obtained by concatenating each string in $L_1$ with a string in $L_2$.
+   \item $L_1^* = \{s_1s_2\ldots s_n \ |\ s_i \in L_1\}$.
+  \end{enumerate}
+
+  
+\item Design a *non*-deterministic finite state automaton over the alphabet $\Sigma={0,1}$ that will accept a string if and only if it
+  \begin{enumerate}
+    \item is the empty string
+    \item is not the empty string
+    \item is precisely the string 111
+\item begins with the substring 111
+\item is the empty string or begins with the substring 111
+\item ends with the substring 111
+\item begins with 0 and ends with 1
+\item contains the substring 111 
+  \end{enumerate}
+\end{enumerate}
+\end{document}

@@ -1,0 +1,10 @@
+<ul>
+    $for(solutions)$
+        <li>
+          <a href="$url$">Solutions to Exercise sheet $filedigit$</a>
+	  $if(solutionpdfurl)$ /
+	  <a href="/$pdfurl$">PDF version</a>
+	  $endif$
+        </li>
+    $endfor$
+</ul>

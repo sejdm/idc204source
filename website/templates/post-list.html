@@ -1,0 +1,14 @@
+<ul>
+    $for(posts)$
+        <li>
+            <a href="$url$"><i>$title$</i></a> - $date$
+	  $if(pdfurl)$
+	  (<a href="/$pdfurl$">PDF file</a>)
+	  $endif$
+$if(teaser)$
+	    <p> $teaser$ <br /><a href="$url$">Read more...</a> </p>
+$else$
+$endif$
+        </li>
+    $endfor$
+</ul>

@@ -1,0 +1,14 @@
+<ul>
+    $for(assignments)$
+        <li>
+          <a href="$url$">Exercise sheet $filedigit$</a>
+	  $if(pdfurl)$ /
+	  <a href="/$pdfurl$">PDF version</a>
+	  $endif$
+	  $if(solutionurl)$<br /> 
+	   (<a href="/$solutionurl$">Hints or Solutions</a> /
+	  <a href="/$solutionpdfurl$">Hints or Solutions PDF</a>)
+	  $endif$
+        </li>
+    $endfor$
+</ul>

@@ -1,0 +1,4010 @@
+\documentclass[twocolumn,20pt,fleqn]{extarticle}
+\usepackage{color}
+\usepackage{geometry}
+\usepackage[normalem]{ulem}
+\usepackage{cancel}
+\usepackage{dingbat}
+\usepackage{marginnote}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\usepackage{tcolorbox}
+\usepackage{multicol}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{wrapfig}
+\usepackage{caption}
+%\usepackage{draftwatermark}
+
+\usetikzlibrary{calc}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}
+\makeatletter
+\renewcommand{\@seccntformat}[1]{}
+\makeatother
+
+\geometry{paperwidth=34cm, paperheight=19cm, margin=0.5cm}
+
+\newcommand{\clr}[2]{{\color{#1} #2}}
+\newcommand{\alert}[1]{{\color{red} #1}}
+\newcommand{\ovrbrc}[2]{\overbrace{#2}^{#1}}
+\newcommand{\undrbrc}[2]{\underbrace{#2}_{#1}}
+\newcommand{\lnspc}{\vspace{1cm}}
+\newcommand{\sep}{\vspace{0.5cm}}
+\newcommand{\e}{\textrm{e}}
+%\newcommand{\dydx}[2]{\frac{\mathrm{d}}}
+
+\theoremstyle{plain}
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{proposition}{Proposition}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{corollary}{Corollary}
+
+\theoremstyle{definition}
+\newtheorem*{exercise}{Exercise}
+\newtheorem*{definition}{Definition}
+\newtheorem*{example}{Example}
+\newtheorem*{exmpls}{Examples}
+
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\newtheorem*{note}{Note}
+
+\newenvironment*{examples}{\begin{exmpls} ~ \begin{enumerate}}{\end{enumerate}\end{exmpls}}
+
+\begin{document}
+
+
+
+\clearpage
+
+
+\subsection{Reparametrization}
+$\phi: (\alpha,\beta) \to (\alpha',\beta')$ is bijective,
+
+
+\clearpage
+
+
+\subsection{Reparametrization}
+$\phi: (\alpha,\beta) \to (\alpha',\beta')$ is bijective, then it is invertible,
+
+
+\clearpage
+
+
+\subsection{Reparametrization}
+$\phi: (\alpha,\beta) \to (\alpha',\beta')$ is bijective, then it is invertible, its inverse is,
+denoted: $\phi^{-1} : (\alpha',\beta') \to (\alpha,\beta)$.
+
+
+
+
+\clearpage
+
+
+\subsection{Reparametrization}
+$\phi: (\alpha,\beta) \to (\alpha',\beta')$ is bijective, then it is invertible, its inverse is,
+denoted: $\phi^{-1} : (\alpha',\beta') \to (\alpha,\beta)$.
+
+If $\phi$ is smooth, is $\phi^{-1}$ smooth?
+
+
+\clearpage
+
+
+\subsection{Reparametrization}
+$\phi: (\alpha,\beta) \to (\alpha',\beta')$ is bijective, then it is invertible, its inverse is,
+denoted: $\phi^{-1} : (\alpha',\beta') \to (\alpha,\beta)$.
+
+If $\phi$ is smooth, is $\phi^{-1}$ smooth? Not necessarily!
+
+
+
+
+
+
+\clearpage
+
+
+\subsection{Reparametrization}
+$\phi: (\alpha,\beta) \to (\alpha',\beta')$ is bijective, then it is invertible, its inverse is,
+denoted: $\phi^{-1} : (\alpha',\beta') \to (\alpha,\beta)$.
+
+If $\phi$ is smooth, is $\phi^{-1}$ smooth? Not necessarily!
+
+
+
+
+
+\newpage
+
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\end{tikzpicture}
+
+
+\clearpage
+
+
+\subsection{Reparametrization}
+$\phi: (\alpha,\beta) \to (\alpha',\beta')$ is bijective, then it is invertible, its inverse is,
+denoted: $\phi^{-1} : (\alpha',\beta') \to (\alpha,\beta)$.
+
+If $\phi$ is smooth, is $\phi^{-1}$ smooth? Not necessarily!
+
+
+
+
+
+\newpage
+
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\end{tikzpicture}
+
+
+\clearpage
+
+
+\subsection{Reparametrization}
+$\phi: (\alpha,\beta) \to (\alpha',\beta')$ is bijective, then it is invertible, its inverse is,
+denoted: $\phi^{-1} : (\alpha',\beta') \to (\alpha,\beta)$.
+
+If $\phi$ is smooth, is $\phi^{-1}$ smooth? Not necessarily!
+
+
+
+
+
+\newpage
+
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\end{tikzpicture}
+
+
+\clearpage
+
+
+\subsection{Reparametrization}
+$\phi: (\alpha,\beta) \to (\alpha',\beta')$ is bijective, then it is invertible, its inverse is,
+denoted: $\phi^{-1} : (\alpha',\beta') \to (\alpha,\beta)$.
+
+If $\phi$ is smooth, is $\phi^{-1}$ smooth? Not necessarily!
+
+
+
+
+
+\newpage
+
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+;
+\end{tikzpicture}
+ 
+
+
+
+
+
+\clearpage
+
+
+\subsection{Reparametrization}
+$\phi: (\alpha,\beta) \to (\alpha',\beta')$ is bijective, then it is invertible, its inverse is,
+denoted: $\phi^{-1} : (\alpha',\beta') \to (\alpha,\beta)$.
+
+If $\phi$ is smooth, is $\phi^{-1}$ smooth? Not necessarily!
+
+
+
+
+
+\newpage
+
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+
+\draw[color=blue,thick] (2,0) arc
+    [
+        start angle=0,
+        end angle=290,
+        x radius=2cm,
+        y radius =2cm
+    ] ;
+
+\draw[thin,->] (-5,-7) -- (5,-7) node[anchor=west] {};
+;
+\end{tikzpicture}
+ 
+
+
+
+
+
+
+\clearpage
+
+
+\subsection{Reparametrization}
+$\phi: (\alpha,\beta) \to (\alpha',\beta')$ is bijective, then it is invertible, its inverse is,
+denoted: $\phi^{-1} : (\alpha',\beta') \to (\alpha,\beta)$.
+
+If $\phi$ is smooth, is $\phi^{-1}$ smooth? Not necessarily!
+
+
+
+
+
+\newpage
+
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+
+\draw[color=blue,thick] (2,0) arc
+    [
+        start angle=0,
+        end angle=290,
+        x radius=2cm,
+        y radius =2cm
+    ] ;
+ \node at (2,0)[circle,fill,inner sep=2pt,color=blue]{}; 
+\draw[thin,->] (-5,-7) -- (5,-7) node[anchor=west] {};
+\node at (-4,-7)[circle,fill,inner sep=2pt,color=blue]{};
+;
+\end{tikzpicture}
+ 
+
+
+
+
+
+
+\clearpage
+
+
+\subsection{Reparametrization}
+$\phi: (\alpha,\beta) \to (\alpha',\beta')$ is bijective, then it is invertible, its inverse is,
+denoted: $\phi^{-1} : (\alpha',\beta') \to (\alpha,\beta)$.
+
+If $\phi$ is smooth, is $\phi^{-1}$ smooth? Not necessarily!
+
+
+
+
+
+\newpage
+
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+
+\draw[color=blue,thick] (2,0) arc
+    [
+        start angle=0,
+        end angle=290,
+        x radius=2cm,
+        y radius =2cm
+    ] ;
+ \node at (2,0)[circle,fill,inner sep=2pt,color=blue]{};  \node at (0,2)[circle,fill,inner sep=2pt,color=green]{}; 
+\draw[thin,->] (-5,-7) -- (5,-7) node[anchor=west] {};
+\node at (-4,-7)[circle,fill,inner sep=2pt,color=blue]{};
+\node at (-2,-7)[circle,fill,inner sep=2pt,color=green]{}; 
+;
+\end{tikzpicture}
+ 
+
+
+
+
+
+
+\clearpage
+
+
+\subsection{Reparametrization}
+$\phi: (\alpha,\beta) \to (\alpha',\beta')$ is bijective, then it is invertible, its inverse is,
+denoted: $\phi^{-1} : (\alpha',\beta') \to (\alpha,\beta)$.
+
+If $\phi$ is smooth, is $\phi^{-1}$ smooth? Not necessarily!
+
+
+
+
+
+\newpage
+
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+
+\draw[color=blue,thick] (2,0) arc
+    [
+        start angle=0,
+        end angle=290,
+        x radius=2cm,
+        y radius =2cm
+    ] ;
+ \node at (2,0)[circle,fill,inner sep=2pt,color=blue]{};  \node at (0,2)[circle,fill,inner sep=2pt,color=green]{};  \node at (-2,0)[circle,fill,inner sep=2pt,color=yellow]{}; 
+\draw[thin,->] (-5,-7) -- (5,-7) node[anchor=west] {};
+\node at (-4,-7)[circle,fill,inner sep=2pt,color=blue]{};
+\node at (-2,-7)[circle,fill,inner sep=2pt,color=green]{}; 
+\node at (0,-7)[circle,fill,inner sep=2pt,color=yellow]{};
+;
+\end{tikzpicture}
+ 
+
+
+
+
+
+
+\clearpage
+
+
+\subsection{Reparametrization}
+$\phi: (\alpha,\beta) \to (\alpha',\beta')$ is bijective, then it is invertible, its inverse is,
+denoted: $\phi^{-1} : (\alpha',\beta') \to (\alpha,\beta)$.
+
+If $\phi$ is smooth, is $\phi^{-1}$ smooth? Not necessarily!
+
+
+
+
+
+\newpage
+
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+
+\draw[color=blue,thick] (2,0) arc
+    [
+        start angle=0,
+        end angle=290,
+        x radius=2cm,
+        y radius =2cm
+    ] ;
+ \node at (2,0)[circle,fill,inner sep=2pt,color=blue]{};  \node at (0,2)[circle,fill,inner sep=2pt,color=green]{};  \node at (-2,0)[circle,fill,inner sep=2pt,color=yellow]{};  \node at (0,-2)[circle,fill,inner sep=2pt,color=red]{}; 
+\draw[thin,->] (-5,-7) -- (5,-7) node[anchor=west] {};
+\node at (-4,-7)[circle,fill,inner sep=2pt,color=blue]{};
+\node at (-2,-7)[circle,fill,inner sep=2pt,color=green]{}; 
+\node at (0,-7)[circle,fill,inner sep=2pt,color=yellow]{};
+\node at (2,-7)[circle,fill,inner sep=2pt,color=red]{};
+
+;
+\end{tikzpicture}
+ 
+
+
+
+
+
+
+\clearpage
+
+
+\subsection{Reparametrization}
+$\phi: (\alpha,\beta) \to (\alpha',\beta')$ is bijective, then it is invertible, its inverse is,
+denoted: $\phi^{-1} : (\alpha',\beta') \to (\alpha,\beta)$.
+
+If $\phi$ is smooth, is $\phi^{-1}$ smooth? Not necessarily!
+
+
+
+
+
+\newpage
+
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+
+\draw[color=blue,thick] (2,0) arc
+    [
+        start angle=0,
+        end angle=290,
+        x radius=2cm,
+        y radius =2cm
+    ] ;
+ \node at (2,0)[circle,fill,inner sep=2pt,color=blue]{};  \node at (0,2)[circle,fill,inner sep=2pt,color=green]{};  \node at (-2,0)[circle,fill,inner sep=2pt,color=yellow]{};  \node at (0,-2)[circle,fill,inner sep=2pt,color=red]{}; 
+\draw[thin,->] (-5,-7) -- (5,-7) node[anchor=west] {};
+\node at (-4,-7)[circle,fill,inner sep=2pt,color=blue]{};
+\node at (-2,-7)[circle,fill,inner sep=2pt,color=green]{}; 
+\node at (0,-7)[circle,fill,inner sep=2pt,color=yellow]{};
+\node at (2,-7)[circle,fill,inner sep=2pt,color=red]{};
+
+\draw[thin,->] (-5,-10) -- (5,-10) node[anchor=west] {};
+;
+\end{tikzpicture}
+ 
+
+
+
+
+
+
+\clearpage
+
+
+\subsection{Reparametrization}
+$\phi: (\alpha,\beta) \to (\alpha',\beta')$ is bijective, then it is invertible, its inverse is,
+denoted: $\phi^{-1} : (\alpha',\beta') \to (\alpha,\beta)$.
+
+If $\phi$ is smooth, is $\phi^{-1}$ smooth? Not necessarily!
+
+
+
+
+
+\newpage
+
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+
+\draw[color=blue,thick] (2,0) arc
+    [
+        start angle=0,
+        end angle=290,
+        x radius=2cm,
+        y radius =2cm
+    ] ;
+ \node at (2,0)[circle,fill,inner sep=2pt,color=blue]{};  \node at (0,2)[circle,fill,inner sep=2pt,color=green]{};  \node at (-2,0)[circle,fill,inner sep=2pt,color=yellow]{};  \node at (0,-2)[circle,fill,inner sep=2pt,color=red]{};  \node at (2,0)[circle,fill,inner sep=2pt,color=blue]{}; 
+\draw[thin,->] (-5,-7) -- (5,-7) node[anchor=west] {};
+\node at (-4,-7)[circle,fill,inner sep=2pt,color=blue]{};
+\node at (-2,-7)[circle,fill,inner sep=2pt,color=green]{}; 
+\node at (0,-7)[circle,fill,inner sep=2pt,color=yellow]{};
+\node at (2,-7)[circle,fill,inner sep=2pt,color=red]{};
+
+\draw[thin,->] (-5,-10) -- (5,-10) node[anchor=west] {};
+\node at (-5,-10)[circle,fill,inner sep=2pt,color=blue]{};
+;
+\end{tikzpicture}
+ 
+
+
+
+
+
+
+\clearpage
+
+
+\subsection{Reparametrization}
+$\phi: (\alpha,\beta) \to (\alpha',\beta')$ is bijective, then it is invertible, its inverse is,
+denoted: $\phi^{-1} : (\alpha',\beta') \to (\alpha,\beta)$.
+
+If $\phi$ is smooth, is $\phi^{-1}$ smooth? Not necessarily!
+
+
+
+
+
+\newpage
+
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+
+\draw[color=blue,thick] (2,0) arc
+    [
+        start angle=0,
+        end angle=290,
+        x radius=2cm,
+        y radius =2cm
+    ] ;
+ \node at (2,0)[circle,fill,inner sep=2pt,color=blue]{};  \node at (0,2)[circle,fill,inner sep=2pt,color=green]{};  \node at (-2,0)[circle,fill,inner sep=2pt,color=yellow]{};  \node at (0,-2)[circle,fill,inner sep=2pt,color=red]{};  \node at (2,0)[circle,fill,inner sep=2pt,color=blue]{};  \node at (0,2)[circle,fill,inner sep=2pt,color=green]{}; 
+\draw[thin,->] (-5,-7) -- (5,-7) node[anchor=west] {};
+\node at (-4,-7)[circle,fill,inner sep=2pt,color=blue]{};
+\node at (-2,-7)[circle,fill,inner sep=2pt,color=green]{}; 
+\node at (0,-7)[circle,fill,inner sep=2pt,color=yellow]{};
+\node at (2,-7)[circle,fill,inner sep=2pt,color=red]{};
+
+\draw[thin,->] (-5,-10) -- (5,-10) node[anchor=west] {};
+\node at (-5,-10)[circle,fill,inner sep=2pt,color=blue]{};
+\node at (-2,-10)[circle,fill,inner sep=2pt,color=green]{}; 
+;
+\end{tikzpicture}
+ 
+
+
+
+
+
+
+\clearpage
+
+
+\subsection{Reparametrization}
+$\phi: (\alpha,\beta) \to (\alpha',\beta')$ is bijective, then it is invertible, its inverse is,
+denoted: $\phi^{-1} : (\alpha',\beta') \to (\alpha,\beta)$.
+
+If $\phi$ is smooth, is $\phi^{-1}$ smooth? Not necessarily!
+
+
+
+
+
+\newpage
+
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+
+\draw[color=blue,thick] (2,0) arc
+    [
+        start angle=0,
+        end angle=290,
+        x radius=2cm,
+        y radius =2cm
+    ] ;
+ \node at (2,0)[circle,fill,inner sep=2pt,color=blue]{};  \node at (0,2)[circle,fill,inner sep=2pt,color=green]{};  \node at (-2,0)[circle,fill,inner sep=2pt,color=yellow]{};  \node at (0,-2)[circle,fill,inner sep=2pt,color=red]{};  \node at (2,0)[circle,fill,inner sep=2pt,color=blue]{};  \node at (0,2)[circle,fill,inner sep=2pt,color=green]{};  \node at (-2,0)[circle,fill,inner sep=2pt,color=yellow]{}; 
+\draw[thin,->] (-5,-7) -- (5,-7) node[anchor=west] {};
+\node at (-4,-7)[circle,fill,inner sep=2pt,color=blue]{};
+\node at (-2,-7)[circle,fill,inner sep=2pt,color=green]{}; 
+\node at (0,-7)[circle,fill,inner sep=2pt,color=yellow]{};
+\node at (2,-7)[circle,fill,inner sep=2pt,color=red]{};
+
+\draw[thin,->] (-5,-10) -- (5,-10) node[anchor=west] {};
+\node at (-5,-10)[circle,fill,inner sep=2pt,color=blue]{};
+\node at (-2,-10)[circle,fill,inner sep=2pt,color=green]{}; 
+\node at (0,-10)[circle,fill,inner sep=2pt,color=yellow]{};
+;
+\end{tikzpicture}
+ 
+
+
+
+
+
+
+\clearpage
+
+
+\subsection{Reparametrization}
+$\phi: (\alpha,\beta) \to (\alpha',\beta')$ is bijective, then it is invertible, its inverse is,
+denoted: $\phi^{-1} : (\alpha',\beta') \to (\alpha,\beta)$.
+
+If $\phi$ is smooth, is $\phi^{-1}$ smooth? Not necessarily!
+
+
+
+
+
+\newpage
+
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+
+\draw[color=blue,thick] (2,0) arc
+    [
+        start angle=0,
+        end angle=290,
+        x radius=2cm,
+        y radius =2cm
+    ] ;
+ \node at (2,0)[circle,fill,inner sep=2pt,color=blue]{};  \node at (0,2)[circle,fill,inner sep=2pt,color=green]{};  \node at (-2,0)[circle,fill,inner sep=2pt,color=yellow]{};  \node at (0,-2)[circle,fill,inner sep=2pt,color=red]{};  \node at (2,0)[circle,fill,inner sep=2pt,color=blue]{};  \node at (0,2)[circle,fill,inner sep=2pt,color=green]{};  \node at (-2,0)[circle,fill,inner sep=2pt,color=yellow]{};  \node at (0,-2)[circle,fill,inner sep=2pt,color=red]{}; 
+
+\draw[thin,->] (-5,-7) -- (5,-7) node[anchor=west] {};
+\node at (-4,-7)[circle,fill,inner sep=2pt,color=blue]{};
+\node at (-2,-7)[circle,fill,inner sep=2pt,color=green]{}; 
+\node at (0,-7)[circle,fill,inner sep=2pt,color=yellow]{};
+\node at (2,-7)[circle,fill,inner sep=2pt,color=red]{};
+
+\draw[thin,->] (-5,-10) -- (5,-10) node[anchor=west] {};
+\node at (-5,-10)[circle,fill,inner sep=2pt,color=blue]{};
+\node at (-2,-10)[circle,fill,inner sep=2pt,color=green]{}; 
+\node at (0,-10)[circle,fill,inner sep=2pt,color=yellow]{};
+\node at (4,-10)[circle,fill,inner sep=2pt,color=red]{};;
+\end{tikzpicture}
+ 
+
+
+
+
+
+
+\clearpage
+
+
+\subsection{Reparametrization}
+$\phi: (\alpha,\beta) \to (\alpha',\beta')$ is bijective, then it is invertible, its inverse is,
+denoted: $\phi^{-1} : (\alpha',\beta') \to (\alpha,\beta)$.
+
+If $\phi$ is smooth, is $\phi^{-1}$ smooth? Not necessarily!
+
+
+
+
+
+\newpage
+
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+
+\draw[color=blue,thick] (2,0) arc
+    [
+        start angle=0,
+        end angle=290,
+        x radius=2cm,
+        y radius =2cm
+    ] ;
+ \node at (2,0)[circle,fill,inner sep=2pt,color=blue]{};  \node at (0,2)[circle,fill,inner sep=2pt,color=green]{};  \node at (-2,0)[circle,fill,inner sep=2pt,color=yellow]{};  \node at (0,-2)[circle,fill,inner sep=2pt,color=red]{};  \node at (2,0)[circle,fill,inner sep=2pt,color=blue]{};  \node at (0,2)[circle,fill,inner sep=2pt,color=green]{};  \node at (-2,0)[circle,fill,inner sep=2pt,color=yellow]{};  \node at (0,-2)[circle,fill,inner sep=2pt,color=red]{}; 
+\draw[thick,->, shorten >=2.5pt] (-5,-10) -- (-4,-7);
+
+\draw[thin,->] (-5,-7) -- (5,-7) node[anchor=west] {};
+\node at (-4,-7)[circle,fill,inner sep=2pt,color=blue]{};
+\node at (-2,-7)[circle,fill,inner sep=2pt,color=green]{}; 
+\node at (0,-7)[circle,fill,inner sep=2pt,color=yellow]{};
+\node at (2,-7)[circle,fill,inner sep=2pt,color=red]{};
+
+\draw[thin,->] (-5,-10) -- (5,-10) node[anchor=west] {};
+\node at (-5,-10)[circle,fill,inner sep=2pt,color=blue]{};
+\node at (-2,-10)[circle,fill,inner sep=2pt,color=green]{}; 
+\node at (0,-10)[circle,fill,inner sep=2pt,color=yellow]{};
+\node at (4,-10)[circle,fill,inner sep=2pt,color=red]{};;
+\end{tikzpicture}
+ 
+
+
+
+
+
+
+\clearpage
+
+
+\subsection{Reparametrization}
+$\phi: (\alpha,\beta) \to (\alpha',\beta')$ is bijective, then it is invertible, its inverse is,
+denoted: $\phi^{-1} : (\alpha',\beta') \to (\alpha,\beta)$.
+
+If $\phi$ is smooth, is $\phi^{-1}$ smooth? Not necessarily!
+
+
+
+
+
+\newpage
+
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+
+\draw[color=blue,thick] (2,0) arc
+    [
+        start angle=0,
+        end angle=290,
+        x radius=2cm,
+        y radius =2cm
+    ] ;
+ \node at (2,0)[circle,fill,inner sep=2pt,color=blue]{};  \node at (0,2)[circle,fill,inner sep=2pt,color=green]{};  \node at (-2,0)[circle,fill,inner sep=2pt,color=yellow]{};  \node at (0,-2)[circle,fill,inner sep=2pt,color=red]{};  \node at (2,0)[circle,fill,inner sep=2pt,color=blue]{};  \node at (0,2)[circle,fill,inner sep=2pt,color=green]{};  \node at (-2,0)[circle,fill,inner sep=2pt,color=yellow]{};  \node at (0,-2)[circle,fill,inner sep=2pt,color=red]{}; 
+\draw[thick,->, shorten >=2.5pt] (-5,-10) -- (-4,-7);
+\draw[thick,->, shorten >=2.5pt] (-2,-10) -- (-2,-7);
+
+\draw[thin,->] (-5,-7) -- (5,-7) node[anchor=west] {};
+\node at (-4,-7)[circle,fill,inner sep=2pt,color=blue]{};
+\node at (-2,-7)[circle,fill,inner sep=2pt,color=green]{}; 
+\node at (0,-7)[circle,fill,inner sep=2pt,color=yellow]{};
+\node at (2,-7)[circle,fill,inner sep=2pt,color=red]{};
+
+\draw[thin,->] (-5,-10) -- (5,-10) node[anchor=west] {};
+\node at (-5,-10)[circle,fill,inner sep=2pt,color=blue]{};
+\node at (-2,-10)[circle,fill,inner sep=2pt,color=green]{}; 
+\node at (0,-10)[circle,fill,inner sep=2pt,color=yellow]{};
+\node at (4,-10)[circle,fill,inner sep=2pt,color=red]{};;
+\end{tikzpicture}
+ 
+
+
+
+
+
+
+\clearpage
+
+
+\subsection{Reparametrization}
+$\phi: (\alpha,\beta) \to (\alpha',\beta')$ is bijective, then it is invertible, its inverse is,
+denoted: $\phi^{-1} : (\alpha',\beta') \to (\alpha,\beta)$.
+
+If $\phi$ is smooth, is $\phi^{-1}$ smooth? Not necessarily!
+
+
+
+
+
+\newpage
+
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+
+\draw[color=blue,thick] (2,0) arc
+    [
+        start angle=0,
+        end angle=290,
+        x radius=2cm,
+        y radius =2cm
+    ] ;
+ \node at (2,0)[circle,fill,inner sep=2pt,color=blue]{};  \node at (0,2)[circle,fill,inner sep=2pt,color=green]{};  \node at (-2,0)[circle,fill,inner sep=2pt,color=yellow]{};  \node at (0,-2)[circle,fill,inner sep=2pt,color=red]{};  \node at (2,0)[circle,fill,inner sep=2pt,color=blue]{};  \node at (0,2)[circle,fill,inner sep=2pt,color=green]{};  \node at (-2,0)[circle,fill,inner sep=2pt,color=yellow]{};  \node at (0,-2)[circle,fill,inner sep=2pt,color=red]{}; 
+\draw[thick,->, shorten >=2.5pt] (-5,-10) -- (-4,-7);
+\draw[thick,->, shorten >=2.5pt] (-2,-10) -- (-2,-7);
+\draw[thick,->, shorten >=2.5pt] (0,-10) -- (0,-7);
+
+\draw[thin,->] (-5,-7) -- (5,-7) node[anchor=west] {};
+\node at (-4,-7)[circle,fill,inner sep=2pt,color=blue]{};
+\node at (-2,-7)[circle,fill,inner sep=2pt,color=green]{}; 
+\node at (0,-7)[circle,fill,inner sep=2pt,color=yellow]{};
+\node at (2,-7)[circle,fill,inner sep=2pt,color=red]{};
+
+\draw[thin,->] (-5,-10) -- (5,-10) node[anchor=west] {};
+\node at (-5,-10)[circle,fill,inner sep=2pt,color=blue]{};
+\node at (-2,-10)[circle,fill,inner sep=2pt,color=green]{}; 
+\node at (0,-10)[circle,fill,inner sep=2pt,color=yellow]{};
+\node at (4,-10)[circle,fill,inner sep=2pt,color=red]{};;
+\end{tikzpicture}
+ 
+
+
+
+
+
+
+\clearpage
+
+
+\subsection{Reparametrization}
+$\phi: (\alpha,\beta) \to (\alpha',\beta')$ is bijective, then it is invertible, its inverse is,
+denoted: $\phi^{-1} : (\alpha',\beta') \to (\alpha,\beta)$.
+
+If $\phi$ is smooth, is $\phi^{-1}$ smooth? Not necessarily!
+
+
+
+
+
+\newpage
+
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+
+\draw[color=blue,thick] (2,0) arc
+    [
+        start angle=0,
+        end angle=290,
+        x radius=2cm,
+        y radius =2cm
+    ] ;
+ \node at (2,0)[circle,fill,inner sep=2pt,color=blue]{};  \node at (0,2)[circle,fill,inner sep=2pt,color=green]{};  \node at (-2,0)[circle,fill,inner sep=2pt,color=yellow]{};  \node at (0,-2)[circle,fill,inner sep=2pt,color=red]{};  \node at (2,0)[circle,fill,inner sep=2pt,color=blue]{};  \node at (0,2)[circle,fill,inner sep=2pt,color=green]{};  \node at (-2,0)[circle,fill,inner sep=2pt,color=yellow]{};  \node at (0,-2)[circle,fill,inner sep=2pt,color=red]{}; 
+\draw[thick,->, shorten >=2.5pt] (-5,-10) -- (-4,-7);
+\draw[thick,->, shorten >=2.5pt] (-2,-10) -- (-2,-7);
+\draw[thick,->, shorten >=2.5pt] (0,-10) -- (0,-7);
+\draw[thick,->, shorten >=2.5pt] (4,-10) -- (2,-7);
+\draw[thin,->] (-5,-7) -- (5,-7) node[anchor=west] {};
+\node at (-4,-7)[circle,fill,inner sep=2pt,color=blue]{};
+\node at (-2,-7)[circle,fill,inner sep=2pt,color=green]{}; 
+\node at (0,-7)[circle,fill,inner sep=2pt,color=yellow]{};
+\node at (2,-7)[circle,fill,inner sep=2pt,color=red]{};
+
+\draw[thin,->] (-5,-10) -- (5,-10) node[anchor=west] {};
+\node at (-5,-10)[circle,fill,inner sep=2pt,color=blue]{};
+\node at (-2,-10)[circle,fill,inner sep=2pt,color=green]{}; 
+\node at (0,-10)[circle,fill,inner sep=2pt,color=yellow]{};
+\node at (4,-10)[circle,fill,inner sep=2pt,color=red]{};;
+\end{tikzpicture}
+ 
+
+
+
+
+
+
+
+\clearpage
+
+
+\subsection{Reparametrization}
+$\phi: (\alpha,\beta) \to (\alpha',\beta')$ is bijective, then it is invertible, its inverse is,
+denoted: $\phi^{-1} : (\alpha',\beta') \to (\alpha,\beta)$.
+
+If $\phi$ is smooth, is $\phi^{-1}$ smooth? Not necessarily!
+
+
+
+\begin{definition}~\\
+  $\gamma : (\alpha, \beta) \to \mathbb{R}^2$.\\\end{definition}
+
+
+\newpage
+
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+
+\draw[color=blue,thick] (2,0) arc
+    [
+        start angle=0,
+        end angle=290,
+        x radius=2cm,
+        y radius =2cm
+    ] ;
+ \node at (2,0)[circle,fill,inner sep=2pt,color=blue]{};  \node at (0,2)[circle,fill,inner sep=2pt,color=green]{};  \node at (-2,0)[circle,fill,inner sep=2pt,color=yellow]{};  \node at (0,-2)[circle,fill,inner sep=2pt,color=red]{};  \node at (2,0)[circle,fill,inner sep=2pt,color=blue]{};  \node at (0,2)[circle,fill,inner sep=2pt,color=green]{};  \node at (-2,0)[circle,fill,inner sep=2pt,color=yellow]{};  \node at (0,-2)[circle,fill,inner sep=2pt,color=red]{}; 
+\draw[thick,->, shorten >=2.5pt] (-5,-10) -- (-4,-7);
+\draw[thick,->, shorten >=2.5pt] (-2,-10) -- (-2,-7);
+\draw[thick,->, shorten >=2.5pt] (0,-10) -- (0,-7);
+\draw[thick,->, shorten >=2.5pt] (4,-10) -- (2,-7);
+\draw[thin,->] (-5,-7) -- (5,-7) node[anchor=west] {};
+\node at (-4,-7)[circle,fill,inner sep=2pt,color=blue]{};
+\node at (-2,-7)[circle,fill,inner sep=2pt,color=green]{}; 
+\node at (0,-7)[circle,fill,inner sep=2pt,color=yellow]{};
+\node at (2,-7)[circle,fill,inner sep=2pt,color=red]{};
+
+\draw[thin,->] (-5,-10) -- (5,-10) node[anchor=west] {};
+\node at (-5,-10)[circle,fill,inner sep=2pt,color=blue]{};
+\node at (-2,-10)[circle,fill,inner sep=2pt,color=green]{}; 
+\node at (0,-10)[circle,fill,inner sep=2pt,color=yellow]{};
+\node at (4,-10)[circle,fill,inner sep=2pt,color=red]{};;
+\end{tikzpicture}
+ 
+
+
+
+
+
+
+
+\clearpage
+
+
+\subsection{Reparametrization}
+$\phi: (\alpha,\beta) \to (\alpha',\beta')$ is bijective, then it is invertible, its inverse is,
+denoted: $\phi^{-1} : (\alpha',\beta') \to (\alpha,\beta)$.
+
+If $\phi$ is smooth, is $\phi^{-1}$ smooth? Not necessarily!
+
+
+
+\begin{definition}~\\
+  $\gamma : (\alpha, \beta) \to \mathbb{R}^2$.\\
+  $\tilde{\gamma} : (\tilde{\alpha}, \tilde{\beta}) \to \mathbb{R}^2$.\\\end{definition}
+
+
+\newpage
+
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+
+\draw[color=blue,thick] (2,0) arc
+    [
+        start angle=0,
+        end angle=290,
+        x radius=2cm,
+        y radius =2cm
+    ] ;
+ \node at (2,0)[circle,fill,inner sep=2pt,color=blue]{};  \node at (0,2)[circle,fill,inner sep=2pt,color=green]{};  \node at (-2,0)[circle,fill,inner sep=2pt,color=yellow]{};  \node at (0,-2)[circle,fill,inner sep=2pt,color=red]{};  \node at (2,0)[circle,fill,inner sep=2pt,color=blue]{};  \node at (0,2)[circle,fill,inner sep=2pt,color=green]{};  \node at (-2,0)[circle,fill,inner sep=2pt,color=yellow]{};  \node at (0,-2)[circle,fill,inner sep=2pt,color=red]{}; 
+\draw[thick,->, shorten >=2.5pt] (-5,-10) -- (-4,-7);
+\draw[thick,->, shorten >=2.5pt] (-2,-10) -- (-2,-7);
+\draw[thick,->, shorten >=2.5pt] (0,-10) -- (0,-7);
+\draw[thick,->, shorten >=2.5pt] (4,-10) -- (2,-7);
+\draw[thin,->] (-5,-7) -- (5,-7) node[anchor=west] {};
+\node at (-4,-7)[circle,fill,inner sep=2pt,color=blue]{};
+\node at (-2,-7)[circle,fill,inner sep=2pt,color=green]{}; 
+\node at (0,-7)[circle,fill,inner sep=2pt,color=yellow]{};
+\node at (2,-7)[circle,fill,inner sep=2pt,color=red]{};
+
+\draw[thin,->] (-5,-10) -- (5,-10) node[anchor=west] {};
+\node at (-5,-10)[circle,fill,inner sep=2pt,color=blue]{};
+\node at (-2,-10)[circle,fill,inner sep=2pt,color=green]{}; 
+\node at (0,-10)[circle,fill,inner sep=2pt,color=yellow]{};
+\node at (4,-10)[circle,fill,inner sep=2pt,color=red]{};;
+\end{tikzpicture}
+ 
+
+
+
+
+
+
+
+\clearpage
+
+
+\subsection{Reparametrization}
+$\phi: (\alpha,\beta) \to (\alpha',\beta')$ is bijective, then it is invertible, its inverse is,
+denoted: $\phi^{-1} : (\alpha',\beta') \to (\alpha,\beta)$.
+
+If $\phi$ is smooth, is $\phi^{-1}$ smooth? Not necessarily!
+
+
+
+\begin{definition}~\\
+  $\gamma : (\alpha, \beta) \to \mathbb{R}^2$.\\
+  $\tilde{\gamma} : (\tilde{\alpha}, \tilde{\beta}) \to \mathbb{R}^2$.\\
+  If $\phi : (\tilde{\alpha}, \tilde{\beta})\to (\alpha, \beta)$ is bijective\end{definition}
+
+
+\newpage
+
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+
+\draw[color=blue,thick] (2,0) arc
+    [
+        start angle=0,
+        end angle=290,
+        x radius=2cm,
+        y radius =2cm
+    ] ;
+ \node at (2,0)[circle,fill,inner sep=2pt,color=blue]{};  \node at (0,2)[circle,fill,inner sep=2pt,color=green]{};  \node at (-2,0)[circle,fill,inner sep=2pt,color=yellow]{};  \node at (0,-2)[circle,fill,inner sep=2pt,color=red]{};  \node at (2,0)[circle,fill,inner sep=2pt,color=blue]{};  \node at (0,2)[circle,fill,inner sep=2pt,color=green]{};  \node at (-2,0)[circle,fill,inner sep=2pt,color=yellow]{};  \node at (0,-2)[circle,fill,inner sep=2pt,color=red]{}; 
+\draw[thick,->, shorten >=2.5pt] (-5,-10) -- (-4,-7);
+\draw[thick,->, shorten >=2.5pt] (-2,-10) -- (-2,-7);
+\draw[thick,->, shorten >=2.5pt] (0,-10) -- (0,-7);
+\draw[thick,->, shorten >=2.5pt] (4,-10) -- (2,-7);
+\draw[thin,->] (-5,-7) -- (5,-7) node[anchor=west] {};
+\node at (-4,-7)[circle,fill,inner sep=2pt,color=blue]{};
+\node at (-2,-7)[circle,fill,inner sep=2pt,color=green]{}; 
+\node at (0,-7)[circle,fill,inner sep=2pt,color=yellow]{};
+\node at (2,-7)[circle,fill,inner sep=2pt,color=red]{};
+
+\draw[thin,->] (-5,-10) -- (5,-10) node[anchor=west] {};
+\node at (-5,-10)[circle,fill,inner sep=2pt,color=blue]{};
+\node at (-2,-10)[circle,fill,inner sep=2pt,color=green]{}; 
+\node at (0,-10)[circle,fill,inner sep=2pt,color=yellow]{};
+\node at (4,-10)[circle,fill,inner sep=2pt,color=red]{};;
+\end{tikzpicture}
+ 
+
+
+
+
+
+
+
+\clearpage
+
+
+\subsection{Reparametrization}
+$\phi: (\alpha,\beta) \to (\alpha',\beta')$ is bijective, then it is invertible, its inverse is,
+denoted: $\phi^{-1} : (\alpha',\beta') \to (\alpha,\beta)$.
+
+If $\phi$ is smooth, is $\phi^{-1}$ smooth? Not necessarily!
+
+
+
+\begin{definition}~\\
+  $\gamma : (\alpha, \beta) \to \mathbb{R}^2$.\\
+  $\tilde{\gamma} : (\tilde{\alpha}, \tilde{\beta}) \to \mathbb{R}^2$.\\
+  If $\phi : (\tilde{\alpha}, \tilde{\beta})\to (\alpha, \beta)$ is bijective, smooth,\end{definition}
+
+
+\newpage
+
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+
+\draw[color=blue,thick] (2,0) arc
+    [
+        start angle=0,
+        end angle=290,
+        x radius=2cm,
+        y radius =2cm
+    ] ;
+ \node at (2,0)[circle,fill,inner sep=2pt,color=blue]{};  \node at (0,2)[circle,fill,inner sep=2pt,color=green]{};  \node at (-2,0)[circle,fill,inner sep=2pt,color=yellow]{};  \node at (0,-2)[circle,fill,inner sep=2pt,color=red]{};  \node at (2,0)[circle,fill,inner sep=2pt,color=blue]{};  \node at (0,2)[circle,fill,inner sep=2pt,color=green]{};  \node at (-2,0)[circle,fill,inner sep=2pt,color=yellow]{};  \node at (0,-2)[circle,fill,inner sep=2pt,color=red]{}; 
+\draw[thick,->, shorten >=2.5pt] (-5,-10) -- (-4,-7);
+\draw[thick,->, shorten >=2.5pt] (-2,-10) -- (-2,-7);
+\draw[thick,->, shorten >=2.5pt] (0,-10) -- (0,-7);
+\draw[thick,->, shorten >=2.5pt] (4,-10) -- (2,-7);
+\draw[thin,->] (-5,-7) -- (5,-7) node[anchor=west] {};
+\node at (-4,-7)[circle,fill,inner sep=2pt,color=blue]{};
+\node at (-2,-7)[circle,fill,inner sep=2pt,color=green]{}; 
+\node at (0,-7)[circle,fill,inner sep=2pt,color=yellow]{};
+\node at (2,-7)[circle,fill,inner sep=2pt,color=red]{};
+
+\draw[thin,->] (-5,-10) -- (5,-10) node[anchor=west] {};
+\node at (-5,-10)[circle,fill,inner sep=2pt,color=blue]{};
+\node at (-2,-10)[circle,fill,inner sep=2pt,color=green]{}; 
+\node at (0,-10)[circle,fill,inner sep=2pt,color=yellow]{};
+\node at (4,-10)[circle,fill,inner sep=2pt,color=red]{};;
+\end{tikzpicture}
+ 
+
+
+
+
+
+
+
+\clearpage
+
+
+\subsection{Reparametrization}
+$\phi: (\alpha,\beta) \to (\alpha',\beta')$ is bijective, then it is invertible, its inverse is,
+denoted: $\phi^{-1} : (\alpha',\beta') \to (\alpha,\beta)$.
+
+If $\phi$ is smooth, is $\phi^{-1}$ smooth? Not necessarily!
+
+
+
+\begin{definition}~\\
+  $\gamma : (\alpha, \beta) \to \mathbb{R}^2$.\\
+  $\tilde{\gamma} : (\tilde{\alpha}, \tilde{\beta}) \to \mathbb{R}^2$.\\
+  If $\phi : (\tilde{\alpha}, \tilde{\beta})\to (\alpha, \beta)$ is bijective, smooth, \\and its inverse, $\phi^{-1}$ is smooth,\end{definition}
+
+
+\newpage
+
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+
+\draw[color=blue,thick] (2,0) arc
+    [
+        start angle=0,
+        end angle=290,
+        x radius=2cm,
+        y radius =2cm
+    ] ;
+ \node at (2,0)[circle,fill,inner sep=2pt,color=blue]{};  \node at (0,2)[circle,fill,inner sep=2pt,color=green]{};  \node at (-2,0)[circle,fill,inner sep=2pt,color=yellow]{};  \node at (0,-2)[circle,fill,inner sep=2pt,color=red]{};  \node at (2,0)[circle,fill,inner sep=2pt,color=blue]{};  \node at (0,2)[circle,fill,inner sep=2pt,color=green]{};  \node at (-2,0)[circle,fill,inner sep=2pt,color=yellow]{};  \node at (0,-2)[circle,fill,inner sep=2pt,color=red]{}; 
+\draw[thick,->, shorten >=2.5pt] (-5,-10) -- (-4,-7);
+\draw[thick,->, shorten >=2.5pt] (-2,-10) -- (-2,-7);
+\draw[thick,->, shorten >=2.5pt] (0,-10) -- (0,-7);
+\draw[thick,->, shorten >=2.5pt] (4,-10) -- (2,-7);
+\draw[thin,->] (-5,-7) -- (5,-7) node[anchor=west] {};
+\node at (-4,-7)[circle,fill,inner sep=2pt,color=blue]{};
+\node at (-2,-7)[circle,fill,inner sep=2pt,color=green]{}; 
+\node at (0,-7)[circle,fill,inner sep=2pt,color=yellow]{};
+\node at (2,-7)[circle,fill,inner sep=2pt,color=red]{};
+
+\draw[thin,->] (-5,-10) -- (5,-10) node[anchor=west] {};
+\node at (-5,-10)[circle,fill,inner sep=2pt,color=blue]{};
+\node at (-2,-10)[circle,fill,inner sep=2pt,color=green]{}; 
+\node at (0,-10)[circle,fill,inner sep=2pt,color=yellow]{};
+\node at (4,-10)[circle,fill,inner sep=2pt,color=red]{};;
+\end{tikzpicture}
+ 
+
+
+
+
+
+
+
+\clearpage
+
+
+\subsection{Reparametrization}
+$\phi: (\alpha,\beta) \to (\alpha',\beta')$ is bijective, then it is invertible, its inverse is,
+denoted: $\phi^{-1} : (\alpha',\beta') \to (\alpha,\beta)$.
+
+If $\phi$ is smooth, is $\phi^{-1}$ smooth? Not necessarily!
+
+
+
+\begin{definition}~\\
+  $\gamma : (\alpha, \beta) \to \mathbb{R}^2$.\\
+  $\tilde{\gamma} : (\tilde{\alpha}, \tilde{\beta}) \to \mathbb{R}^2$.\\
+  If $\phi : (\tilde{\alpha}, \tilde{\beta})\to (\alpha, \beta)$ is bijective, smooth, \\and its inverse, $\phi^{-1}$ is smooth,\\ and
+ $\tilde{\gamma}(t) = \gamma(\phi(t))$,\end{definition}
+
+
+\newpage
+
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+
+\draw[color=blue,thick] (2,0) arc
+    [
+        start angle=0,
+        end angle=290,
+        x radius=2cm,
+        y radius =2cm
+    ] ;
+ \node at (2,0)[circle,fill,inner sep=2pt,color=blue]{};  \node at (0,2)[circle,fill,inner sep=2pt,color=green]{};  \node at (-2,0)[circle,fill,inner sep=2pt,color=yellow]{};  \node at (0,-2)[circle,fill,inner sep=2pt,color=red]{};  \node at (2,0)[circle,fill,inner sep=2pt,color=blue]{};  \node at (0,2)[circle,fill,inner sep=2pt,color=green]{};  \node at (-2,0)[circle,fill,inner sep=2pt,color=yellow]{};  \node at (0,-2)[circle,fill,inner sep=2pt,color=red]{}; 
+\draw[thick,->, shorten >=2.5pt] (-5,-10) -- (-4,-7);
+\draw[thick,->, shorten >=2.5pt] (-2,-10) -- (-2,-7);
+\draw[thick,->, shorten >=2.5pt] (0,-10) -- (0,-7);
+\draw[thick,->, shorten >=2.5pt] (4,-10) -- (2,-7);
+\draw[thin,->] (-5,-7) -- (5,-7) node[anchor=west] {};
+\node at (-4,-7)[circle,fill,inner sep=2pt,color=blue]{};
+\node at (-2,-7)[circle,fill,inner sep=2pt,color=green]{}; 
+\node at (0,-7)[circle,fill,inner sep=2pt,color=yellow]{};
+\node at (2,-7)[circle,fill,inner sep=2pt,color=red]{};
+
+\draw[thin,->] (-5,-10) -- (5,-10) node[anchor=west] {};
+\node at (-5,-10)[circle,fill,inner sep=2pt,color=blue]{};
+\node at (-2,-10)[circle,fill,inner sep=2pt,color=green]{}; 
+\node at (0,-10)[circle,fill,inner sep=2pt,color=yellow]{};
+\node at (4,-10)[circle,fill,inner sep=2pt,color=red]{};;
+\end{tikzpicture}
+ 
+
+
+
+
+
+
+
+\clearpage
+
+
+\subsection{Reparametrization}
+$\phi: (\alpha,\beta) \to (\alpha',\beta')$ is bijective, then it is invertible, its inverse is,
+denoted: $\phi^{-1} : (\alpha',\beta') \to (\alpha,\beta)$.
+
+If $\phi$ is smooth, is $\phi^{-1}$ smooth? Not necessarily!
+
+
+
+\begin{definition}~\\
+  $\gamma : (\alpha, \beta) \to \mathbb{R}^2$.\\
+  $\tilde{\gamma} : (\tilde{\alpha}, \tilde{\beta}) \to \mathbb{R}^2$.\\
+  If $\phi : (\tilde{\alpha}, \tilde{\beta})\to (\alpha, \beta)$ is bijective, smooth, \\and its inverse, $\phi^{-1}$ is smooth,\\ and
+ $\tilde{\gamma}(t) = \gamma(\phi(t))$,\\ then $\phi$ is called a reparametrization of $\gamma$.
+\end{definition}
+
+
+
+\newpage
+
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+
+\draw[color=blue,thick] (2,0) arc
+    [
+        start angle=0,
+        end angle=290,
+        x radius=2cm,
+        y radius =2cm
+    ] ;
+ \node at (2,0)[circle,fill,inner sep=2pt,color=blue]{};  \node at (0,2)[circle,fill,inner sep=2pt,color=green]{};  \node at (-2,0)[circle,fill,inner sep=2pt,color=yellow]{};  \node at (0,-2)[circle,fill,inner sep=2pt,color=red]{};  \node at (2,0)[circle,fill,inner sep=2pt,color=blue]{};  \node at (0,2)[circle,fill,inner sep=2pt,color=green]{};  \node at (-2,0)[circle,fill,inner sep=2pt,color=yellow]{};  \node at (0,-2)[circle,fill,inner sep=2pt,color=red]{}; 
+\draw[thick,->, shorten >=2.5pt] (-5,-10) -- (-4,-7);
+\draw[thick,->, shorten >=2.5pt] (-2,-10) -- (-2,-7);
+\draw[thick,->, shorten >=2.5pt] (0,-10) -- (0,-7);
+\draw[thick,->, shorten >=2.5pt] (4,-10) -- (2,-7);
+\draw[thin,->] (-5,-7) -- (5,-7) node[anchor=west] {};
+\node at (-4,-7)[circle,fill,inner sep=2pt,color=blue]{};
+\node at (-2,-7)[circle,fill,inner sep=2pt,color=green]{}; 
+\node at (0,-7)[circle,fill,inner sep=2pt,color=yellow]{};
+\node at (2,-7)[circle,fill,inner sep=2pt,color=red]{};
+
+\draw[thin,->] (-5,-10) -- (5,-10) node[anchor=west] {};
+\node at (-5,-10)[circle,fill,inner sep=2pt,color=blue]{};
+\node at (-2,-10)[circle,fill,inner sep=2pt,color=green]{}; 
+\node at (0,-10)[circle,fill,inner sep=2pt,color=yellow]{};
+\node at (4,-10)[circle,fill,inner sep=2pt,color=red]{};;
+\end{tikzpicture}
+ 
+
+
+
+
+
+
+
+\clearpage
+
+
+\subsection{Reparametrization}
+$\phi: (\alpha,\beta) \to (\alpha',\beta')$ is bijective, then it is invertible, its inverse is,
+denoted: $\phi^{-1} : (\alpha',\beta') \to (\alpha,\beta)$.
+
+If $\phi$ is smooth, is $\phi^{-1}$ smooth? Not necessarily!
+
+
+
+\begin{definition}~\\
+  $\gamma : (\alpha, \beta) \to \mathbb{R}^2$.\\
+  $\tilde{\gamma} : (\tilde{\alpha}, \tilde{\beta}) \to \mathbb{R}^2$.\\
+  If $\phi : (\tilde{\alpha}, \tilde{\beta})\to (\alpha, \beta)$ is bijective, smooth, \\and its inverse, $\phi^{-1}$ is smooth,\\ and
+ $\tilde{\gamma}(t) = \gamma(\phi(t))$,\\ then $\phi$ is called a reparametrization of $\gamma$.
+\end{definition}
+
+Explictly:
+
+
+\newpage
+
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+
+\draw[color=blue,thick] (2,0) arc
+    [
+        start angle=0,
+        end angle=290,
+        x radius=2cm,
+        y radius =2cm
+    ] ;
+ \node at (2,0)[circle,fill,inner sep=2pt,color=blue]{};  \node at (0,2)[circle,fill,inner sep=2pt,color=green]{};  \node at (-2,0)[circle,fill,inner sep=2pt,color=yellow]{};  \node at (0,-2)[circle,fill,inner sep=2pt,color=red]{};  \node at (2,0)[circle,fill,inner sep=2pt,color=blue]{};  \node at (0,2)[circle,fill,inner sep=2pt,color=green]{};  \node at (-2,0)[circle,fill,inner sep=2pt,color=yellow]{};  \node at (0,-2)[circle,fill,inner sep=2pt,color=red]{}; 
+\draw[thick,->, shorten >=2.5pt] (-5,-10) -- (-4,-7);
+\draw[thick,->, shorten >=2.5pt] (-2,-10) -- (-2,-7);
+\draw[thick,->, shorten >=2.5pt] (0,-10) -- (0,-7);
+\draw[thick,->, shorten >=2.5pt] (4,-10) -- (2,-7);
+\draw[thin,->] (-5,-7) -- (5,-7) node[anchor=west] {};
+\node at (-4,-7)[circle,fill,inner sep=2pt,color=blue]{};
+\node at (-2,-7)[circle,fill,inner sep=2pt,color=green]{}; 
+\node at (0,-7)[circle,fill,inner sep=2pt,color=yellow]{};
+\node at (2,-7)[circle,fill,inner sep=2pt,color=red]{};
+
+\draw[thin,->] (-5,-10) -- (5,-10) node[anchor=west] {};
+\node at (-5,-10)[circle,fill,inner sep=2pt,color=blue]{};
+\node at (-2,-10)[circle,fill,inner sep=2pt,color=green]{}; 
+\node at (0,-10)[circle,fill,inner sep=2pt,color=yellow]{};
+\node at (4,-10)[circle,fill,inner sep=2pt,color=red]{};;
+\end{tikzpicture}
+ 
+
+
+
+
+
+
+
+\clearpage
+
+
+\subsection{Reparametrization}
+$\phi: (\alpha,\beta) \to (\alpha',\beta')$ is bijective, then it is invertible, its inverse is,
+denoted: $\phi^{-1} : (\alpha',\beta') \to (\alpha,\beta)$.
+
+If $\phi$ is smooth, is $\phi^{-1}$ smooth? Not necessarily!
+
+
+
+\begin{definition}~\\
+  $\gamma : (\alpha, \beta) \to \mathbb{R}^2$.\\
+  $\tilde{\gamma} : (\tilde{\alpha}, \tilde{\beta}) \to \mathbb{R}^2$.\\
+  If $\phi : (\tilde{\alpha}, \tilde{\beta})\to (\alpha, \beta)$ is bijective, smooth, \\and its inverse, $\phi^{-1}$ is smooth,\\ and
+ $\tilde{\gamma}(t) = \gamma(\phi(t))$,\\ then $\phi$ is called a reparametrization of $\gamma$.
+\end{definition}
+
+Explictly:
+
+$\gamma(t) = (f_1(t), f_2(t))$
+
+
+\newpage
+
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+
+\draw[color=blue,thick] (2,0) arc
+    [
+        start angle=0,
+        end angle=290,
+        x radius=2cm,
+        y radius =2cm
+    ] ;
+ \node at (2,0)[circle,fill,inner sep=2pt,color=blue]{};  \node at (0,2)[circle,fill,inner sep=2pt,color=green]{};  \node at (-2,0)[circle,fill,inner sep=2pt,color=yellow]{};  \node at (0,-2)[circle,fill,inner sep=2pt,color=red]{};  \node at (2,0)[circle,fill,inner sep=2pt,color=blue]{};  \node at (0,2)[circle,fill,inner sep=2pt,color=green]{};  \node at (-2,0)[circle,fill,inner sep=2pt,color=yellow]{};  \node at (0,-2)[circle,fill,inner sep=2pt,color=red]{}; 
+\draw[thick,->, shorten >=2.5pt] (-5,-10) -- (-4,-7);
+\draw[thick,->, shorten >=2.5pt] (-2,-10) -- (-2,-7);
+\draw[thick,->, shorten >=2.5pt] (0,-10) -- (0,-7);
+\draw[thick,->, shorten >=2.5pt] (4,-10) -- (2,-7);
+\draw[thin,->] (-5,-7) -- (5,-7) node[anchor=west] {};
+\node at (-4,-7)[circle,fill,inner sep=2pt,color=blue]{};
+\node at (-2,-7)[circle,fill,inner sep=2pt,color=green]{}; 
+\node at (0,-7)[circle,fill,inner sep=2pt,color=yellow]{};
+\node at (2,-7)[circle,fill,inner sep=2pt,color=red]{};
+
+\draw[thin,->] (-5,-10) -- (5,-10) node[anchor=west] {};
+\node at (-5,-10)[circle,fill,inner sep=2pt,color=blue]{};
+\node at (-2,-10)[circle,fill,inner sep=2pt,color=green]{}; 
+\node at (0,-10)[circle,fill,inner sep=2pt,color=yellow]{};
+\node at (4,-10)[circle,fill,inner sep=2pt,color=red]{};;
+\end{tikzpicture}
+ 
+
+
+
+
+
+
+
+\clearpage
+
+
+\subsection{Reparametrization}
+$\phi: (\alpha,\beta) \to (\alpha',\beta')$ is bijective, then it is invertible, its inverse is,
+denoted: $\phi^{-1} : (\alpha',\beta') \to (\alpha,\beta)$.
+
+If $\phi$ is smooth, is $\phi^{-1}$ smooth? Not necessarily!
+
+
+
+\begin{definition}~\\
+  $\gamma : (\alpha, \beta) \to \mathbb{R}^2$.\\
+  $\tilde{\gamma} : (\tilde{\alpha}, \tilde{\beta}) \to \mathbb{R}^2$.\\
+  If $\phi : (\tilde{\alpha}, \tilde{\beta})\to (\alpha, \beta)$ is bijective, smooth, \\and its inverse, $\phi^{-1}$ is smooth,\\ and
+ $\tilde{\gamma}(t) = \gamma(\phi(t))$,\\ then $\phi$ is called a reparametrization of $\gamma$.
+\end{definition}
+
+Explictly:
+
+$\gamma(t) = (f_1(t), f_2(t))$\\
+$\gamma(\phi(t)) = (f_1(\phi(t)),$
+
+
+\newpage
+
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+
+\draw[color=blue,thick] (2,0) arc
+    [
+        start angle=0,
+        end angle=290,
+        x radius=2cm,
+        y radius =2cm
+    ] ;
+ \node at (2,0)[circle,fill,inner sep=2pt,color=blue]{};  \node at (0,2)[circle,fill,inner sep=2pt,color=green]{};  \node at (-2,0)[circle,fill,inner sep=2pt,color=yellow]{};  \node at (0,-2)[circle,fill,inner sep=2pt,color=red]{};  \node at (2,0)[circle,fill,inner sep=2pt,color=blue]{};  \node at (0,2)[circle,fill,inner sep=2pt,color=green]{};  \node at (-2,0)[circle,fill,inner sep=2pt,color=yellow]{};  \node at (0,-2)[circle,fill,inner sep=2pt,color=red]{}; 
+\draw[thick,->, shorten >=2.5pt] (-5,-10) -- (-4,-7);
+\draw[thick,->, shorten >=2.5pt] (-2,-10) -- (-2,-7);
+\draw[thick,->, shorten >=2.5pt] (0,-10) -- (0,-7);
+\draw[thick,->, shorten >=2.5pt] (4,-10) -- (2,-7);
+\draw[thin,->] (-5,-7) -- (5,-7) node[anchor=west] {};
+\node at (-4,-7)[circle,fill,inner sep=2pt,color=blue]{};
+\node at (-2,-7)[circle,fill,inner sep=2pt,color=green]{}; 
+\node at (0,-7)[circle,fill,inner sep=2pt,color=yellow]{};
+\node at (2,-7)[circle,fill,inner sep=2pt,color=red]{};
+
+\draw[thin,->] (-5,-10) -- (5,-10) node[anchor=west] {};
+\node at (-5,-10)[circle,fill,inner sep=2pt,color=blue]{};
+\node at (-2,-10)[circle,fill,inner sep=2pt,color=green]{}; 
+\node at (0,-10)[circle,fill,inner sep=2pt,color=yellow]{};
+\node at (4,-10)[circle,fill,inner sep=2pt,color=red]{};;
+\end{tikzpicture}
+ 
+
+
+
+
+
+
+
+\clearpage
+
+
+\subsection{Reparametrization}
+$\phi: (\alpha,\beta) \to (\alpha',\beta')$ is bijective, then it is invertible, its inverse is,
+denoted: $\phi^{-1} : (\alpha',\beta') \to (\alpha,\beta)$.
+
+If $\phi$ is smooth, is $\phi^{-1}$ smooth? Not necessarily!
+
+
+
+\begin{definition}~\\
+  $\gamma : (\alpha, \beta) \to \mathbb{R}^2$.\\
+  $\tilde{\gamma} : (\tilde{\alpha}, \tilde{\beta}) \to \mathbb{R}^2$.\\
+  If $\phi : (\tilde{\alpha}, \tilde{\beta})\to (\alpha, \beta)$ is bijective, smooth, \\and its inverse, $\phi^{-1}$ is smooth,\\ and
+ $\tilde{\gamma}(t) = \gamma(\phi(t))$,\\ then $\phi$ is called a reparametrization of $\gamma$.
+\end{definition}
+
+Explictly:
+
+$\gamma(t) = (f_1(t), f_2(t))$\\
+$\gamma(\phi(t)) = (f_1(\phi(t)), f_2(\phi(t)))$
+
+
+
+\newpage
+
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+
+\draw[color=blue,thick] (2,0) arc
+    [
+        start angle=0,
+        end angle=290,
+        x radius=2cm,
+        y radius =2cm
+    ] ;
+ \node at (2,0)[circle,fill,inner sep=2pt,color=blue]{};  \node at (0,2)[circle,fill,inner sep=2pt,color=green]{};  \node at (-2,0)[circle,fill,inner sep=2pt,color=yellow]{};  \node at (0,-2)[circle,fill,inner sep=2pt,color=red]{};  \node at (2,0)[circle,fill,inner sep=2pt,color=blue]{};  \node at (0,2)[circle,fill,inner sep=2pt,color=green]{};  \node at (-2,0)[circle,fill,inner sep=2pt,color=yellow]{};  \node at (0,-2)[circle,fill,inner sep=2pt,color=red]{}; 
+\draw[thick,->, shorten >=2.5pt] (-5,-10) -- (-4,-7);
+\draw[thick,->, shorten >=2.5pt] (-2,-10) -- (-2,-7);
+\draw[thick,->, shorten >=2.5pt] (0,-10) -- (0,-7);
+\draw[thick,->, shorten >=2.5pt] (4,-10) -- (2,-7);
+\draw[thin,->] (-5,-7) -- (5,-7) node[anchor=west] {};
+\node at (-4,-7)[circle,fill,inner sep=2pt,color=blue]{};
+\node at (-2,-7)[circle,fill,inner sep=2pt,color=green]{}; 
+\node at (0,-7)[circle,fill,inner sep=2pt,color=yellow]{};
+\node at (2,-7)[circle,fill,inner sep=2pt,color=red]{};
+
+\draw[thin,->] (-5,-10) -- (5,-10) node[anchor=west] {};
+\node at (-5,-10)[circle,fill,inner sep=2pt,color=blue]{};
+\node at (-2,-10)[circle,fill,inner sep=2pt,color=green]{}; 
+\node at (0,-10)[circle,fill,inner sep=2pt,color=yellow]{};
+\node at (4,-10)[circle,fill,inner sep=2pt,color=red]{};;
+\end{tikzpicture}
+ 
+
+
+
+
+
+
+
+
+\clearpage
+
+
+
+\subsection{Example}
+  $\gamma : (-1, 1) \to \mathbb{R}^2$
+
+
+\clearpage
+
+
+
+\subsection{Example}
+  $\gamma : (-1, 1) \to \mathbb{R}^2$\\
+  $\gamma(t) = (t,t)$
+
+
+\clearpage
+
+
+
+\subsection{Example}
+  $\gamma : (-1, 1) \to \mathbb{R}^2$\\
+  $\gamma(t) = (t,t)$\\
+
+  $\tilde{\gamma} : (-1/2, 1/2) \to \mathbb{R}^2$.
+
+
+\clearpage
+
+
+
+\subsection{Example}
+  $\gamma : (-1, 1) \to \mathbb{R}^2$\\
+  $\gamma(t) = (t,t)$\\
+
+  $\tilde{\gamma} : (-1/2, 1/2) \to \mathbb{R}^2$.\\
+  $\tilde{\gamma}(t) = (2t,2t)$
+
+
+\clearpage
+
+
+
+\subsection{Example}
+  $\gamma : (-1, 1) \to \mathbb{R}^2$\\
+  $\gamma(t) = (t,t)$\\
+
+  $\tilde{\gamma} : (-1/2, 1/2) \to \mathbb{R}^2$.\\
+  $\tilde{\gamma}(t) = (2t,2t)$\\
+
+  $\phi: (-1/2,1/2) \to (-1,1)$
+
+
+\clearpage
+
+
+
+\subsection{Example}
+  $\gamma : (-1, 1) \to \mathbb{R}^2$\\
+  $\gamma(t) = (t,t)$\\
+
+  $\tilde{\gamma} : (-1/2, 1/2) \to \mathbb{R}^2$.\\
+  $\tilde{\gamma}(t) = (2t,2t)$\\
+
+  $\phi: (-1/2,1/2) \to (-1,1)$\\
+  $\phi(t) = 2t$\\
+
+
+\clearpage
+
+
+
+\subsection{Example}
+  $\gamma : (-1, 1) \to \mathbb{R}^2$\\
+  $\gamma(t) = (t,t)$\\
+
+  $\tilde{\gamma} : (-1/2, 1/2) \to \mathbb{R}^2$.\\
+  $\tilde{\gamma}(t) = (2t,2t)$\\
+
+  $\phi: (-1/2,1/2) \to (-1,1)$\\
+  $\phi(t) = 2t$\\
+  So that $\tilde{\gamma}(t)$
+
+
+\clearpage
+
+
+
+\subsection{Example}
+  $\gamma : (-1, 1) \to \mathbb{R}^2$\\
+  $\gamma(t) = (t,t)$\\
+
+  $\tilde{\gamma} : (-1/2, 1/2) \to \mathbb{R}^2$.\\
+  $\tilde{\gamma}(t) = (2t,2t)$\\
+
+  $\phi: (-1/2,1/2) \to (-1,1)$\\
+  $\phi(t) = 2t$\\
+  So that $\tilde{\gamma}(t) = \gamma(\phi(t))$
+
+
+\clearpage
+
+
+
+\subsection{Example}
+  $\gamma : (-1, 1) \to \mathbb{R}^2$\\
+  $\gamma(t) = (t,t)$\\
+
+  $\tilde{\gamma} : (-1/2, 1/2) \to \mathbb{R}^2$.\\
+  $\tilde{\gamma}(t) = (2t,2t)$\\
+
+  $\phi: (-1/2,1/2) \to (-1,1)$\\
+  $\phi(t) = 2t$\\
+  So that $\tilde{\gamma}(t) = \gamma(\phi(t)) = \gamma(2t)$
+
+
+\clearpage
+
+
+
+\subsection{Example}
+  $\gamma : (-1, 1) \to \mathbb{R}^2$\\
+  $\gamma(t) = (t,t)$\\
+
+  $\tilde{\gamma} : (-1/2, 1/2) \to \mathbb{R}^2$.\\
+  $\tilde{\gamma}(t) = (2t,2t)$\\
+
+  $\phi: (-1/2,1/2) \to (-1,1)$\\
+  $\phi(t) = 2t$\\
+  So that $\tilde{\gamma}(t) = \gamma(\phi(t)) = \gamma(2t) = (2t, 2t)$
+
+
+
+
+
+
+\clearpage
+
+
+
+\subsection{Vectors}
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+;
+\end{tikzpicture}
+
+\newpage
+
+
+
+
+
+
+
+\clearpage
+
+
+
+\subsection{Vectors}
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+\node at (2,3)[circle,fill,inner sep=1.5pt,color=blue]{} ;
+\end{tikzpicture}
+
+\newpage
+
+
+
+
+
+
+
+
+\clearpage
+
+
+
+\subsection{Vectors}
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+ \draw[thick,->,color=blue] (0,0) -- (2,3); ;
+\end{tikzpicture}
+
+\newpage
+
+
+
+
+
+
+
+
+
+
+\clearpage
+
+
+
+\subsection{Vectors}
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+ \draw[thick,->,color=blue] (0,0) -- (2,3); 
+\draw[thick,->,color=blue] (0,0) -- (1,-1); ;
+\end{tikzpicture}
+
+\newpage
+
+$v=(2,3)$
+
+
+
+
+
+
+
+
+
+\clearpage
+
+
+
+\subsection{Vectors}
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+ \draw[thick,->,color=blue] (0,0) -- (2,3); 
+\draw[thick,->,color=blue] (0,0) -- (1,-1); ;
+\end{tikzpicture}
+
+\newpage
+
+$v=(2,3)$\\
+$w=(1,-1)$
+
+\sep
+
+
+
+
+
+
+
+
+
+
+\clearpage
+
+
+
+\subsection{Vectors}
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+ \draw[thick,->,color=blue] (0,0) -- (2,3); 
+\draw[thick,->,color=blue] (0,0) -- (1,-1); ;
+\end{tikzpicture}
+
+\newpage
+
+$v=(2,3)$\\
+$w=(1,-1)$
+
+\sep
+Vector addition :\\
+
+
+
+
+
+
+
+
+
+
+\clearpage
+
+
+
+\subsection{Vectors}
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+ \draw[thick,->,color=blue] (0,0) -- (2,3); 
+\draw[thick,->,color=blue] (0,0) -- (1,-1); 
+\draw[thick,->,color=blue] (0,0) -- (3,2); ;
+\end{tikzpicture}
+
+\newpage
+
+$v=(2,3)$\\
+$w=(1,-1)$
+
+\sep
+Vector addition :\\
+$v+w = (3,2)$
+
+
+
+
+
+
+
+
+
+
+
+
+\clearpage
+
+
+
+\subsection{Vectors}
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+ \draw[thick,->,color=blue] (0,0) -- (2,3); 
+ \draw[thick,->,color=blue] (2,3) -- (3,2); ; 
+\draw[thick,->,color=blue] (0,0) -- (3,2); ;
+\end{tikzpicture}
+
+\newpage
+
+$v=(2,3)$\\
+$w=(1,-1)$
+
+\sep
+Vector addition :\\
+$v+w = (3,2)$
+
+
+
+
+
+
+
+
+
+
+
+
+
+\clearpage
+
+
+
+\subsection{Vectors}
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+ \draw[thick,->,color=blue] (0,0) -- (2,3); 
+ \draw[thick,->,color=blue] (2,3) -- (3,2); ; 
+\draw[thick,->,color=blue] (0,0) -- (3,2); ;
+\end{tikzpicture}
+
+\newpage
+
+$v=(2,3)$\\
+$w=(1,-1)$
+
+\sep
+Vector addition :\\
+$v+w = (3,2)$
+
+
+
+In general:\\
+
+
+
+
+
+
+
+
+
+
+\clearpage
+
+
+
+\subsection{Vectors}
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+ \draw[thick,->,color=blue] (0,0) -- (2,3); 
+ \draw[thick,->,color=blue] (2,3) -- (3,2); ; 
+\draw[thick,->,color=blue] (0,0) -- (3,2); ;
+\end{tikzpicture}
+
+\newpage
+
+$v=(2,3)$\\
+$w=(1,-1)$
+
+\sep
+Vector addition :\\
+$v+w = (3,2)$
+
+
+
+In general:\\
+$(x_1,y_2) + (x_2,y_2) $
+
+
+
+
+
+
+
+
+
+\clearpage
+
+
+
+\subsection{Vectors}
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+ \draw[thick,->,color=blue] (0,0) -- (2,3); 
+ \draw[thick,->,color=blue] (2,3) -- (3,2); ; 
+\draw[thick,->,color=blue] (0,0) -- (3,2); ;
+\end{tikzpicture}
+
+\newpage
+
+$v=(2,3)$\\
+$w=(1,-1)$
+
+\sep
+Vector addition :\\
+$v+w = (3,2)$
+
+
+
+In general:\\
+$(x_1,y_2) + (x_2,y_2) := (x_1 + x_2$
+
+
+
+
+
+
+
+
+
+\clearpage
+
+
+
+\subsection{Vectors}
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+ \draw[thick,->,color=blue] (0,0) -- (2,3); 
+ \draw[thick,->,color=blue] (2,3) -- (3,2); ; 
+\draw[thick,->,color=blue] (0,0) -- (3,2); ;
+\end{tikzpicture}
+
+\newpage
+
+$v=(2,3)$\\
+$w=(1,-1)$
+
+\sep
+Vector addition :\\
+$v+w = (3,2)$
+
+
+
+In general:\\
+$(x_1,y_2) + (x_2,y_2) := (x_1 + x_2, y_1 + y_2)$\\
+
+
+
+
+
+
+
+
+
+
+\clearpage
+
+
+
+\subsection{Vectors}
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+ \draw[thick,->,color=blue] (0,0) -- (2,3); 
+ \draw[thick,->,color=blue] (2,3) -- (3,2); ; 
+\draw[thick,->,color=blue] (0,0) -- (3,2); ;
+\end{tikzpicture}
+
+\newpage
+
+$v=(2,3)$\\
+$w=(1,-1)$
+
+\sep
+Vector addition :\\
+$v+w = (3,2)$
+
+
+
+In general:\\
+$(x_1,y_2) + (x_2,y_2) := (x_1 + x_2, y_1 + y_2)$\\
+$(x_1,y_2) - (x_2,y_2) $
+
+
+
+
+
+
+
+
+
+\clearpage
+
+
+
+\subsection{Vectors}
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+ \draw[thick,->,color=blue] (0,0) -- (2,3); 
+ \draw[thick,->,color=blue] (2,3) -- (3,2); ; 
+\draw[thick,->,color=blue] (0,0) -- (3,2); ;
+\end{tikzpicture}
+
+\newpage
+
+$v=(2,3)$\\
+$w=(1,-1)$
+
+\sep
+Vector addition :\\
+$v+w = (3,2)$
+
+
+
+In general:\\
+$(x_1,y_2) + (x_2,y_2) := (x_1 + x_2, y_1 + y_2)$\\
+$(x_1,y_2) - (x_2,y_2) := (x_1 - x_2$
+
+
+
+
+
+
+
+
+
+\clearpage
+
+
+
+\subsection{Vectors}
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+ \draw[thick,->,color=blue] (0,0) -- (2,3); 
+ \draw[thick,->,color=blue] (2,3) -- (3,2); ; 
+\draw[thick,->,color=blue] (0,0) -- (3,2); ;
+\end{tikzpicture}
+
+\newpage
+
+$v=(2,3)$\\
+$w=(1,-1)$
+
+\sep
+Vector addition :\\
+$v+w = (3,2)$
+
+
+
+In general:\\
+$(x_1,y_2) + (x_2,y_2) := (x_1 + x_2, y_1 + y_2)$\\
+$(x_1,y_2) - (x_2,y_2) := (x_1 - x_2, y_1 - y_2)$
+
+
+
+
+
+
+
+
+
+
+\clearpage
+
+
+
+\subsection{Vectors}
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+ \draw[thick,->,color=blue] (0,0) -- (2,3); 
+ \draw[thick,->,color=blue] (2,3) -- (3,2); ; 
+\draw[thick,->,color=blue] (0,0) -- (3,2); ;
+\end{tikzpicture}
+
+\newpage
+
+$v=(2,3)$\\
+$w=(1,-1)$
+
+\sep
+Vector addition  and subtraction :\\
+$v+w = (3,2)$
+
+
+
+In general:\\
+$(x_1,y_2) + (x_2,y_2) := (x_1 + x_2, y_1 + y_2)$\\
+$(x_1,y_2) - (x_2,y_2) := (x_1 - x_2, y_1 - y_2)$
+
+
+
+
+\sep
+
+
+
+
+
+
+
+
+
+
+\clearpage
+
+
+
+\subsection{Vectors}
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+ \draw[thick,->,color=blue] (0,0) -- (2,3); 
+ \draw[thick,->,color=blue] (2,3) -- (3,2); ; 
+\draw[thick,->,color=blue] (0,0) -- (3,2); ;
+\end{tikzpicture}
+
+\newpage
+
+$v=(2,3)$\\
+$w=(1,-1)$
+
+\sep
+Vector addition  and subtraction :\\
+$v+w = (3,2)$
+
+
+
+In general:\\
+$(x_1,y_2) + (x_2,y_2) := (x_1 + x_2, y_1 + y_2)$\\
+$(x_1,y_2) - (x_2,y_2) := (x_1 - x_2, y_1 - y_2)$
+
+
+
+
+\sep
+Scalar multiplication:\\
+
+
+
+
+
+
+
+
+
+
+\clearpage
+
+
+
+\subsection{Vectors}
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+ \draw[thick,->,color=blue] (0,0) -- (1,2); ;
+\end{tikzpicture}
+
+\newpage
+
+$v=(2,3)$\\
+$w=(1,-1)$
+
+\sep
+Vector addition  and subtraction :\\
+$v+w = (3,2)$
+
+
+
+In general:\\
+$(x_1,y_2) + (x_2,y_2) := (x_1 + x_2, y_1 + y_2)$\\
+$(x_1,y_2) - (x_2,y_2) := (x_1 - x_2, y_1 - y_2)$
+
+
+
+
+\sep
+Scalar multiplication:\\
+ $v:=(1,2)$\\
+
+
+
+
+
+
+
+
+
+
+\clearpage
+
+
+
+\subsection{Vectors}
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+ \draw[thick,->,color=blue] (0,0) -- (2,4); ;
+\end{tikzpicture}
+
+\newpage
+
+$v=(2,3)$\\
+$w=(1,-1)$
+
+\sep
+Vector addition  and subtraction :\\
+$v+w = (3,2)$
+
+
+
+In general:\\
+$(x_1,y_2) + (x_2,y_2) := (x_1 + x_2, y_1 + y_2)$\\
+$(x_1,y_2) - (x_2,y_2) := (x_1 - x_2, y_1 - y_2)$
+
+
+
+
+\sep
+Scalar multiplication:\\
+ $v:=(1,2)$\\
+ $2v$
+
+
+
+
+
+
+
+
+
+\clearpage
+
+
+
+\subsection{Vectors}
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+ \draw[thick,->,color=blue] (0,0) -- (2,4); ;
+\end{tikzpicture}
+
+\newpage
+
+$v=(2,3)$\\
+$w=(1,-1)$
+
+\sep
+Vector addition  and subtraction :\\
+$v+w = (3,2)$
+
+
+
+In general:\\
+$(x_1,y_2) + (x_2,y_2) := (x_1 + x_2, y_1 + y_2)$\\
+$(x_1,y_2) - (x_2,y_2) := (x_1 - x_2, y_1 - y_2)$
+
+
+
+
+\sep
+Scalar multiplication:\\
+ $v:=(1,2)$\\
+ $2v=2(1,2)$
+
+
+
+
+
+
+
+
+
+\clearpage
+
+
+
+\subsection{Vectors}
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+ \draw[thick,->,color=blue] (0,0) -- (2,4); ;
+\end{tikzpicture}
+
+\newpage
+
+$v=(2,3)$\\
+$w=(1,-1)$
+
+\sep
+Vector addition  and subtraction :\\
+$v+w = (3,2)$
+
+
+
+In general:\\
+$(x_1,y_2) + (x_2,y_2) := (x_1 + x_2, y_1 + y_2)$\\
+$(x_1,y_2) - (x_2,y_2) := (x_1 - x_2, y_1 - y_2)$
+
+
+
+
+\sep
+Scalar multiplication:\\
+ $v:=(1,2)$\\
+ $2v=2(1,2)=(2,4)$\\
+
+
+
+
+
+
+
+
+
+
+\clearpage
+
+
+
+\subsection{Vectors}
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+ \draw[thick,->,color=blue] (0,0) -- (2,4); ;
+\end{tikzpicture}
+
+\newpage
+
+$v=(2,3)$\\
+$w=(1,-1)$
+
+\sep
+Vector addition  and subtraction :\\
+$v+w = (3,2)$
+
+
+
+In general:\\
+$(x_1,y_2) + (x_2,y_2) := (x_1 + x_2, y_1 + y_2)$\\
+$(x_1,y_2) - (x_2,y_2) := (x_1 - x_2, y_1 - y_2)$
+
+
+
+
+\sep
+Scalar multiplication:\\
+ $v:=(1,2)$\\
+ $2v=2(1,2)=(2,4)$\\
+In general:\\
+
+
+
+
+
+
+
+
+
+
+\clearpage
+
+
+
+\subsection{Vectors}
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+ \draw[thick,->,color=blue] (0,0) -- (2,4); ;
+\end{tikzpicture}
+
+\newpage
+
+$v=(2,3)$\\
+$w=(1,-1)$
+
+\sep
+Vector addition  and subtraction :\\
+$v+w = (3,2)$
+
+
+
+In general:\\
+$(x_1,y_2) + (x_2,y_2) := (x_1 + x_2, y_1 + y_2)$\\
+$(x_1,y_2) - (x_2,y_2) := (x_1 - x_2, y_1 - y_2)$
+
+
+
+
+\sep
+Scalar multiplication:\\
+ $v:=(1,2)$\\
+ $2v=2(1,2)=(2,4)$\\
+In general:\\
+$\lambda(x,y) $
+
+
+
+
+
+
+
+
+
+\clearpage
+
+
+
+\subsection{Vectors}
+\begin{tikzpicture}
+\draw[thin,->] (-5,0) -- (5,0) node[anchor=west] {$x$};
+\foreach \x in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (\x cm,2pt) -- (\x cm,-2pt);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=north] at (\x cm,0) {\footnotesize \x};
+\draw[thin,->] (0,-5) -- (0,5) node[anchor=south] {$y$};
+\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+\draw (2pt, \y cm) -- (-2pt, \y cm);
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+\node[anchor=west] at (0, \y cm) {\footnotesize \y};
+\node[anchor=north west] at (0,0) {\footnotesize O};
+ \draw[thick,->,color=blue] (0,0) -- (2,4); ;
+\end{tikzpicture}
+
+\newpage
+
+$v=(2,3)$\\
+$w=(1,-1)$
+
+\sep
+Vector addition  and subtraction :\\
+$v+w = (3,2)$
+
+
+
+In general:\\
+$(x_1,y_2) + (x_2,y_2) := (x_1 + x_2, y_1 + y_2)$\\
+$(x_1,y_2) - (x_2,y_2) := (x_1 - x_2, y_1 - y_2)$
+
+
+
+
+\sep
+Scalar multiplication:\\
+ $v:=(1,2)$\\
+ $2v=2(1,2)=(2,4)$\\
+In general:\\
+$\lambda(x,y) := (\lambda x, \lambda y)$
+
+
+
+
+
+
+
+
+
+
+
+
+\clearpage
+
+
+
+$p := (2,3)$,
+
+
+\clearpage
+
+
+
+$p := (2,3)$,\\ $\mathbf{w} := (1,1)$,
+
+
+\clearpage
+
+
+
+$p := (2,3)$,\\ $\mathbf{w} := (1,1)$,\\ $q:=p + \mathbf{w} = (2,3) + (1,1) = (3,4)$ 
+
+
+\clearpage
+
+
+
+$p := (2,3)$,\\ $\mathbf{w} := (1,1)$,\\ $q:=p + \mathbf{w} = (2,3) + (1,1) = (3,4)$ \\ (displacement of $p$ by $\mathbf{w}$).
+
+
+
+
+\clearpage
+
+
+
+$p := (2,3)$,\\ $\mathbf{w} := (1,1)$,\\ $q:=p + \mathbf{w} = (2,3) + (1,1) = (3,4)$ \\ (displacement of $p$ by $\mathbf{w}$).
+
+\sep
+$p := (2,3)$ and $q=(3,4)$,
+
+
+\clearpage
+
+
+
+$p := (2,3)$,\\ $\mathbf{w} := (1,1)$,\\ $q:=p + \mathbf{w} = (2,3) + (1,1) = (3,4)$ \\ (displacement of $p$ by $\mathbf{w}$).
+
+\sep
+$p := (2,3)$ and $q=(3,4)$,\\
+$\mathbf{v}= q - p$
+
+
+\clearpage
+
+
+
+$p := (2,3)$,\\ $\mathbf{w} := (1,1)$,\\ $q:=p + \mathbf{w} = (2,3) + (1,1) = (3,4)$ \\ (displacement of $p$ by $\mathbf{w}$).
+
+\sep
+$p := (2,3)$ and $q=(3,4)$,\\
+$\mathbf{v}= q - p$ is the displacement
+
+
+\clearpage
+
+
+
+$p := (2,3)$,\\ $\mathbf{w} := (1,1)$,\\ $q:=p + \mathbf{w} = (2,3) + (1,1) = (3,4)$ \\ (displacement of $p$ by $\mathbf{w}$).
+
+\sep
+$p := (2,3)$ and $q=(3,4)$,\\
+$\mathbf{v}= q - p$ is the displacement that takes $p$ to $q$ 
+
+
+
+\clearpage
+
+
+
+$p := (2,3)$,\\ $\mathbf{w} := (1,1)$,\\ $q:=p + \mathbf{w} = (2,3) + (1,1) = (3,4)$ \\ (displacement of $p$ by $\mathbf{w}$).
+
+\sep
+$p := (2,3)$ and $q=(3,4)$,\\
+$\mathbf{v}= q - p$ is the displacement that takes $p$ to $q$ 
+\sep
+
+$\gamma : (\alpha,\beta) \to \mathbb{R}^2$
+
+
+\clearpage
+
+
+
+$p := (2,3)$,\\ $\mathbf{w} := (1,1)$,\\ $q:=p + \mathbf{w} = (2,3) + (1,1) = (3,4)$ \\ (displacement of $p$ by $\mathbf{w}$).
+
+\sep
+$p := (2,3)$ and $q=(3,4)$,\\
+$\mathbf{v}= q - p$ is the displacement that takes $p$ to $q$ 
+\sep
+
+$\gamma : (\alpha,\beta) \to \mathbb{R}^2$ is a smooth parametrization.
+
+
+\clearpage
+
+
+
+$p := (2,3)$,\\ $\mathbf{w} := (1,1)$,\\ $q:=p + \mathbf{w} = (2,3) + (1,1) = (3,4)$ \\ (displacement of $p$ by $\mathbf{w}$).
+
+\sep
+$p := (2,3)$ and $q=(3,4)$,\\
+$\mathbf{v}= q - p$ is the displacement that takes $p$ to $q$ 
+\sep
+
+$\gamma : (\alpha,\beta) \to \mathbb{R}^2$ is a smooth parametrization.\\
+$\gamma(t)$ is the \emph{point} at $t$
+
+
+\clearpage
+
+
+
+$p := (2,3)$,\\ $\mathbf{w} := (1,1)$,\\ $q:=p + \mathbf{w} = (2,3) + (1,1) = (3,4)$ \\ (displacement of $p$ by $\mathbf{w}$).
+
+\sep
+$p := (2,3)$ and $q=(3,4)$,\\
+$\mathbf{v}= q - p$ is the displacement that takes $p$ to $q$ 
+\sep
+
+$\gamma : (\alpha,\beta) \to \mathbb{R}^2$ is a smooth parametrization.\\
+$\gamma(t)$ is the \emph{point} at $t$\\
+$\gamma(t+h)$ is the \emph{point} at $t+h$
+
+
+\clearpage
+
+
+
+$p := (2,3)$,\\ $\mathbf{w} := (1,1)$,\\ $q:=p + \mathbf{w} = (2,3) + (1,1) = (3,4)$ \\ (displacement of $p$ by $\mathbf{w}$).
+
+\sep
+$p := (2,3)$ and $q=(3,4)$,\\
+$\mathbf{v}= q - p$ is the displacement that takes $p$ to $q$ 
+\sep
+
+$\gamma : (\alpha,\beta) \to \mathbb{R}^2$ is a smooth parametrization.\\
+$\gamma(t)$ is the \emph{point} at $t$\\
+$\gamma(t+h)$ is the \emph{point} at $t+h$\\
+$\gamma(t+h)-\gamma(t)$ is the displacement \emph{vector} at $t+h$
+
+
+\clearpage
+
+
+
+$p := (2,3)$,\\ $\mathbf{w} := (1,1)$,\\ $q:=p + \mathbf{w} = (2,3) + (1,1) = (3,4)$ \\ (displacement of $p$ by $\mathbf{w}$).
+
+\sep
+$p := (2,3)$ and $q=(3,4)$,\\
+$\mathbf{v}= q - p$ is the displacement that takes $p$ to $q$ 
+\sep
+
+$\gamma : (\alpha,\beta) \to \mathbb{R}^2$ is a smooth parametrization.\\
+$\gamma(t)$ is the \emph{point} at $t$\\
+$\gamma(t+h)$ is the \emph{point} at $t+h$\\
+$\gamma(t+h)-\gamma(t)$ is the displacement \emph{vector} at $t+h$\\
+
+
+
+\begin{definition}
+$\gamma : (\alpha,\beta) \to \mathbb{R}^2$\end{definition}
+
+
+\clearpage
+
+
+
+$p := (2,3)$,\\ $\mathbf{w} := (1,1)$,\\ $q:=p + \mathbf{w} = (2,3) + (1,1) = (3,4)$ \\ (displacement of $p$ by $\mathbf{w}$).
+
+\sep
+$p := (2,3)$ and $q=(3,4)$,\\
+$\mathbf{v}= q - p$ is the displacement that takes $p$ to $q$ 
+\sep
+
+$\gamma : (\alpha,\beta) \to \mathbb{R}^2$ is a smooth parametrization.\\
+$\gamma(t)$ is the \emph{point} at $t$\\
+$\gamma(t+h)$ is the \emph{point} at $t+h$\\
+$\gamma(t+h)-\gamma(t)$ is the displacement \emph{vector} at $t+h$\\
+
+
+
+\begin{definition}
+$\gamma : (\alpha,\beta) \to \mathbb{R}^2$ is a smooth parametrization.
+\[\dot{\gamma}(t) \]\end{definition}
+
+
+\clearpage
+
+
+
+$p := (2,3)$,\\ $\mathbf{w} := (1,1)$,\\ $q:=p + \mathbf{w} = (2,3) + (1,1) = (3,4)$ \\ (displacement of $p$ by $\mathbf{w}$).
+
+\sep
+$p := (2,3)$ and $q=(3,4)$,\\
+$\mathbf{v}= q - p$ is the displacement that takes $p$ to $q$ 
+\sep
+
+$\gamma : (\alpha,\beta) \to \mathbb{R}^2$ is a smooth parametrization.\\
+$\gamma(t)$ is the \emph{point} at $t$\\
+$\gamma(t+h)$ is the \emph{point} at $t+h$\\
+$\gamma(t+h)-\gamma(t)$ is the displacement \emph{vector} at $t+h$\\
+
+
+
+\begin{definition}
+$\gamma : (\alpha,\beta) \to \mathbb{R}^2$ is a smooth parametrization.
+\[\dot{\gamma}(t) = \lim_{h\to 0} \]\end{definition}
+
+
+\clearpage
+
+
+
+$p := (2,3)$,\\ $\mathbf{w} := (1,1)$,\\ $q:=p + \mathbf{w} = (2,3) + (1,1) = (3,4)$ \\ (displacement of $p$ by $\mathbf{w}$).
+
+\sep
+$p := (2,3)$ and $q=(3,4)$,\\
+$\mathbf{v}= q - p$ is the displacement that takes $p$ to $q$ 
+\sep
+
+$\gamma : (\alpha,\beta) \to \mathbb{R}^2$ is a smooth parametrization.\\
+$\gamma(t)$ is the \emph{point} at $t$\\
+$\gamma(t+h)$ is the \emph{point} at $t+h$\\
+$\gamma(t+h)-\gamma(t)$ is the displacement \emph{vector} at $t+h$\\
+
+
+
+\begin{definition}
+$\gamma : (\alpha,\beta) \to \mathbb{R}^2$ is a smooth parametrization.
+\[\dot{\gamma}(t) = \lim_{h\to 0} (1/h)(\gamma(t+h) - \gamma(t))\]
+\end{definition}
+
+
+\clearpage
+
+
+
+$p := (2,3)$,\\ $\mathbf{w} := (1,1)$,\\ $q:=p + \mathbf{w} = (2,3) + (1,1) = (3,4)$ \\ (displacement of $p$ by $\mathbf{w}$).
+
+\sep
+$p := (2,3)$ and $q=(3,4)$,\\
+$\mathbf{v}= q - p$ is the displacement that takes $p$ to $q$ 
+\sep
+
+$\gamma : (\alpha,\beta) \to \mathbb{R}^2$ is a smooth parametrization.\\
+$\gamma(t)$ is the \emph{point} at $t$\\
+$\gamma(t+h)$ is the \emph{point} at $t+h$\\
+$\gamma(t+h)-\gamma(t)$ is the displacement \emph{vector} at $t+h$\\
+
+
+
+\begin{definition}
+$\gamma : (\alpha,\beta) \to \mathbb{R}^2$ is a smooth parametrization.
+\[\dot{\gamma}(t) = \lim_{h\to 0} (1/h)(\gamma(t+h) - \gamma(t))\]
+is called the velocity vector at $t$ and $\dot{\gamma} : (\alpha, \beta) \to \mathbb{R}^2$ is called the velocity vector field of the parametrization $\gamma$.
+\end{definition}
+
+
+
+\clearpage
+
+
+
+$p := (2,3)$,\\ $\mathbf{w} := (1,1)$,\\ $q:=p + \mathbf{w} = (2,3) + (1,1) = (3,4)$ \\ (displacement of $p$ by $\mathbf{w}$).
+
+\sep
+$p := (2,3)$ and $q=(3,4)$,\\
+$\mathbf{v}= q - p$ is the displacement that takes $p$ to $q$ 
+\sep
+
+$\gamma : (\alpha,\beta) \to \mathbb{R}^2$ is a smooth parametrization.\\
+$\gamma(t)$ is the \emph{point} at $t$\\
+$\gamma(t+h)$ is the \emph{point} at $t+h$\\
+$\gamma(t+h)-\gamma(t)$ is the displacement \emph{vector} at $t+h$\\
+
+
+
+\begin{definition}
+$\gamma : (\alpha,\beta) \to \mathbb{R}^2$ is a smooth parametrization.
+\[\dot{\gamma}(t) = \lim_{h\to 0} (1/h)(\gamma(t+h) - \gamma(t))\]
+is called the velocity vector at $t$ and $\dot{\gamma} : (\alpha, \beta) \to \mathbb{R}^2$ is called the velocity vector field of the parametrization $\gamma$.
+\end{definition}
+\newpage
+Points on the straight line passing through $p$,
+
+
+\clearpage
+
+
+
+$p := (2,3)$,\\ $\mathbf{w} := (1,1)$,\\ $q:=p + \mathbf{w} = (2,3) + (1,1) = (3,4)$ \\ (displacement of $p$ by $\mathbf{w}$).
+
+\sep
+$p := (2,3)$ and $q=(3,4)$,\\
+$\mathbf{v}= q - p$ is the displacement that takes $p$ to $q$ 
+\sep
+
+$\gamma : (\alpha,\beta) \to \mathbb{R}^2$ is a smooth parametrization.\\
+$\gamma(t)$ is the \emph{point} at $t$\\
+$\gamma(t+h)$ is the \emph{point} at $t+h$\\
+$\gamma(t+h)-\gamma(t)$ is the displacement \emph{vector} at $t+h$\\
+
+
+
+\begin{definition}
+$\gamma : (\alpha,\beta) \to \mathbb{R}^2$ is a smooth parametrization.
+\[\dot{\gamma}(t) = \lim_{h\to 0} (1/h)(\gamma(t+h) - \gamma(t))\]
+is called the velocity vector at $t$ and $\dot{\gamma} : (\alpha, \beta) \to \mathbb{R}^2$ is called the velocity vector field of the parametrization $\gamma$.
+\end{definition}
+\newpage
+Points on the straight line passing through $p$, parallel to $\mathbf{v}$
+
+
+\clearpage
+
+
+
+$p := (2,3)$,\\ $\mathbf{w} := (1,1)$,\\ $q:=p + \mathbf{w} = (2,3) + (1,1) = (3,4)$ \\ (displacement of $p$ by $\mathbf{w}$).
+
+\sep
+$p := (2,3)$ and $q=(3,4)$,\\
+$\mathbf{v}= q - p$ is the displacement that takes $p$ to $q$ 
+\sep
+
+$\gamma : (\alpha,\beta) \to \mathbb{R}^2$ is a smooth parametrization.\\
+$\gamma(t)$ is the \emph{point} at $t$\\
+$\gamma(t+h)$ is the \emph{point} at $t+h$\\
+$\gamma(t+h)-\gamma(t)$ is the displacement \emph{vector} at $t+h$\\
+
+
+
+\begin{definition}
+$\gamma : (\alpha,\beta) \to \mathbb{R}^2$ is a smooth parametrization.
+\[\dot{\gamma}(t) = \lim_{h\to 0} (1/h)(\gamma(t+h) - \gamma(t))\]
+is called the velocity vector at $t$ and $\dot{\gamma} : (\alpha, \beta) \to \mathbb{R}^2$ is called the velocity vector field of the parametrization $\gamma$.
+\end{definition}
+\newpage
+Points on the straight line passing through $p$, parallel to $\mathbf{v}\neq 0$:
+
+
+\clearpage
+
+
+
+$p := (2,3)$,\\ $\mathbf{w} := (1,1)$,\\ $q:=p + \mathbf{w} = (2,3) + (1,1) = (3,4)$ \\ (displacement of $p$ by $\mathbf{w}$).
+
+\sep
+$p := (2,3)$ and $q=(3,4)$,\\
+$\mathbf{v}= q - p$ is the displacement that takes $p$ to $q$ 
+\sep
+
+$\gamma : (\alpha,\beta) \to \mathbb{R}^2$ is a smooth parametrization.\\
+$\gamma(t)$ is the \emph{point} at $t$\\
+$\gamma(t+h)$ is the \emph{point} at $t+h$\\
+$\gamma(t+h)-\gamma(t)$ is the displacement \emph{vector} at $t+h$\\
+
+
+
+\begin{definition}
+$\gamma : (\alpha,\beta) \to \mathbb{R}^2$ is a smooth parametrization.
+\[\dot{\gamma}(t) = \lim_{h\to 0} (1/h)(\gamma(t+h) - \gamma(t))\]
+is called the velocity vector at $t$ and $\dot{\gamma} : (\alpha, \beta) \to \mathbb{R}^2$ is called the velocity vector field of the parametrization $\gamma$.
+\end{definition}
+\newpage
+Points on the straight line passing through $p$, parallel to $\mathbf{v}\neq 0$:
+\[\{q \in \mathbb{R}^2 \ |\ \}\]
+
+
+\clearpage
+
+
+
+$p := (2,3)$,\\ $\mathbf{w} := (1,1)$,\\ $q:=p + \mathbf{w} = (2,3) + (1,1) = (3,4)$ \\ (displacement of $p$ by $\mathbf{w}$).
+
+\sep
+$p := (2,3)$ and $q=(3,4)$,\\
+$\mathbf{v}= q - p$ is the displacement that takes $p$ to $q$ 
+\sep
+
+$\gamma : (\alpha,\beta) \to \mathbb{R}^2$ is a smooth parametrization.\\
+$\gamma(t)$ is the \emph{point} at $t$\\
+$\gamma(t+h)$ is the \emph{point} at $t+h$\\
+$\gamma(t+h)-\gamma(t)$ is the displacement \emph{vector} at $t+h$\\
+
+
+
+\begin{definition}
+$\gamma : (\alpha,\beta) \to \mathbb{R}^2$ is a smooth parametrization.
+\[\dot{\gamma}(t) = \lim_{h\to 0} (1/h)(\gamma(t+h) - \gamma(t))\]
+is called the velocity vector at $t$ and $\dot{\gamma} : (\alpha, \beta) \to \mathbb{R}^2$ is called the velocity vector field of the parametrization $\gamma$.
+\end{definition}
+\newpage
+Points on the straight line passing through $p$, parallel to $\mathbf{v}\neq 0$:
+\[\{q \in \mathbb{R}^2 \ |\ q = p \}\]
+
+
+\clearpage
+
+
+
+$p := (2,3)$,\\ $\mathbf{w} := (1,1)$,\\ $q:=p + \mathbf{w} = (2,3) + (1,1) = (3,4)$ \\ (displacement of $p$ by $\mathbf{w}$).
+
+\sep
+$p := (2,3)$ and $q=(3,4)$,\\
+$\mathbf{v}= q - p$ is the displacement that takes $p$ to $q$ 
+\sep
+
+$\gamma : (\alpha,\beta) \to \mathbb{R}^2$ is a smooth parametrization.\\
+$\gamma(t)$ is the \emph{point} at $t$\\
+$\gamma(t+h)$ is the \emph{point} at $t+h$\\
+$\gamma(t+h)-\gamma(t)$ is the displacement \emph{vector} at $t+h$\\
+
+
+
+\begin{definition}
+$\gamma : (\alpha,\beta) \to \mathbb{R}^2$ is a smooth parametrization.
+\[\dot{\gamma}(t) = \lim_{h\to 0} (1/h)(\gamma(t+h) - \gamma(t))\]
+is called the velocity vector at $t$ and $\dot{\gamma} : (\alpha, \beta) \to \mathbb{R}^2$ is called the velocity vector field of the parametrization $\gamma$.
+\end{definition}
+\newpage
+Points on the straight line passing through $p$, parallel to $\mathbf{v}\neq 0$:
+\[\{q \in \mathbb{R}^2 \ |\ q = p  + k\mathbf{v} \}\]
+
+
+\clearpage
+
+
+
+$p := (2,3)$,\\ $\mathbf{w} := (1,1)$,\\ $q:=p + \mathbf{w} = (2,3) + (1,1) = (3,4)$ \\ (displacement of $p$ by $\mathbf{w}$).
+
+\sep
+$p := (2,3)$ and $q=(3,4)$,\\
+$\mathbf{v}= q - p$ is the displacement that takes $p$ to $q$ 
+\sep
+
+$\gamma : (\alpha,\beta) \to \mathbb{R}^2$ is a smooth parametrization.\\
+$\gamma(t)$ is the \emph{point} at $t$\\
+$\gamma(t+h)$ is the \emph{point} at $t+h$\\
+$\gamma(t+h)-\gamma(t)$ is the displacement \emph{vector} at $t+h$\\
+
+
+
+\begin{definition}
+$\gamma : (\alpha,\beta) \to \mathbb{R}^2$ is a smooth parametrization.
+\[\dot{\gamma}(t) = \lim_{h\to 0} (1/h)(\gamma(t+h) - \gamma(t))\]
+is called the velocity vector at $t$ and $\dot{\gamma} : (\alpha, \beta) \to \mathbb{R}^2$ is called the velocity vector field of the parametrization $\gamma$.
+\end{definition}
+\newpage
+Points on the straight line passing through $p$, parallel to $\mathbf{v}\neq 0$:
+\[\{q \in \mathbb{R}^2 \ |\ q = p  + k\mathbf{v} , k \in \mathbb{R}\}\]
+
+
+\clearpage
+
+
+
+$p := (2,3)$,\\ $\mathbf{w} := (1,1)$,\\ $q:=p + \mathbf{w} = (2,3) + (1,1) = (3,4)$ \\ (displacement of $p$ by $\mathbf{w}$).
+
+\sep
+$p := (2,3)$ and $q=(3,4)$,\\
+$\mathbf{v}= q - p$ is the displacement that takes $p$ to $q$ 
+\sep
+
+$\gamma : (\alpha,\beta) \to \mathbb{R}^2$ is a smooth parametrization.\\
+$\gamma(t)$ is the \emph{point} at $t$\\
+$\gamma(t+h)$ is the \emph{point} at $t+h$\\
+$\gamma(t+h)-\gamma(t)$ is the displacement \emph{vector} at $t+h$\\
+
+
+
+\begin{definition}
+$\gamma : (\alpha,\beta) \to \mathbb{R}^2$ is a smooth parametrization.
+\[\dot{\gamma}(t) = \lim_{h\to 0} (1/h)(\gamma(t+h) - \gamma(t))\]
+is called the velocity vector at $t$ and $\dot{\gamma} : (\alpha, \beta) \to \mathbb{R}^2$ is called the velocity vector field of the parametrization $\gamma$.
+\end{definition}
+\newpage
+Points on the straight line passing through $p$, parallel to $\mathbf{v}\neq 0$:
+\[\{q \in \mathbb{R}^2 \ |\ q = p  + k\mathbf{v} , k \in \mathbb{R}\}\]
+
+\begin{definition}
+  If $\dot{\gamma}(t)\neq 0$, the line tangent to $\gamma$\end{definition}
+
+
+\clearpage
+
+
+
+$p := (2,3)$,\\ $\mathbf{w} := (1,1)$,\\ $q:=p + \mathbf{w} = (2,3) + (1,1) = (3,4)$ \\ (displacement of $p$ by $\mathbf{w}$).
+
+\sep
+$p := (2,3)$ and $q=(3,4)$,\\
+$\mathbf{v}= q - p$ is the displacement that takes $p$ to $q$ 
+\sep
+
+$\gamma : (\alpha,\beta) \to \mathbb{R}^2$ is a smooth parametrization.\\
+$\gamma(t)$ is the \emph{point} at $t$\\
+$\gamma(t+h)$ is the \emph{point} at $t+h$\\
+$\gamma(t+h)-\gamma(t)$ is the displacement \emph{vector} at $t+h$\\
+
+
+
+\begin{definition}
+$\gamma : (\alpha,\beta) \to \mathbb{R}^2$ is a smooth parametrization.
+\[\dot{\gamma}(t) = \lim_{h\to 0} (1/h)(\gamma(t+h) - \gamma(t))\]
+is called the velocity vector at $t$ and $\dot{\gamma} : (\alpha, \beta) \to \mathbb{R}^2$ is called the velocity vector field of the parametrization $\gamma$.
+\end{definition}
+\newpage
+Points on the straight line passing through $p$, parallel to $\mathbf{v}\neq 0$:
+\[\{q \in \mathbb{R}^2 \ |\ q = p  + k\mathbf{v} , k \in \mathbb{R}\}\]
+
+\begin{definition}
+  If $\dot{\gamma}(t)\neq 0$, the line tangent to $\gamma$ at $t$ is,\end{definition}
+
+
+\clearpage
+
+
+
+$p := (2,3)$,\\ $\mathbf{w} := (1,1)$,\\ $q:=p + \mathbf{w} = (2,3) + (1,1) = (3,4)$ \\ (displacement of $p$ by $\mathbf{w}$).
+
+\sep
+$p := (2,3)$ and $q=(3,4)$,\\
+$\mathbf{v}= q - p$ is the displacement that takes $p$ to $q$ 
+\sep
+
+$\gamma : (\alpha,\beta) \to \mathbb{R}^2$ is a smooth parametrization.\\
+$\gamma(t)$ is the \emph{point} at $t$\\
+$\gamma(t+h)$ is the \emph{point} at $t+h$\\
+$\gamma(t+h)-\gamma(t)$ is the displacement \emph{vector} at $t+h$\\
+
+
+
+\begin{definition}
+$\gamma : (\alpha,\beta) \to \mathbb{R}^2$ is a smooth parametrization.
+\[\dot{\gamma}(t) = \lim_{h\to 0} (1/h)(\gamma(t+h) - \gamma(t))\]
+is called the velocity vector at $t$ and $\dot{\gamma} : (\alpha, \beta) \to \mathbb{R}^2$ is called the velocity vector field of the parametrization $\gamma$.
+\end{definition}
+\newpage
+Points on the straight line passing through $p$, parallel to $\mathbf{v}\neq 0$:
+\[\{q \in \mathbb{R}^2 \ |\ q = p  + k\mathbf{v} , k \in \mathbb{R}\}\]
+
+\begin{definition}
+  If $\dot{\gamma}(t)\neq 0$, the line tangent to $\gamma$ at $t$ is,
+  \[T_\gamma(t):=\{q \in \mathbb{R}^2\}\]\end{definition}
+
+
+\clearpage
+
+
+
+$p := (2,3)$,\\ $\mathbf{w} := (1,1)$,\\ $q:=p + \mathbf{w} = (2,3) + (1,1) = (3,4)$ \\ (displacement of $p$ by $\mathbf{w}$).
+
+\sep
+$p := (2,3)$ and $q=(3,4)$,\\
+$\mathbf{v}= q - p$ is the displacement that takes $p$ to $q$ 
+\sep
+
+$\gamma : (\alpha,\beta) \to \mathbb{R}^2$ is a smooth parametrization.\\
+$\gamma(t)$ is the \emph{point} at $t$\\
+$\gamma(t+h)$ is the \emph{point} at $t+h$\\
+$\gamma(t+h)-\gamma(t)$ is the displacement \emph{vector} at $t+h$\\
+
+
+
+\begin{definition}
+$\gamma : (\alpha,\beta) \to \mathbb{R}^2$ is a smooth parametrization.
+\[\dot{\gamma}(t) = \lim_{h\to 0} (1/h)(\gamma(t+h) - \gamma(t))\]
+is called the velocity vector at $t$ and $\dot{\gamma} : (\alpha, \beta) \to \mathbb{R}^2$ is called the velocity vector field of the parametrization $\gamma$.
+\end{definition}
+\newpage
+Points on the straight line passing through $p$, parallel to $\mathbf{v}\neq 0$:
+\[\{q \in \mathbb{R}^2 \ |\ q = p  + k\mathbf{v} , k \in \mathbb{R}\}\]
+
+\begin{definition}
+  If $\dot{\gamma}(t)\neq 0$, the line tangent to $\gamma$ at $t$ is,
+  \[T_\gamma(t):=\{q \in \mathbb{R}^2 \ |\ q = \gamma(t)\}\]\end{definition}
+
+
+\clearpage
+
+
+
+$p := (2,3)$,\\ $\mathbf{w} := (1,1)$,\\ $q:=p + \mathbf{w} = (2,3) + (1,1) = (3,4)$ \\ (displacement of $p$ by $\mathbf{w}$).
+
+\sep
+$p := (2,3)$ and $q=(3,4)$,\\
+$\mathbf{v}= q - p$ is the displacement that takes $p$ to $q$ 
+\sep
+
+$\gamma : (\alpha,\beta) \to \mathbb{R}^2$ is a smooth parametrization.\\
+$\gamma(t)$ is the \emph{point} at $t$\\
+$\gamma(t+h)$ is the \emph{point} at $t+h$\\
+$\gamma(t+h)-\gamma(t)$ is the displacement \emph{vector} at $t+h$\\
+
+
+
+\begin{definition}
+$\gamma : (\alpha,\beta) \to \mathbb{R}^2$ is a smooth parametrization.
+\[\dot{\gamma}(t) = \lim_{h\to 0} (1/h)(\gamma(t+h) - \gamma(t))\]
+is called the velocity vector at $t$ and $\dot{\gamma} : (\alpha, \beta) \to \mathbb{R}^2$ is called the velocity vector field of the parametrization $\gamma$.
+\end{definition}
+\newpage
+Points on the straight line passing through $p$, parallel to $\mathbf{v}\neq 0$:
+\[\{q \in \mathbb{R}^2 \ |\ q = p  + k\mathbf{v} , k \in \mathbb{R}\}\]
+
+\begin{definition}
+  If $\dot{\gamma}(t)\neq 0$, the line tangent to $\gamma$ at $t$ is,
+  \[T_\gamma(t):=\{q \in \mathbb{R}^2 \ |\ q = \gamma(t) + k\dot{\gamma}(t)\}\]\end{definition}
+
+
+\clearpage
+
+
+
+$p := (2,3)$,\\ $\mathbf{w} := (1,1)$,\\ $q:=p + \mathbf{w} = (2,3) + (1,1) = (3,4)$ \\ (displacement of $p$ by $\mathbf{w}$).
+
+\sep
+$p := (2,3)$ and $q=(3,4)$,\\
+$\mathbf{v}= q - p$ is the displacement that takes $p$ to $q$ 
+\sep
+
+$\gamma : (\alpha,\beta) \to \mathbb{R}^2$ is a smooth parametrization.\\
+$\gamma(t)$ is the \emph{point} at $t$\\
+$\gamma(t+h)$ is the \emph{point} at $t+h$\\
+$\gamma(t+h)-\gamma(t)$ is the displacement \emph{vector} at $t+h$\\
+
+
+
+\begin{definition}
+$\gamma : (\alpha,\beta) \to \mathbb{R}^2$ is a smooth parametrization.
+\[\dot{\gamma}(t) = \lim_{h\to 0} (1/h)(\gamma(t+h) - \gamma(t))\]
+is called the velocity vector at $t$ and $\dot{\gamma} : (\alpha, \beta) \to \mathbb{R}^2$ is called the velocity vector field of the parametrization $\gamma$.
+\end{definition}
+\newpage
+Points on the straight line passing through $p$, parallel to $\mathbf{v}\neq 0$:
+\[\{q \in \mathbb{R}^2 \ |\ q = p  + k\mathbf{v} , k \in \mathbb{R}\}\]
+
+\begin{definition}
+  If $\dot{\gamma}(t)\neq 0$, the line tangent to $\gamma$ at $t$ is,
+  \[T_\gamma(t):=\{q \in \mathbb{R}^2 \ |\ q = \gamma(t) + k\dot{\gamma}(t) \}\]\end{definition}
+
+
+\clearpage
+
+
+
+$p := (2,3)$,\\ $\mathbf{w} := (1,1)$,\\ $q:=p + \mathbf{w} = (2,3) + (1,1) = (3,4)$ \\ (displacement of $p$ by $\mathbf{w}$).
+
+\sep
+$p := (2,3)$ and $q=(3,4)$,\\
+$\mathbf{v}= q - p$ is the displacement that takes $p$ to $q$ 
+\sep
+
+$\gamma : (\alpha,\beta) \to \mathbb{R}^2$ is a smooth parametrization.\\
+$\gamma(t)$ is the \emph{point} at $t$\\
+$\gamma(t+h)$ is the \emph{point} at $t+h$\\
+$\gamma(t+h)-\gamma(t)$ is the displacement \emph{vector} at $t+h$\\
+
+
+
+\begin{definition}
+$\gamma : (\alpha,\beta) \to \mathbb{R}^2$ is a smooth parametrization.
+\[\dot{\gamma}(t) = \lim_{h\to 0} (1/h)(\gamma(t+h) - \gamma(t))\]
+is called the velocity vector at $t$ and $\dot{\gamma} : (\alpha, \beta) \to \mathbb{R}^2$ is called the velocity vector field of the parametrization $\gamma$.
+\end{definition}
+\newpage
+Points on the straight line passing through $p$, parallel to $\mathbf{v}\neq 0$:
+\[\{q \in \mathbb{R}^2 \ |\ q = p  + k\mathbf{v} , k \in \mathbb{R}\}\]
+
+\begin{definition}
+  If $\dot{\gamma}(t)\neq 0$, the line tangent to $\gamma$ at $t$ is,
+  \[T_\gamma(t):=\{q \in \mathbb{R}^2 \ |\ q = \gamma(t) + k\dot{\gamma}(t) , k\in \mathbb{R}\}\]
+\end{definition}
+
+\begin{definition}
+  A smooth parametrized curve, $\gamma : (\alpha,\beta) \to \mathbb{R}^2$,\end{definition}
+
+
+\clearpage
+
+
+
+$p := (2,3)$,\\ $\mathbf{w} := (1,1)$,\\ $q:=p + \mathbf{w} = (2,3) + (1,1) = (3,4)$ \\ (displacement of $p$ by $\mathbf{w}$).
+
+\sep
+$p := (2,3)$ and $q=(3,4)$,\\
+$\mathbf{v}= q - p$ is the displacement that takes $p$ to $q$ 
+\sep
+
+$\gamma : (\alpha,\beta) \to \mathbb{R}^2$ is a smooth parametrization.\\
+$\gamma(t)$ is the \emph{point} at $t$\\
+$\gamma(t+h)$ is the \emph{point} at $t+h$\\
+$\gamma(t+h)-\gamma(t)$ is the displacement \emph{vector} at $t+h$\\
+
+
+
+\begin{definition}
+$\gamma : (\alpha,\beta) \to \mathbb{R}^2$ is a smooth parametrization.
+\[\dot{\gamma}(t) = \lim_{h\to 0} (1/h)(\gamma(t+h) - \gamma(t))\]
+is called the velocity vector at $t$ and $\dot{\gamma} : (\alpha, \beta) \to \mathbb{R}^2$ is called the velocity vector field of the parametrization $\gamma$.
+\end{definition}
+\newpage
+Points on the straight line passing through $p$, parallel to $\mathbf{v}\neq 0$:
+\[\{q \in \mathbb{R}^2 \ |\ q = p  + k\mathbf{v} , k \in \mathbb{R}\}\]
+
+\begin{definition}
+  If $\dot{\gamma}(t)\neq 0$, the line tangent to $\gamma$ at $t$ is,
+  \[T_\gamma(t):=\{q \in \mathbb{R}^2 \ |\ q = \gamma(t) + k\dot{\gamma}(t) , k\in \mathbb{R}\}\]
+\end{definition}
+
+\begin{definition}
+  A smooth parametrized curve, $\gamma : (\alpha,\beta) \to \mathbb{R}^2$, is called a \textbf{regular parametrized curve}\end{definition}
+
+
+\clearpage
+
+
+
+$p := (2,3)$,\\ $\mathbf{w} := (1,1)$,\\ $q:=p + \mathbf{w} = (2,3) + (1,1) = (3,4)$ \\ (displacement of $p$ by $\mathbf{w}$).
+
+\sep
+$p := (2,3)$ and $q=(3,4)$,\\
+$\mathbf{v}= q - p$ is the displacement that takes $p$ to $q$ 
+\sep
+
+$\gamma : (\alpha,\beta) \to \mathbb{R}^2$ is a smooth parametrization.\\
+$\gamma(t)$ is the \emph{point} at $t$\\
+$\gamma(t+h)$ is the \emph{point} at $t+h$\\
+$\gamma(t+h)-\gamma(t)$ is the displacement \emph{vector} at $t+h$\\
+
+
+
+\begin{definition}
+$\gamma : (\alpha,\beta) \to \mathbb{R}^2$ is a smooth parametrization.
+\[\dot{\gamma}(t) = \lim_{h\to 0} (1/h)(\gamma(t+h) - \gamma(t))\]
+is called the velocity vector at $t$ and $\dot{\gamma} : (\alpha, \beta) \to \mathbb{R}^2$ is called the velocity vector field of the parametrization $\gamma$.
+\end{definition}
+\newpage
+Points on the straight line passing through $p$, parallel to $\mathbf{v}\neq 0$:
+\[\{q \in \mathbb{R}^2 \ |\ q = p  + k\mathbf{v} , k \in \mathbb{R}\}\]
+
+\begin{definition}
+  If $\dot{\gamma}(t)\neq 0$, the line tangent to $\gamma$ at $t$ is,
+  \[T_\gamma(t):=\{q \in \mathbb{R}^2 \ |\ q = \gamma(t) + k\dot{\gamma}(t) , k\in \mathbb{R}\}\]
+\end{definition}
+
+\begin{definition}
+  A smooth parametrized curve, $\gamma : (\alpha,\beta) \to \mathbb{R}^2$, is called a \textbf{regular parametrized curve} if $\dot{\gamma}(t) \neq 0$ for each  $t \in (\alpha,\beta)$.
+\end{definition}
+
+\textbf{From now on, we will assume all parametrized curves to be regular}
+
+
+
+\clearpage
+
+
+
+\begin{lemma}
+If $\tilde{\gamma}(t) = \gamma(\phi(t))$ is a reparametrization,\end{lemma}
+
+
+\clearpage
+
+
+
+\begin{lemma}
+If $\tilde{\gamma}(t) = \gamma(\phi(t))$ is a reparametrization, then $\dot{\tilde{\gamma}}(t) = \dot{\gamma}(\phi(t))\phi'(t)$\end{lemma}
+
+
+\clearpage
+
+
+
+\begin{lemma}
+If $\tilde{\gamma}(t) = \gamma(\phi(t))$ is a reparametrization, then $\dot{\tilde{\gamma}}(t) = \dot{\gamma}(\phi(t))\phi'(t)$
+\end{lemma}
+\begin{proof}
+\[\tilde{\gamma}(t) = \gamma(\phi(t))\]\end{proof}
+
+
+\clearpage
+
+
+
+\begin{lemma}
+If $\tilde{\gamma}(t) = \gamma(\phi(t))$ is a reparametrization, then $\dot{\tilde{\gamma}}(t) = \dot{\gamma}(\phi(t))\phi'(t)$
+\end{lemma}
+\begin{proof}
+\[\tilde{\gamma}(t) = \gamma(\phi(t))\]
+\[\tilde{\gamma}(t) = (f_1(\phi(t)), f_2(\phi(t)))\]\end{proof}
+
+
+\clearpage
+
+
+
+\begin{lemma}
+If $\tilde{\gamma}(t) = \gamma(\phi(t))$ is a reparametrization, then $\dot{\tilde{\gamma}}(t) = \dot{\gamma}(\phi(t))\phi'(t)$
+\end{lemma}
+\begin{proof}
+\[\tilde{\gamma}(t) = \gamma(\phi(t))\]
+\[\tilde{\gamma}(t) = (f_1(\phi(t)), f_2(\phi(t)))\]
+\[\dot{\tilde{\gamma}}(t) = (f_1'(\phi(t))\phi'(t), f_2'(\phi(t))\phi'(t))\]\end{proof}
+
+
+\clearpage
+
+
+
+\begin{lemma}
+If $\tilde{\gamma}(t) = \gamma(\phi(t))$ is a reparametrization, then $\dot{\tilde{\gamma}}(t) = \dot{\gamma}(\phi(t))\phi'(t)$
+\end{lemma}
+\begin{proof}
+\[\tilde{\gamma}(t) = \gamma(\phi(t))\]
+\[\tilde{\gamma}(t) = (f_1(\phi(t)), f_2(\phi(t)))\]
+\[\dot{\tilde{\gamma}}(t) = (f_1'(\phi(t))\phi'(t), f_2'(\phi(t))\phi'(t))\]
+\[\dot{\tilde{\gamma}}(t) = (f_1'(\phi(t)), f_2'(\phi(t)))\phi'(t)\]\end{proof}
+
+
+\clearpage
+
+
+
+\begin{lemma}
+If $\tilde{\gamma}(t) = \gamma(\phi(t))$ is a reparametrization, then $\dot{\tilde{\gamma}}(t) = \dot{\gamma}(\phi(t))\phi'(t)$
+\end{lemma}
+\begin{proof}
+\[\tilde{\gamma}(t) = \gamma(\phi(t))\]
+\[\tilde{\gamma}(t) = (f_1(\phi(t)), f_2(\phi(t)))\]
+\[\dot{\tilde{\gamma}}(t) = (f_1'(\phi(t))\phi'(t), f_2'(\phi(t))\phi'(t))\]
+\[\dot{\tilde{\gamma}}(t) = (f_1'(\phi(t)), f_2'(\phi(t)))\phi'(t)\]
+\[\dot{\tilde{\gamma}}(t) = \dot{\gamma}(\phi(t))\phi'(t)\]\end{proof}
+
+
+\clearpage
+
+
+
+\begin{lemma}
+If $\tilde{\gamma}(t) = \gamma(\phi(t))$ is a reparametrization, then $\dot{\tilde{\gamma}}(t) = \dot{\gamma}(\phi(t))\phi'(t)$
+\end{lemma}
+\begin{proof}
+\[\tilde{\gamma}(t) = \gamma(\phi(t))\]
+\[\tilde{\gamma}(t) = (f_1(\phi(t)), f_2(\phi(t)))\]
+\[\dot{\tilde{\gamma}}(t) = (f_1'(\phi(t))\phi'(t), f_2'(\phi(t))\phi'(t))\]
+\[\dot{\tilde{\gamma}}(t) = (f_1'(\phi(t)), f_2'(\phi(t)))\phi'(t)\]
+\[\dot{\tilde{\gamma}}(t) = \dot{\gamma}(\phi(t))\phi'(t)\]
+\end{proof}
+
+\begin{corollary}
+The tangent line is invariant under a reparametrization, $\phi(t)$.
+\end{corollary}
+\begin{proof}
+\begin{eqnarray*}
+\{\gamma(t) + k\dot{\tilde{\gamma}}(t) \}\end{eqnarray*}\end{proof}
+
+
+\clearpage
+
+
+
+\begin{lemma}
+If $\tilde{\gamma}(t) = \gamma(\phi(t))$ is a reparametrization, then $\dot{\tilde{\gamma}}(t) = \dot{\gamma}(\phi(t))\phi'(t)$
+\end{lemma}
+\begin{proof}
+\[\tilde{\gamma}(t) = \gamma(\phi(t))\]
+\[\tilde{\gamma}(t) = (f_1(\phi(t)), f_2(\phi(t)))\]
+\[\dot{\tilde{\gamma}}(t) = (f_1'(\phi(t))\phi'(t), f_2'(\phi(t))\phi'(t))\]
+\[\dot{\tilde{\gamma}}(t) = (f_1'(\phi(t)), f_2'(\phi(t)))\phi'(t)\]
+\[\dot{\tilde{\gamma}}(t) = \dot{\gamma}(\phi(t))\phi'(t)\]
+\end{proof}
+
+\begin{corollary}
+The tangent line is invariant under a reparametrization, $\phi(t)$.
+\end{corollary}
+\begin{proof}
+\begin{eqnarray*}
+\{\gamma(t) + k\dot{\tilde{\gamma}}(t) \ |\ k\in \mathbb{R}\} &=& \{\gamma(t) + k\dot{\gamma}(\phi(t))\phi'(t) \}\end{eqnarray*}\end{proof}
+
+
+\clearpage
+
+
+
+\begin{lemma}
+If $\tilde{\gamma}(t) = \gamma(\phi(t))$ is a reparametrization, then $\dot{\tilde{\gamma}}(t) = \dot{\gamma}(\phi(t))\phi'(t)$
+\end{lemma}
+\begin{proof}
+\[\tilde{\gamma}(t) = \gamma(\phi(t))\]
+\[\tilde{\gamma}(t) = (f_1(\phi(t)), f_2(\phi(t)))\]
+\[\dot{\tilde{\gamma}}(t) = (f_1'(\phi(t))\phi'(t), f_2'(\phi(t))\phi'(t))\]
+\[\dot{\tilde{\gamma}}(t) = (f_1'(\phi(t)), f_2'(\phi(t)))\phi'(t)\]
+\[\dot{\tilde{\gamma}}(t) = \dot{\gamma}(\phi(t))\phi'(t)\]
+\end{proof}
+
+\begin{corollary}
+The tangent line is invariant under a reparametrization, $\phi(t)$.
+\end{corollary}
+\begin{proof}
+\begin{eqnarray*}
+\{\gamma(t) + k\dot{\tilde{\gamma}}(t) \ |\ k\in \mathbb{R}\} &=& \{\gamma(t) + k\dot{\gamma}(\phi(t))\phi'(t) \ |\ k\in \mathbb{R}\} \end{eqnarray*}\end{proof}
+
+
+\clearpage
+
+
+
+\begin{lemma}
+If $\tilde{\gamma}(t) = \gamma(\phi(t))$ is a reparametrization, then $\dot{\tilde{\gamma}}(t) = \dot{\gamma}(\phi(t))\phi'(t)$
+\end{lemma}
+\begin{proof}
+\[\tilde{\gamma}(t) = \gamma(\phi(t))\]
+\[\tilde{\gamma}(t) = (f_1(\phi(t)), f_2(\phi(t)))\]
+\[\dot{\tilde{\gamma}}(t) = (f_1'(\phi(t))\phi'(t), f_2'(\phi(t))\phi'(t))\]
+\[\dot{\tilde{\gamma}}(t) = (f_1'(\phi(t)), f_2'(\phi(t)))\phi'(t)\]
+\[\dot{\tilde{\gamma}}(t) = \dot{\gamma}(\phi(t))\phi'(t)\]
+\end{proof}
+
+\begin{corollary}
+The tangent line is invariant under a reparametrization, $\phi(t)$.
+\end{corollary}
+\begin{proof}
+\begin{eqnarray*}
+\{\gamma(t) + k\dot{\tilde{\gamma}}(t) \ |\ k\in \mathbb{R}\} &=& \{\gamma(t) + k\dot{\gamma}(\phi(t))\phi'(t) \ |\ k\in \mathbb{R}\} \\ \end{eqnarray*}\end{proof}
+
+
+\clearpage
+
+
+
+\begin{lemma}
+If $\tilde{\gamma}(t) = \gamma(\phi(t))$ is a reparametrization, then $\dot{\tilde{\gamma}}(t) = \dot{\gamma}(\phi(t))\phi'(t)$
+\end{lemma}
+\begin{proof}
+\[\tilde{\gamma}(t) = \gamma(\phi(t))\]
+\[\tilde{\gamma}(t) = (f_1(\phi(t)), f_2(\phi(t)))\]
+\[\dot{\tilde{\gamma}}(t) = (f_1'(\phi(t))\phi'(t), f_2'(\phi(t))\phi'(t))\]
+\[\dot{\tilde{\gamma}}(t) = (f_1'(\phi(t)), f_2'(\phi(t)))\phi'(t)\]
+\[\dot{\tilde{\gamma}}(t) = \dot{\gamma}(\phi(t))\phi'(t)\]
+\end{proof}
+
+\begin{corollary}
+The tangent line is invariant under a reparametrization, $\phi(t)$,  if $\phi'(t)\neq 0$ 
+\end{corollary}
+\begin{proof}
+\begin{eqnarray*}
+\{\gamma(t) + k\dot{\tilde{\gamma}}(t) \ |\ k\in \mathbb{R}\} &=& \{\gamma(t) + k\dot{\gamma}(\phi(t))\phi'(t) \ |\ k\in \mathbb{R}\} \\ 
+                                                  &=& \{\gamma(t) + k\dot{\gamma}(\phi(t)) \}\end{eqnarray*}\end{proof}
+
+
+\clearpage
+
+
+
+\begin{lemma}
+If $\tilde{\gamma}(t) = \gamma(\phi(t))$ is a reparametrization, then $\dot{\tilde{\gamma}}(t) = \dot{\gamma}(\phi(t))\phi'(t)$
+\end{lemma}
+\begin{proof}
+\[\tilde{\gamma}(t) = \gamma(\phi(t))\]
+\[\tilde{\gamma}(t) = (f_1(\phi(t)), f_2(\phi(t)))\]
+\[\dot{\tilde{\gamma}}(t) = (f_1'(\phi(t))\phi'(t), f_2'(\phi(t))\phi'(t))\]
+\[\dot{\tilde{\gamma}}(t) = (f_1'(\phi(t)), f_2'(\phi(t)))\phi'(t)\]
+\[\dot{\tilde{\gamma}}(t) = \dot{\gamma}(\phi(t))\phi'(t)\]
+\end{proof}
+
+\begin{corollary}
+The tangent line is invariant under a reparametrization, $\phi(t)$,  if $\phi'(t)\neq 0$ 
+\end{corollary}
+\begin{proof}
+\begin{eqnarray*}
+\{\gamma(t) + k\dot{\tilde{\gamma}}(t) \ |\ k\in \mathbb{R}\} &=& \{\gamma(t) + k\dot{\gamma}(\phi(t))\phi'(t) \ |\ k\in \mathbb{R}\} \\ 
+                                                  &=& \{\gamma(t) + k\dot{\gamma}(\phi(t)) \ |\ k\in \mathbb{R}\}
+\end{eqnarray*}
+\end{proof}
+\newpage
+
+
+
+\clearpage
+
+
+
+\begin{lemma}
+If $\tilde{\gamma}(t) = \gamma(\phi(t))$ is a reparametrization, then $\dot{\tilde{\gamma}}(t) = \dot{\gamma}(\phi(t))\phi'(t)$
+\end{lemma}
+\begin{proof}
+\[\tilde{\gamma}(t) = \gamma(\phi(t))\]
+\[\tilde{\gamma}(t) = (f_1(\phi(t)), f_2(\phi(t)))\]
+\[\dot{\tilde{\gamma}}(t) = (f_1'(\phi(t))\phi'(t), f_2'(\phi(t))\phi'(t))\]
+\[\dot{\tilde{\gamma}}(t) = (f_1'(\phi(t)), f_2'(\phi(t)))\phi'(t)\]
+\[\dot{\tilde{\gamma}}(t) = \dot{\gamma}(\phi(t))\phi'(t)\]
+\end{proof}
+
+\begin{corollary}
+The tangent line is invariant under a reparametrization, $\phi(t)$,  if $\phi'(t)\neq 0$ 
+\end{corollary}
+\begin{proof}
+\begin{eqnarray*}
+\{\gamma(t) + k\dot{\tilde{\gamma}}(t) \ |\ k\in \mathbb{R}\} &=& \{\gamma(t) + k\dot{\gamma}(\phi(t))\phi'(t) \ |\ k\in \mathbb{R}\} \\ 
+                                                  &=& \{\gamma(t) + k\dot{\gamma}(\phi(t)) \ |\ k\in \mathbb{R}\}
+\end{eqnarray*}
+\end{proof}
+\newpage
+Note: $\tilde{\gamma}(t)$ is the same point, $p$, as $\gamma(\phi(t))$
+
+
+\clearpage
+
+
+
+\begin{lemma}
+If $\tilde{\gamma}(t) = \gamma(\phi(t))$ is a reparametrization, then $\dot{\tilde{\gamma}}(t) = \dot{\gamma}(\phi(t))\phi'(t)$
+\end{lemma}
+\begin{proof}
+\[\tilde{\gamma}(t) = \gamma(\phi(t))\]
+\[\tilde{\gamma}(t) = (f_1(\phi(t)), f_2(\phi(t)))\]
+\[\dot{\tilde{\gamma}}(t) = (f_1'(\phi(t))\phi'(t), f_2'(\phi(t))\phi'(t))\]
+\[\dot{\tilde{\gamma}}(t) = (f_1'(\phi(t)), f_2'(\phi(t)))\phi'(t)\]
+\[\dot{\tilde{\gamma}}(t) = \dot{\gamma}(\phi(t))\phi'(t)\]
+\end{proof}
+
+\begin{corollary}
+The tangent line is invariant under a reparametrization, $\phi(t)$,  if $\phi'(t)\neq 0$ 
+\end{corollary}
+\begin{proof}
+\begin{eqnarray*}
+\{\gamma(t) + k\dot{\tilde{\gamma}}(t) \ |\ k\in \mathbb{R}\} &=& \{\gamma(t) + k\dot{\gamma}(\phi(t))\phi'(t) \ |\ k\in \mathbb{R}\} \\ 
+                                                  &=& \{\gamma(t) + k\dot{\gamma}(\phi(t)) \ |\ k\in \mathbb{R}\}
+\end{eqnarray*}
+\end{proof}
+\newpage
+Note: $\tilde{\gamma}(t)$ is the same point, $p$, as $\gamma(\phi(t))$\\
+When using $\tilde{\gamma}$, the point $p$ ``appears at time $t$''
+
+
+\clearpage
+
+
+
+\begin{lemma}
+If $\tilde{\gamma}(t) = \gamma(\phi(t))$ is a reparametrization, then $\dot{\tilde{\gamma}}(t) = \dot{\gamma}(\phi(t))\phi'(t)$
+\end{lemma}
+\begin{proof}
+\[\tilde{\gamma}(t) = \gamma(\phi(t))\]
+\[\tilde{\gamma}(t) = (f_1(\phi(t)), f_2(\phi(t)))\]
+\[\dot{\tilde{\gamma}}(t) = (f_1'(\phi(t))\phi'(t), f_2'(\phi(t))\phi'(t))\]
+\[\dot{\tilde{\gamma}}(t) = (f_1'(\phi(t)), f_2'(\phi(t)))\phi'(t)\]
+\[\dot{\tilde{\gamma}}(t) = \dot{\gamma}(\phi(t))\phi'(t)\]
+\end{proof}
+
+\begin{corollary}
+The tangent line is invariant under a reparametrization, $\phi(t)$,  if $\phi'(t)\neq 0$ 
+\end{corollary}
+\begin{proof}
+\begin{eqnarray*}
+\{\gamma(t) + k\dot{\tilde{\gamma}}(t) \ |\ k\in \mathbb{R}\} &=& \{\gamma(t) + k\dot{\gamma}(\phi(t))\phi'(t) \ |\ k\in \mathbb{R}\} \\ 
+                                                  &=& \{\gamma(t) + k\dot{\gamma}(\phi(t)) \ |\ k\in \mathbb{R}\}
+\end{eqnarray*}
+\end{proof}
+\newpage
+Note: $\tilde{\gamma}(t)$ is the same point, $p$, as $\gamma(\phi(t))$\\
+When using $\tilde{\gamma}$, the point $p$ ``appears at time $t$''\\
+When using $\gamma$, the point $p$ ``appears at time $\phi(t)$''
+
+
+\clearpage
+
+
+
+\begin{lemma}
+If $\tilde{\gamma}(t) = \gamma(\phi(t))$ is a reparametrization, then $\dot{\tilde{\gamma}}(t) = \dot{\gamma}(\phi(t))\phi'(t)$
+\end{lemma}
+\begin{proof}
+\[\tilde{\gamma}(t) = \gamma(\phi(t))\]
+\[\tilde{\gamma}(t) = (f_1(\phi(t)), f_2(\phi(t)))\]
+\[\dot{\tilde{\gamma}}(t) = (f_1'(\phi(t))\phi'(t), f_2'(\phi(t))\phi'(t))\]
+\[\dot{\tilde{\gamma}}(t) = (f_1'(\phi(t)), f_2'(\phi(t)))\phi'(t)\]
+\[\dot{\tilde{\gamma}}(t) = \dot{\gamma}(\phi(t))\phi'(t)\]
+\end{proof}
+
+\begin{corollary}
+The tangent line is invariant under a reparametrization, $\phi(t)$,  if $\phi'(t)\neq 0$ 
+\end{corollary}
+\begin{proof}
+\begin{eqnarray*}
+\{\gamma(t) + k\dot{\tilde{\gamma}}(t) \ |\ k\in \mathbb{R}\} &=& \{\gamma(t) + k\dot{\gamma}(\phi(t))\phi'(t) \ |\ k\in \mathbb{R}\} \\ 
+                                                  &=& \{\gamma(t) + k\dot{\gamma}(\phi(t)) \ |\ k\in \mathbb{R}\}
+\end{eqnarray*}
+\end{proof}
+\newpage
+Note: $\tilde{\gamma}(t)$ is the same point, $p$, as $\gamma(\phi(t))$\\
+When using $\tilde{\gamma}$, the point $p$ ``appears at time $t$''\\
+When using $\gamma$, the point $p$ ``appears at time $\phi(t)$''\\
+So, $\dot{\tilde{\gamma}}(t)$ and $\dot{\gamma}(\phi(t))$ are velocity vectors at the same point $p$
+
+
+
+
+
+\end{document}

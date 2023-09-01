@@ -1,0 +1,25 @@
+<article>
+    <section class="header">
+        <h1>Exercise sheet $filedigit$</h1>
+    </section>
+    <section>
+      <p>
+	$if(prevPost)$
+	<a href="$prevPost$" class="prev"><<</a>
+	$endif$
+	$if(nextPost)$
+	<a href="$nextPost$" style="float:right" class="next">>></a>
+	$endif$
+      </p>
+<p class="date"><strong>&nbsp;Last modified: $mtime$</strong></p>
+	  $if(pdfurl)$
+	  <a href="/$pdfurl$">PDF version</a>
+	  $endif$
+	  $if(solutionurl)$
+	  <br />
+	  <a href="/$solutionurl$">Hints or Solutions</a> / 
+	  <a href="/$solutionpdfurl$">Hints or Solutions PDF</a>
+	  $endif$
+        $body$
+    </section>
+</article>
