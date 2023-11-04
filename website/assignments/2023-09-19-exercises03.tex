@@ -1,0 +1,23 @@
+\begin{enumerate}
+  \item Consider a smooth frame $s_1, s_2, \ldots, s_k$ of a smooth vector bundle $\pi : E \to B$ over an open set $U \subset B$. Prove that any other section $s(p) = \lambda_1(p) s_1(p) + \cdots + \lambda_k(p) s_k(p)$ over $U$ is a smooth vector field if and only if $\lambda_i : U \to \mathbb{R}$  are smooth functions.
+\item Consider a (not-necessarily smooth) section $s : M \to T(M)$ such that $\pi \circ s = Id$, where $T(M)$ denotes the tangent bundle and $\pi : T(M) \to M$ the natural projection. Prove that the following are equivalent (and, therefore,they are all equivalent definitions of a smooth vector field):
+  \begin{enumerate}
+  \item $s : M \to T(M)$ is a smooth map (considering the manifold structure on $T(M)$).
+    \item Given a chart $\phi : U \to \mathbb{R}^n$, let $x_i$ be the coordinate functions, i.e. $\phi(p) = (x_1(p), x_2(p), \ldots, x_n(p))$. Consider the smooth (local)  frame on $U$ given by $\frac{\partial}{\partial y_i}$. Let $\lambda_i : U \to \mathbb{R}$ define smooth functions so that $s(p) = \Sigma_i \lambda_i(p)\frac{\partial}{\partial y_i} $, then $\lambda_i$ are smooth.
+      \item Since $s(p)$ is a tangent vector, it is a derivation. So given a smooth function $f : M\to \mathbb{R}$, $s(p)(f)\in \mathbb{R}$. Therefore, we get a map $p \to s(p)(f)$ which is smooth for every (global!) smooth function $f : M \to \mathbb{R}$ (Be careful, we are only considering global functions $f$, not local ones).
+  \end{enumerate}
+  \item Prove that (global) vector fields on a smooth manifold form a vector space.
+  \item Given a vector field $p \to X_p$ where $X_p$ may be regarded as a derivation on the germs of smooth functions at $p$, let $X(f) := X_p(f)$. Prove that $X$ is as a linear map $X : C^\infty(M) \to C^\infty(M)$ which satisfies Leibnitz's rule, i.e. $X(fg) = fX(g) + g X(f)$. Conversely, any linear map which satisfies Leibnitz rule is equal to $X(f)$, for some vector field $p \to X_p$.
+  \item Given two vector fields $X$ and $Y$, define the \emph{Lie Bracket} of $X$ and $Y$ (denoted $[X,Y]$) as $[X, Y](f) := X(Y(f)) - Y (X (f))$.
+    \begin{enumerate}
+\item Prove that $[X,Y]$ is vector field.
+\item Prove that the Lie Bracket satisfies these properties
+  \begin{enumerate}
+\item $[X, Y + Z] = [X, Y] + [X, Z]$ and $[X, \lambda Y] = \lambda [X, Y]$  for any $\lambda \in \mathbb{R}$.
+\item $[X, Y] = -[Y, X]$
+\item $[X, [Y , Z]] + [Y, [Z , X]] + [Z, [X , Y]]$. This is called the \emph{Jacobi identity}.
+  \end{enumerate}
+  \item Given a chart $\phi : U \to \mathbb{R}^n$, with its coordinate functions $x_i(p)$ defined so that $\phi(p) = (x_1(p), x_2(p), \ldots, x_n(p)$, prove that $[\frac{\partial}{\partial x_i}, \frac{\partial}{\partial x_j}]=0$
+    \item Derive a local expression for the Lie Bracket. In other words, given a chart $\phi : U \to \mathbb{R}^n$, with its coordinate functions $x_i(p)$ defined so that $\phi(p) = (x_1(p), x_2(p), \ldots, x_n(p)$, express the vector fields $X$ and $Y$ in terms of the coordinate frame on $U$, i.e. $X_p = \Sigma_i a_i(p) \frac{\partial}{\partial x_i}$ and $Y_p = \Sigma_i b_i(p) \frac{\partial}{\partial x_i}$, then write an expression for $[X, Y]$ in terms of $a_i$, $b_i$, and $\frac{\partial}{\partial x_i}$
+    \end{enumerate}
+\end{enumerate}
